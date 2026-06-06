@@ -26,9 +26,15 @@ Covers two seasons:
 
 ```
 dm-stats/
-├── index.html        # The tracker app — only change this for UI updates
-└── data/
-    └── games.json    # All game data — update this after every new game
+├── index.html                    # The tracker app — only change this for UI updates
+├── data/
+│   └── games.json                # All game data — update this after every new game
+├── scorecards/
+│   ├── index.html                # Scorecard archive viewer — all games with Spawtz links
+│   ├── scorecard_urls.csv        # CSV index of all fixture IDs, URLs, and PDF availability
+│   └── *.md                      # Ball-by-ball scorecard extracts (one file per game)
+└── tools/
+    └── extract_scorecard.py      # Python script to extract batting grids from PDF scorecards
 ```
 
 ---

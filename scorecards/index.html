@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DM Scorecard Archive</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
+  :root {
+    --green: #00C853; --green-dim: #00913c; --bg: #0a0f0d; --surface: #111a14;
+    --surface2: #162019; --border: #1e2e22; --text: #e8f0ea; --muted: #6b8c72;
+    --accent: #FFD600; --red: #ff4444; --blue: #7ecfff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+
+  .hero {
+    background: linear-gradient(135deg, #0a1a0e 0%, #0f2a14 50%, #0a1a0e 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 24px 20px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: 'SC'; position: absolute; right: -10px; top: -20px;
+    font-family: 'Bebas Neue', sans-serif; font-size: 160px;
+    color: rgba(0,200,83,0.04); pointer-events: none; line-height: 1;
+  }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 3px; color: var(--green); }
+  .hero-sub { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+  .stats-bar {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;
+  }
+  .stat-pill {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 14px;
+  }
+  .stat-pill .label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .stat-pill .value { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--accent); line-height: 1.1; }
+  .stat-pill .value.green { color: var(--green); }
+
+  .controls {
+    padding: 16px 24px; background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+  }
+  .filter-btn {
+    padding: 5px 14px; border-radius: 5px; border: 2px solid var(--border);
+    background: transparent; color: var(--muted); font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 600; cursor: pointer; letter-spacing: 1px;
+    text-transform: uppercase; transition: all 0.2s;
+  }
+  .filter-btn:hover { border-color: var(--green); color: var(--green); }
+  .filter-btn.active { background: var(--green); border-color: var(--green); color: #0a0f0d; }
+  .filter-btn.sp.active { background: var(--accent); border-color: var(--accent); color: #0a0f0d; }
+  .filter-btn.au.active { background: var(--blue); border-color: var(--blue); color: #0a0f0d; }
+  .filter-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+
+  .content { padding: 20px 24px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    text-align: left; padding: 8px 12px;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); border-bottom: 1px solid var(--border);
+    font-weight: 500; white-space: nowrap;
+  }
+  tbody tr { border-bottom: 1px solid rgba(30,46,34,0.5); transition: background 0.15s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover td { background: var(--surface2); }
+  tbody td { padding: 11px 12px; vertical-align: middle; white-space: nowrap; }
+
+  .season-tag {
+    display: inline-block; font-size: 10px; letter-spacing: 1px;
+    border-radius: 4px; padding: 2px 7px; font-weight: 600;
+  }
+  .season-tag.sp { color: var(--accent); background: rgba(255,214,0,0.1); border: 1px solid rgba(255,214,0,0.25); }
+  .season-tag.au { color: var(--blue); background: rgba(126,207,255,0.1); border: 1px solid rgba(126,207,255,0.25); }
+
+  .game-num { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--muted); }
+  .opponent { font-weight: 600; }
+  .date-cell { color: var(--muted); font-size: 12px; }
+
+  .result-badge {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .result-badge.win { background: rgba(0,200,83,0.15); color: var(--green); }
+  .result-badge.loss { background: rgba(255,68,68,0.15); color: var(--red); }
+
+  .score-dm { font-family: 'Bebas Neue', sans-serif; font-size: 17px; color: var(--green); }
+  .score-sep { font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: var(--muted); margin: 0 2px; }
+  .score-opp { font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: var(--muted); }
+
+  .fixture-id { font-size: 11px; color: var(--muted); font-family: monospace; }
+
+  .sc-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 10px; border-radius: 5px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--muted); text-decoration: none; font-size: 11px;
+    transition: all 0.2s; white-space: nowrap;
+  }
+  .sc-link:hover { border-color: var(--green); color: var(--green); background: rgba(0,200,83,0.08); }
+  .sc-link svg { flex-shrink: 0; }
+
+  .pdf-badge {
+    display: inline-block; padding: 2px 7px; border-radius: 4px;
+    font-size: 10px; font-weight: 600; letter-spacing: 1px;
+  }
+  .pdf-badge.yes { background: rgba(0,200,83,0.15); color: var(--green); }
+  .pdf-badge.no { background: rgba(107,140,114,0.1); color: var(--muted); }
+
+  .section-divider {
+    font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 3px;
+    color: var(--muted); padding: 12px 12px 6px; text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+
+  @media (max-width: 700px) {
+    .col-fixture, .col-pdf { display: none; }
+    body { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-title">Scorecard Archive</div>
+  <div class="hero-sub">Durban Mallu's · All Seasons</div>
+  <div class="stats-bar" id="statsBar"></div>
+</div>
+
+<div class="controls">
+  <span class="filter-label">Season</span>
+  <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+  <button class="filter-btn sp" onclick="setFilter('spring2025',this)">Spring 2025</button>
+  <button class="filter-btn au" onclick="setFilter('autumn2026',this)">Autumn 2026</button>
+</div>
+
+<div class="content">
+  <table id="mainTable">
+    <thead>
+      <tr>
+        <th style="width:50px">#</th>
+        <th style="width:100px">Season</th>
+        <th style="width:90px">Date</th>
+        <th>Opponent</th>
+        <th style="width:70px">Result</th>
+        <th style="width:110px">Score</th>
+        <th class="col-fixture" style="width:90px">Fixture ID</th>
+        <th style="width:120px">Scorecard</th>
+        <th class="col-pdf" style="width:70px">PDF</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<script>
+const games = [
+  {season:'spring2025',game:'G1',date:'30 Oct 2025',opponent:'Toenails',result:'win',dm:127,opp:-6,fixtureId:'2266917',pdf:false},
+  {season:'spring2025',game:'G2',date:'04 Nov 2025',opponent:'The Gravel Donkeys',result:'win',dm:81,opp:74,fixtureId:'2274656',pdf:false},
+  {season:'spring2025',game:'G3',date:'04 Nov 2025',opponent:'MATCHFIXERS',result:'win',dm:98,opp:78,fixtureId:'2266920',pdf:false},
+  {season:'spring2025',game:'G4',date:'25 Nov 2025',opponent:'The Gravel Donkeys',result:'loss',dm:94,opp:134,fixtureId:'2266930',pdf:false},
+  {season:'spring2025',game:'G5',date:'25 Nov 2025',opponent:'Just The Tip And Run 22',result:'loss',dm:39,opp:103,fixtureId:'2266927',pdf:false},
+  {season:'spring2025',game:'G6',date:'04 Dec 2025',opponent:'Toenails',result:'win',dm:141,opp:36,fixtureId:'2266932',pdf:false},
+  {season:'autumn2026',game:'G7',date:'24 Feb 2026',opponent:'Incredibles',result:'loss',dm:59,opp:87,fixtureId:'2293054',pdf:false},
+  {season:'autumn2026',game:'G8',date:'04 Mar 2026',opponent:'Akkerkop Arende',result:'loss',dm:54,opp:70,fixtureId:'2293056',pdf:false},
+  {season:'autumn2026',game:'G9',date:'11 Mar 2026',opponent:'SEW Strikers',result:'win',dm:58,opp:27,fixtureId:'2303782',pdf:false},
+  {season:'autumn2026',game:'G10',date:'17 Mar 2026',opponent:'Duck Hunters',result:'win',dm:93,opp:48,fixtureId:'2293062',pdf:false},
+  {season:'autumn2026',game:'G11',date:'02 Apr 2026',opponent:'Super Kings',result:'loss',dm:108,opp:119,fixtureId:'2293058',pdf:false},
+  {season:'autumn2026',game:'G12',date:'15 Apr 2026',opponent:'Akkerkop Arende',result:'loss',dm:52,opp:136,fixtureId:'2293071',pdf:false},
+  {season:'autumn2026',game:'G13',date:'23 Apr 2026',opponent:'Haduuuuken',result:'loss',dm:89,opp:90,fixtureId:'2314795',pdf:false},
+  {season:'autumn2026',game:'G14',date:'29 Apr 2026',opponent:'Akkerkop Arende',result:'loss',dm:103,opp:108,fixtureId:'2293080',pdf:false},
+  {season:'autumn2026',game:'G15',date:'06 May 2026',opponent:'Duck Hunters',result:'loss',dm:42,opp:75,fixtureId:'2293077',pdf:false},
+  {season:'autumn2026',game:'G16',date:'12 May 2026',opponent:'Morning Wood Warriors',result:'loss',dm:107,opp:108,fixtureId:'2318041',pdf:false},
+  {season:'autumn2026',game:'G17',date:'21 May 2026',opponent:'DLH',result:'win',dm:138,opp:84,fixtureId:'2320060',pdf:false},
+  {season:'autumn2026',game:'G18',date:'27 May 2026',opponent:'Duck Hunters',result:'win',dm:88,opp:67,fixtureId:'2322095',pdf:false},
+  {season:'autumn2026',game:'G19',date:'02 Jun 2026',opponent:'Akkerkop Arende',result:'win',dm:110,opp:61,fixtureId:'2322997',pdf:false},
+];
+
+const seasonMeta = {
+  spring2025: { label: 'Spring 2025', cls: 'sp' },
+  autumn2026: { label: 'Autumn 2026', cls: 'au' },
+};
+
+let activeFilter = 'all';
+
+function spawtzUrl(id) {
+  return `https://actionsport.spawtz.com/Leagues/IndoorCricket/Scoresheet?FixtureId=${id}`;
+}
+
+function setFilter(f, btn) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+
+function render() {
+  const filtered = activeFilter === 'all' ? games : games.filter(g => g.season === activeFilter);
+  const tbody = document.getElementById('tableBody');
+
+  let html = '';
+  let lastSeason = null;
+
+  filtered.forEach(g => {
+    const sm = seasonMeta[g.season];
+    if (g.season !== lastSeason && activeFilter === 'all') {
+      html += `<tr><td colspan="9" class="section-divider">${sm.label}</td></tr>`;
+      lastSeason = g.season;
+    }
+    const url = spawtzUrl(g.fixtureId);
+    html += `
+      <tr>
+        <td><span class="game-num">${g.game}</span></td>
+        <td><span class="season-tag ${sm.cls}">${sm.label}</span></td>
+        <td class="date-cell">${g.date}</td>
+        <td class="opponent">${g.opponent}</td>
+        <td><span class="result-badge ${g.result}">${g.result.toUpperCase()}</span></td>
+        <td>
+          <span class="score-dm">${g.dm}</span>
+          <span class="score-sep">–</span>
+          <span class="score-opp">${g.opp}</span>
+        </td>
+        <td class="col-fixture"><span class="fixture-id">${g.fixtureId}</span></td>
+        <td>
+          <a href="${url}" target="_blank" rel="noopener" class="sc-link">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+              <path d="M2 2h4v1H3v6h6V7h1v3H2V2zm5-1h4v4h-1V2.7L5.35 8.35l-.7-.7L10.3 2H8V1z" fill="currentColor"/>
+            </svg>
+            View
+          </a>
+        </td>
+        <td class="col-pdf">
+          <span class="pdf-badge ${g.pdf ? 'yes' : 'no'}">${g.pdf ? 'YES' : '—'}</span>
+        </td>
+      </tr>`;
+  });
+
+  tbody.innerHTML = html;
+  updateStats(filtered);
+}
+
+function updateStats(filtered) {
+  const wins = filtered.filter(g => g.result === 'win').length;
+  const pdfs = filtered.filter(g => g.pdf).length;
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat-pill">
+      <div class="label">Games</div>
+      <div class="value">${filtered.length}</div>
+    </div>
+    <div class="stat-pill">
+      <div class="label">Record</div>
+      <div class="value green">${wins}W – ${filtered.length - wins}L</div>
+    </div>
+    <div class="stat-pill">
+      <div class="label">PDFs Saved</div>
+      <div class="value">${pdfs} / ${filtered.length}</div>
+    </div>
+  `;
+}
+
+render();
+</script>
+</body>
+</html>
