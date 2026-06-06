@@ -380,6 +380,44 @@
   .lg-skin-pair{flex:1;font-weight:600;}
   .lg-skin-score{font-family:'Bebas Neue',sans-serif;font-size:15px;color:var(--text);flex-shrink:0;}
   .lg-skin-icon{font-size:13px;flex-shrink:0;}
+
+  /* ── Rankings tab ─────────────────────────────────────────────────────── */
+  .rankings-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;}
+  .rank-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+  .rank-card-title{padding:11px 14px 9px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px;}
+  .rank-card-icon{font-size:14px;}
+  .rank-row{display:flex;align-items:center;padding:9px 14px;gap:10px;border-bottom:1px solid rgba(30,46,34,0.4);transition:background 0.15s;}
+  .rank-row:last-child{border-bottom:none;}
+  .rank-row:hover{background:var(--surface2);}
+  .rank-pos{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--muted);width:22px;text-align:center;flex-shrink:0;}
+  .rank-pos.gold{color:#FFD600;}
+  .rank-pos.silver{color:#b0b8c1;}
+  .rank-pos.bronze{color:#cd7f32;}
+  .rank-name{flex:1;font-weight:600;font-size:13px;}
+  .rank-sub{font-size:11px;color:var(--muted);}
+  .rank-val{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--green);}
+  .rank-val.accent{color:var(--accent);}
+  .rank-val.blue{color:var(--blue);}
+
+  /* ── Form tab ──────────────────────────────────────────────────────────── */
+  .form-note{font-size:12px;color:var(--muted);margin-bottom:14px;letter-spacing:0.5px;}
+  .form-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;}
+  .form-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;}
+  .form-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+  .form-player-name{font-weight:700;font-size:15px;}
+  .form-trend-badge{font-size:18px;line-height:1;}
+  .form-dots{display:flex;gap:5px;margin-bottom:10px;}
+  .form-dot{flex:1;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:14px;transition:opacity 0.15s;}
+  .form-dot.pos{background:rgba(0,200,83,0.18);color:var(--green);border:1px solid rgba(0,200,83,0.35);}
+  .form-dot.neg{background:rgba(255,68,68,0.15);color:var(--red);border:1px solid rgba(255,68,68,0.3);}
+  .form-dot.zero{background:var(--surface2);color:var(--muted);border:1px solid var(--border);}
+  .form-dot.empty{background:transparent;border:1px dashed var(--border);color:var(--border);}
+  .form-stats{display:flex;gap:12px;font-size:11px;color:var(--muted);}
+  .form-stat-item{display:flex;flex-direction:column;gap:1px;}
+  .form-stat-label{letter-spacing:1px;text-transform:uppercase;font-size:10px;}
+  .form-stat-val{font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--text);}
+  .form-stat-val.up{color:var(--green);}
+  .form-stat-val.down{color:var(--red);}
 </style>
 </head>
 <body>
@@ -409,6 +447,8 @@
   <div class="tab" onclick="showTab('stats')">Player Stats</div>
   <div class="tab" onclick="showTab('pairsbowling')">Pairs &amp; Bowling</div>
   <div class="tab" onclick="showTab('teamsheet')">Team Sheet</div>
+  <div class="tab" onclick="showTab('rankings')">Rankings</div>
+  <div class="tab" onclick="showTab('form')">Form</div>
 </div>
 
 <div class="content">
@@ -573,6 +613,16 @@
     </div>
   </div>
 
+
+  <!-- ── Rankings panel ───────────────────────────────────────────────── -->
+  <div id="rankings" class="panel">
+    <div id="rankingsContent"></div>
+  </div>
+
+  <!-- ── Form panel ───────────────────────────────────────────────────── -->
+  <div id="form" class="panel">
+    <div id="formContent"></div>
+  </div>
   <div id="teamsheet" class="panel">
     <div class="ts-subnav">
       <button class="ts-subnav-btn active" onclick="showTsView('analysis',this)">Analysis</button>
@@ -2261,6 +2311,8 @@ function showTab(name){
   if(name==='insights')renderInsights();
   if(name==='pairsbowling')renderPairs();
   if(name==='teamsheet')renderTeamSheet();
+  if(name==='rankings')renderRankings();
+  if(name==='form')renderForm();
 }
 
 function refresh(){
@@ -2272,6 +2324,142 @@ function refresh(){
   const active=document.querySelector('.panel.active');
   if(active&&active.id==='pairsbowling')renderPairs();
   if(active&&active.id==='teamsheet')renderTeamSheet();
+  if(active&&active.id==='rankings')renderRankings();
+  if(active&&active.id==='form')renderForm();
+}
+
+
+// ── Rankings ──────────────────────────────────────────────────────────────────
+function renderRankings(){
+  const f=activeSeason==='all'?gameStats:gameStats.filter(g=>g.season===activeSeason);
+  if(!f.length){document.getElementById('rankingsContent').innerHTML='<div style="color:var(--muted);padding:20px">No data for this season.</div>';return;}
+
+  // Aggregate per player
+  const byPlayer={};
+  f.forEach(g=>{
+    if(!byPlayer[g.name]) byPlayer[g.name]={name:g.name,gp:0,rs:0,rc:0,wkts:0,contrib:0,sevens:0,dotsBowled:0,ob:0,srNum:0,srDen:0,rcOb:0};
+    const p=byPlayer[g.name];
+    p.gp++; p.rs+=g.rs; p.rc+=g.rc; p.wkts+=g.wkts; p.contrib+=g.contrib;
+    p.sevens+=g.sevens; p.dotsBowled+=g.dotsBowled; p.ob+=g.ob; p.rcOb+=g.rc;
+    if(g.sr>0){p.srNum+=g.rs;p.srDen+=g.rs/g.sr*100/100;}
+  });
+  const players=Object.values(byPlayer).map(p=>({
+    ...p,
+    avgContrib:p.gp?+(p.contrib/p.gp).toFixed(1):0,
+    econ:p.ob?+(p.rc/p.ob).toFixed(2):0,
+  })).filter(p=>p.gp>0);
+
+  function posClass(i){return i===0?'gold':i===1?'silver':i===2?'bronze':'';}
+  function medal(i){return i===0?'🥇':i===1?'🥈':i===2?'🥉':'';}
+
+  function leaderCard(title,icon,sorted,valFn,valClass,subFn){
+    const top=sorted.slice(0,5);
+    const rows=top.map((p,i)=>`
+      <div class="rank-row">
+        <div class="rank-pos ${posClass(i)}">${medal(i)||i+1}</div>
+        <div style="flex:1"><div class="rank-name">${p.name}</div><div class="rank-sub">${subFn(p)}</div></div>
+        <div class="rank-val ${valClass||''}">${valFn(p)}</div>
+      </div>`).join('');
+    return `<div class="rank-card">
+      <div class="rank-card-title"><span class="rank-card-icon">${icon}</span>${title}</div>
+      ${rows}
+    </div>`;
+  }
+
+  const cards=[
+    leaderCard('Top Scorers','🏏',
+      [...players].sort((a,b)=>b.rs-a.rs),
+      p=>p.rs,'',p=>`${p.gp} games · avg ${p.gp?Math.round(p.rs/p.gp):0}/g`),
+    leaderCard('Most Wickets','🎯',
+      [...players].sort((a,b)=>b.wkts-a.wkts),
+      p=>p.wkts,'accent',p=>`${p.gp} games · ${p.ob} overs bowled`),
+    leaderCard('Best Avg Contribution','⭐',
+      [...players].filter(p=>p.gp>=2).sort((a,b)=>b.avgContrib-a.avgContrib),
+      p=>p.avgContrib>0?'+'+p.avgContrib:p.avgContrib,'',p=>`${p.gp} games · total ${p.contrib>0?'+':''}${p.contrib}`),
+    leaderCard('Most 7s','💥',
+      [...players].sort((a,b)=>b.sevens-a.sevens),
+      p=>p.sevens,'accent',p=>`${p.gp} games · Zone D full hits`),
+    leaderCard('Best Economy','🔒',
+      [...players].filter(p=>p.ob>=2).sort((a,b)=>a.econ-b.econ),
+      p=>p.econ,'blue',p=>`${p.ob} overs · ${p.wkts} wkts`),
+    leaderCard('Dot Ball Kings','🧱',
+      [...players].sort((a,b)=>b.dotsBowled-a.dotsBowled),
+      p=>p.dotsBowled,'blue',p=>`${p.ob} overs bowled`),
+  ];
+
+  document.getElementById('rankingsContent').innerHTML=`<div class="rankings-grid">${cards.join('')}</div>`;
+}
+
+// ── Form ──────────────────────────────────────────────────────────────────────
+function renderForm(){
+  const f=activeSeason==='all'?gameStats:gameStats.filter(g=>g.season===activeSeason);
+  if(!f.length){document.getElementById('formContent').innerHTML='<div style="color:var(--muted);padding:20px">No data for this season.</div>';return;}
+
+  // Get all players who appear in filtered games
+  const playerNames=[...new Set(f.map(g=>g.name))].sort();
+  // Season avg contrib per player
+  const seasonAvg={};
+  playerNames.forEach(name=>{
+    const rows=f.filter(g=>g.name===name);
+    seasonAvg[name]=rows.length?rows.reduce((s,r)=>s+r.contrib,0)/rows.length:0;
+  });
+
+  // Get last 5 games chronologically per player
+  const allGames=[...new Set(f.map(g=>g.game))].sort((a,b)=>+a.slice(1)-+b.slice(1));
+  const last5Games=allGames.slice(-5);
+
+  function trendBadge(last3Avg,sAvg){
+    if(last3Avg>sAvg+3)return'📈';
+    if(last3Avg<sAvg-3)return'📉';
+    return'➡️';
+  }
+
+  const cards=playerNames.map(name=>{
+    const playerRows=f.filter(g=>g.name===name);
+    const gameMap={};
+    playerRows.forEach(g=>{gameMap[g.game]=g;});
+
+    const dotDivs=last5Games.map(gid=>{
+      const g=gameMap[gid];
+      if(!g)return`<div class="form-dot empty">–</div>`;
+      const cls=g.contrib>0?'pos':g.contrib<0?'neg':'zero';
+      const label=g.contrib>0?'+'+g.contrib:g.contrib;
+      return`<div class="form-dot ${cls}" title="${gid}: ${label}">${label}</div>`;
+    });
+
+    // Last 3 games for trend
+    const last3=last5Games.slice(-3).map(gid=>gameMap[gid]).filter(Boolean);
+    const last3Avg=last3.length?last3.reduce((s,g)=>s+g.contrib,0)/last3.length:0;
+    const sAvg=seasonAvg[name];
+    const badge=trendBadge(last3Avg,sAvg);
+
+    // Recent RS and wkts
+    const recentGames=last5Games.map(gid=>gameMap[gid]).filter(Boolean);
+    const recentRS=recentGames.reduce((s,g)=>s+g.rs,0);
+    const recentWkts=recentGames.reduce((s,g)=>s+g.wkts,0);
+    const avgCStr=sAvg>=0?'+'+sAvg.toFixed(1):sAvg.toFixed(1);
+    const l3Str=last3Avg>=0?'+'+last3Avg.toFixed(1):last3Avg.toFixed(1);
+    const trendCls=last3Avg>sAvg+1?'up':last3Avg<sAvg-1?'down':'';
+
+    return`<div class="form-card">
+      <div class="form-card-header">
+        <div class="form-player-name">${name}</div>
+        <div class="form-trend-badge" title="Form trend">${badge}</div>
+      </div>
+      <div class="form-dots">${dotDivs.join('')}</div>
+      <div class="form-stats">
+        <div class="form-stat-item"><span class="form-stat-label">Season Avg C</span><span class="form-stat-val">${avgCStr}</span></div>
+        <div class="form-stat-item"><span class="form-stat-label">Last 3 Avg C</span><span class="form-stat-val ${trendCls}">${l3Str}</span></div>
+        <div class="form-stat-item"><span class="form-stat-label">Recent RS</span><span class="form-stat-val">${recentRS}</span></div>
+        <div class="form-stat-item"><span class="form-stat-label">Recent Wkts</span><span class="form-stat-val">${recentWkts}</span></div>
+      </div>
+    </div>`;
+  });
+
+  const seasonLabel=document.querySelector('.season-btn.active')?.textContent||'Season';
+  document.getElementById('formContent').innerHTML=`
+    <div class="form-note">Last 5 games · ${seasonLabel} · Contribution per game (RS − RC)</div>
+    <div class="form-grid">${cards.join('')}</div>`;
 }
 
 // Load gameStats from games.json, then initialise
