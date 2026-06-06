@@ -1,0 +1,195 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Chibin,1,1,3,runs,,3
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Chibin,1,4,3,runs,,3
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Chibin,1,6,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Edric Cilliers,2,2,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Edric Cilliers,2,3,c,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Edric Cilliers,2,6,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Zayne,3,2,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Zayne,3,3,c,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Zayne,3,5,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Robbie Last,4,1,c,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Robbie Last,4,3,s,wicket,stumped,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Robbie Last,4,4,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Unspecified,Robbie Last,4,6,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Chibin,1,2,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Chibin,1,3,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Chibin,1,5,4,runs,,4
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Edric Cilliers,2,1,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Edric Cilliers,2,4,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Edric Cilliers,2,5,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Zayne,3,1,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Zayne,3,4,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Zayne,3,6,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Robbie Last,4,2,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,1,Unspecified & Akhil,Akhil,Robbie Last,4,5,5,runs,,5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Bobby,5,1,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Bobby,5,2,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Bobby,5,4,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Thomas,6,1,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Thomas,6,3,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Thomas,6,6,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Andrew,7,2,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Andrew,7,5,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Andrew,7,6,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Martinus,8,2,4,runs,,4
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Shaun,Martinus,8,5,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Bobby,5,3,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Bobby,5,5,r,wicket,runout,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Bobby,5,6,b,wicket,bowled,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Thomas,6,2,3,runs,,3
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Thomas,6,4,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Thomas,6,5,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Andrew,7,1,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Andrew,7,3,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Andrew,7,4,r,wicket,runout,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Martinus,8,1,7,runs,,7
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Martinus,8,3,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Martinus,8,4,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,2,Shaun & Kieran,Kieran,Martinus,8,6,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Bobby,9,1,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Bobby,9,2,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Bobby,9,3,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Bobby,9,5,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Bobby,9,6,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Caleb,10,1,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Caleb,10,2,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Caleb,10,5,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Caleb,10,6,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Andrew,11,1,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Andrew,11,2,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Andrew,11,3,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Andrew,11,4,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Andrew,11,5,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Martinus,12,1,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Martinus,12,3,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Martinus,12,6,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Ashwin,Martinus,12,7,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Donny,Bobby,9,4,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Donny,Caleb,10,3,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Donny,Caleb,10,4,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Donny,Andrew,11,6,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Donny,Martinus,12,2,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Donny,Martinus,12,4,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,3,Ashwin & Donny,Donny,Martinus,12,5,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Zayne,13,1,c,wicket,caught,-5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Zayne,13,4,3,runs,,3
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Zayne,13,6,5,runs,,5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Edric Cilliers,14,1,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Edric Cilliers,14,2,4,runs,,4
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Edric Cilliers,14,4,4,runs,,4
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Thomas,15,3,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Thomas,15,4,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Thomas,15,6,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Robbie Last,16,1,5,runs,,5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Robbie Last,16,3,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Zaid,Robbie Last,16,5,5,runs,,5
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Zayne,13,2,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Zayne,13,3,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Zayne,13,5,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Edric Cilliers,14,3,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Edric Cilliers,14,5,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Edric Cilliers,14,6,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Thomas,15,1,0,runs,,0
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Thomas,15,2,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Thomas,15,5,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Robbie Last,16,2,1,runs,,1
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Robbie Last,16,4,2,runs,,2
+autumn2026,G16,2026-05-12,Durban Mallu's,Morning Wood Warriors,4,Zaid & Alex,Alex,Robbie Last,16,6,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Kieran,1,1,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Kieran,1,2,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Kieran,1,4,5,runs,,5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Kieran,1,6,4,runs,,4
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Shaun,2,1,4,runs,,4
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Shaun,2,4,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Shaun,2,5,5,runs,,5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Shaun,2,6,r,wicket,runout,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Ashwin,3,1,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Ashwin,3,2,r,wicket,runout,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Ashwin,3,5,5,runs,,5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Ice,4,1,r,wicket,runout,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Andrew,Ice,4,5,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Kieran,1,3,r,wicket,runout,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Kieran,1,5,3,runs,,3
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Shaun,2,2,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Shaun,2,3,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Ashwin,3,3,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Ashwin,3,4,r,wicket,runout,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Ashwin,3,6,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Ice,4,2,b,wicket,bowled,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Ice,4,3,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Ice,4,4,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,1,Andrew & Edric Cilliers,Edric Cilliers,Ice,4,6,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Shaun,5,1,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Shaun,5,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Shaun,5,5,c,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Alex,6,1,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Alex,6,3,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Alex,6,4,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Alex,6,5,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Alex,6,6,7,runs,,7
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Donny,7,1,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Donny,7,2,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Donny,7,3,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Donny,7,5,3,runs,,3
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Akhil,8,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Akhil,8,4,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Thomas,Akhil,8,6,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Shaun,5,3,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Shaun,5,4,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Shaun,5,6,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Alex,6,2,3,runs,,3
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Donny,7,4,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Donny,7,6,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Akhil,8,1,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Akhil,8,3,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,2,Thomas & Martinus,Martinus,Akhil,8,5,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Zaid,9,1,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Zaid,9,5,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Zaid,9,6,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Kieran,10,1,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Kieran,10,3,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Kieran,10,6,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Alex,11,1,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Alex,11,4,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Alex,11,6,3,runs,,3
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Donny,12,1,3,runs,,3
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Donny,12,3,c,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Zayne,Donny,12,5,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Zaid,9,2,nb,extra,noball,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Zaid,9,3,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Zaid,9,4,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Kieran,10,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Kieran,10,4,b,wicket,bowled,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Kieran,10,5,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Alex,11,2,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Alex,11,3,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Alex,11,5,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Donny,12,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Donny,12,4,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Donny,12,6,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,3,Zayne & Bobby,Bobby,Donny,12,7,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Zaid,13,1,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Zaid,13,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Zaid,13,5,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Zaid,13,6,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ashwin,14,1,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ashwin,14,3,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ashwin,14,4,7,runs,,7
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ashwin,14,6,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ice,15,1,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ice,15,3,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ice,15,5,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Ice,15,6,nb1,extra,noball,3
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Akhil,16,1,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Akhil,16,3,0,runs,,0
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Akhil,16,4,b,wicket,bowled,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Caleb,Akhil,16,5,1,runs,,1
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Zaid,13,3,w,wicket,caught,-5
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Zaid,13,4,4,runs,,4
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Ashwin,14,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Ashwin,14,5,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Ice,15,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Ice,15,4,4,runs,,4
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Akhil,16,2,2,runs,,2
+autumn2026,G16,2026-05-12,Morning Wood Warriors,Durban Mallu's,4,Caleb & Robbie Last,Robbie Last,Akhil,16,6,0,runs,,0

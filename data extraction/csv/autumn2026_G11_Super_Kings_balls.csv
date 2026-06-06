@@ -1,0 +1,195 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Rafal,1,1,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Rafal,1,3,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Rafal,1,6,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Appel,2,2,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Appel,2,4,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Davin,3,2,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Davin,3,4,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Ethan,4,2,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Ethan,4,3,nb,extra,noball,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Ethan,4,4,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Ethan,4,6,nb,extra,noball,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Chibin,Ethan,4,7,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Rafal,1,2,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Rafal,1,4,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Rafal,1,5,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Appel,2,1,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Appel,2,3,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Appel,2,5,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Appel,2,6,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Davin,3,1,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Davin,3,3,4,runs,,4
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Davin,3,5,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Davin,3,6,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Ethan,4,1,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,1,Chibin & Ashwin,Ashwin,Ethan,4,5,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Davin,5,1,5,runs,,5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Davin,5,3,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Davin,5,5,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Davin,5,6,7,runs,,7
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Nick,6,1,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Nick,6,3,3,runs,,3
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Nick,6,6,b,wicket,bowled,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Gem,7,3,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Gem,7,5,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Eckhard,8,1,c,wicket,caught,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Eckhard,8,2,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Eckhard,8,3,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Eckhard,8,4,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Godfrey,Eckhard,8,6,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Davin,5,2,3,runs,,3
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Davin,5,4,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Nick,6,2,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Nick,6,4,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Nick,6,5,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Gem,7,1,w,wicket,caught,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Gem,7,2,7,runs,,7
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Gem,7,4,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Gem,7,6,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,2,Godfrey & Shaun,Shaun,Eckhard,8,5,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Noodle,9,1,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Noodle,9,2,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Noodle,9,6,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Nick,10,1,w,wicket,caught,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Nick,10,2,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Nick,10,5,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Gem,11,2,w,wicket,caught,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Gem,11,3,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Gem,11,5,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Appel,12,1,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Appel,12,3,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Kiran Varghese,Appel,12,5,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Noodle,9,3,nb,extra,noball,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Noodle,9,4,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Noodle,9,5,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Nick,10,3,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Nick,10,4,3,runs,,3
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Nick,10,6,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Gem,11,1,3,runs,,3
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Gem,11,4,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Gem,11,6,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Appel,12,2,3,runs,,3
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Appel,12,4,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,3,Kiran Varghese & Yusuf,Yusuf,Appel,12,6,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Rafal,13,1,nb,extra,noball,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Rafal,13,4,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Rafal,13,5,3,runs,,3
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Eckhard,14,1,7,runs,,7
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Eckhard,14,3,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Eckhard,14,5,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Ethan,15,3,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Ethan,15,4,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Ethan,15,6,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Noodle,16,2,3,runs,,3
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Noodle,16,4,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Zaid,Noodle,16,5,4,runs,,4
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Rafal,13,2,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Rafal,13,3,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Rafal,13,6,s,wicket,stumped,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Eckhard,14,2,4,runs,,4
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Eckhard,14,4,7,runs,,7
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Eckhard,14,6,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Ethan,15,1,0,runs,,0
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Ethan,15,2,2,runs,,2
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Ethan,15,5,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Noodle,16,1,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Noodle,16,3,1,runs,,1
+autumn2026,G11,2026-04-02,Durban Mallu's,Super Kings,4,Zaid & Akhil,Akhil,Noodle,16,6,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Kiran Varghese,1,1,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Kiran Varghese,1,2,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Kiran Varghese,1,3,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Kiran Varghese,1,4,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Kiran Varghese,1,6,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Chibin,2,1,nb,extra,noball,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Chibin,2,4,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Chibin,2,5,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Godfrey,3,2,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Godfrey,3,4,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Shaun,4,2,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Shaun,4,3,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Gem,Shaun,4,4,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Kiran Varghese,1,5,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Chibin,2,2,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Chibin,2,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Chibin,2,6,nb1,extra,noball,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Godfrey,3,1,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Godfrey,3,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Godfrey,3,5,w,wicket,caught,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Godfrey,3,6,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Shaun,4,1,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Shaun,4,5,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,1,Gem & Appel,Appel,Shaun,4,6,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Yusuf,5,1,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Yusuf,5,2,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Yusuf,5,4,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Yusuf,5,6,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Ashwin,6,1,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Ashwin,6,4,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Ashwin,6,6,c,wicket,caught,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Akhil,7,3,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Akhil,7,5,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Akhil,7,6,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Zaid,8,1,7,runs,,7
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Zaid,8,3,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Zaid,8,4,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Eckhard,Zaid,8,5,nb1,extra,noball,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Yusuf,5,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Yusuf,5,5,4,runs,,4
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Ashwin,6,2,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Ashwin,6,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Ashwin,6,5,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Akhil,7,1,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Akhil,7,2,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Akhil,7,4,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Zaid,8,2,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Zaid,8,6,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,2,Eckhard & Nick,Nick,Zaid,8,7,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Kiran Varghese,9,1,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Kiran Varghese,9,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Kiran Varghese,9,6,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Godfrey,10,4,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Godfrey,10,6,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Ashwin,11,1,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Ashwin,11,2,ls1,extra,legside,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Ashwin,11,4,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Ashwin,11,5,r,wicket,runout,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Yusuf,12,2,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Yusuf,12,4,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Ethan,Yusuf,12,6,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Kiran Varghese,9,2,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Kiran Varghese,9,4,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Kiran Varghese,9,5,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Godfrey,10,1,b,wicket,bowled,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Godfrey,10,2,nb,extra,noball,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Godfrey,10,3,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Godfrey,10,5,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Ashwin,11,3,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Ashwin,11,6,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Yusuf,12,1,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Yusuf,12,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,3,Ethan & Davin,Davin,Yusuf,12,5,4,runs,,4
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Chibin,13,1,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Chibin,13,3,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Chibin,13,4,nb,extra,noball,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Chibin,13,5,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Zaid,14,1,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Zaid,14,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Zaid,14,6,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Shaun,15,1,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Shaun,15,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Shaun,15,5,s,wicket,stumped,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Shaun,15,6,w,wicket,caught,-5
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Akhil,16,3,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Rafal,Akhil,16,5,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Chibin,13,2,3,runs,,3
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Chibin,13,6,ls,extra,legside,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Zaid,14,2,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Zaid,14,4,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Zaid,14,5,4,runs,,4
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Shaun,15,2,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Shaun,15,4,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Akhil,16,1,0,runs,,0
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Akhil,16,2,1,runs,,1
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Akhil,16,4,2,runs,,2
+autumn2026,G11,2026-04-02,Super Kings,Durban Mallu's,4,Rafal & Noodle,Noodle,Akhil,16,6,2,runs,,2

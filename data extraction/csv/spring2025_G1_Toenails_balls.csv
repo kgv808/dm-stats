@@ -1,0 +1,195 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,Jaime.,1,1,4,runs,,4
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,Doug .,2,5,5,runs,,5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,William,3,1,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,William,3,2,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,William,3,3,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,William,3,4,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,Booger .,4,3,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,Booger .,4,4,5,runs,,5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Zade .,Booger .,4,6,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Jaime.,1,2,b,wicket,bowled,-5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Jaime.,1,3,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Jaime.,1,4,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Jaime.,1,5,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Jaime.,1,6,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Doug .,2,1,nb,extra,noball,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Doug .,2,2,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Doug .,2,3,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Doug .,2,4,ls1,extra,legside,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Doug .,2,6,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,William,3,5,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,William,3,6,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Booger .,4,1,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Booger .,4,2,1,runs,,1
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Booger .,4,5,ls1,extra,legside,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,1,Zade . & Chiban,Chiban,Booger .,4,7,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Kenedy,5,1,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Kenedy,5,3,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Kenedy,5,6,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Chardonnay .,6,1,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Chardonnay .,6,3,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Chardonnay .,6,4,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Chardonnay .,6,5,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Sergio,7,1,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Sergio,7,2,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Sergio,7,4,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Sergio,7,5,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Sergio,7,6,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Henry,8,1,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Henry,8,2,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Henry,8,4,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Kiaran N,Henry,8,5,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Kenedy,5,2,nb,extra,noball,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Kenedy,5,4,nb,extra,noball,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Kenedy,5,5,1,runs,,1
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Chardonnay .,6,2,4,runs,,4
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Chardonnay .,6,6,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Sergio,7,3,7,runs,,7
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Henry,8,3,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,2,Kiaran N & Zach,Zach,Henry,8,6,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Kenedy,9,1,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Kenedy,9,2,nb,extra,noball,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Kenedy,9,3,1,runs,,1
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Kenedy,9,5,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Kenedy,9,6,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Chardonnay .,10,1,7,runs,,7
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Chardonnay .,10,3,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Chardonnay .,10,4,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Chardonnay .,10,5,1,runs,,1
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Chardonnay .,10,6,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Sergio,11,1,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Sergio,11,2,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Sergio,11,3,1,runs,,1
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Sergio,11,5,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Sergio,11,6,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Henry,12,1,nb,extra,noball,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Henry,12,2,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Henry,12,3,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Henry,12,5,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Ash,Henry,12,6,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Arun,Kenedy,9,4,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Arun,Chardonnay .,10,2,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Arun,Sergio,11,4,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Arun,Henry,12,4,5,runs,,5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,3,Ash & Arun,Arun,Henry,12,7,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Jaime.,13,1,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Jaime.,13,2,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Jaime.,13,6,4,runs,,4
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Doug .,14,1,4,runs,,4
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Doug .,14,5,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,William,15,1,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,William,15,2,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,William,15,5,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,William,15,6,1,runs,,1
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Booger .,16,1,4,runs,,4
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Booger .,16,3,4,runs,,4
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Amir,Booger .,16,5,1,runs,,1
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Jaime.,13,3,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Jaime.,13,4,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Jaime.,13,5,3,runs,,3
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Doug .,14,2,ls,extra,legside,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Doug .,14,3,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Doug .,14,4,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Doug .,14,6,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,William,15,3,0,runs,,0
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,William,15,4,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Booger .,16,2,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Booger .,16,4,2,runs,,2
+spring2025,G1,2025-10-30,Durban Mallu's,Toenails,4,Amir & Nithin .,Nithin .,Booger .,16,6,3,runs,,3
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Kiaran N,1,1,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Kiaran N,1,4,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Kiaran N,1,5,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Kiaran N,1,6,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Chiban,2,1,ls,extra,legside,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Chiban,2,2,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Chiban,2,3,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Chiban,2,5,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Ash,3,1,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Ash,3,2,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Ash,3,4,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Zach,4,2,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Zach,4,5,b,wicket,bowled,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Booger .,Zach,4,6,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Kiaran N,1,2,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Kiaran N,1,3,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Chiban,2,4,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Chiban,2,6,nb,extra,noball,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Ash,3,3,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Ash,3,5,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Ash,3,6,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Zach,4,1,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Zach,4,3,b,wicket,bowled,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,1,Booger . & Jaime.,Jaime.,Zach,4,4,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Zade .,5,1,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Zade .,5,5,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Nithin .,6,1,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Nithin .,6,3,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Nithin .,6,5,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Nithin .,6,6,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Arun,7,1,nb,extra,noball,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Arun,7,2,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Arun,7,3,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Arun,7,5,3,runs,,3
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Amir,8,2,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Amir,8,3,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Amir,8,4,4,runs,,4
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,Henry,Amir,8,6,b,wicket,bowled,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Zade .,5,2,b,wicket,bowled,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Zade .,5,3,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Zade .,5,4,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Zade .,5,6,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Nithin .,6,2,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Nithin .,6,4,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Arun,7,4,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Arun,7,6,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Amir,8,1,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,2,Henry & William,William,Amir,8,5,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Sergio,Kiaran N,9,1,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Sergio,Kiaran N,9,2,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Sergio,Kiaran N,9,5,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Sergio,Zach,10,2,b,wicket,bowled,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Sergio,Zach,10,3,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Sergio,Chiban,12,2,ls,extra,legside,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Sergio,Chiban,12,6,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Kiaran N,9,3,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Kiaran N,9,4,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Kiaran N,9,6,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Zach,10,1,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Zach,10,4,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Zach,10,5,ls,extra,legside,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Zach,10,6,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Arun,11,1,b,wicket,bowled,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Arun,11,2,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Arun,11,3,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Arun,11,4,nb,extra,noball,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Arun,11,5,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Arun,11,6,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Chiban,12,1,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Chiban,12,3,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Chiban,12,4,nb,extra,noball,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,3,Sergio & Doug .,Doug .,Chiban,12,5,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Zade .,13,1,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Zade .,13,2,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Zade .,13,3,4,runs,,4
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Ash,14,1,3,runs,,3
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Ash,14,5,3,runs,,3
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Nithin .,15,2,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Nithin .,15,3,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Nithin .,15,4,7,runs,,7
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Nithin .,15,5,r,wicket,runout,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Amir,16,2,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Chardonnay .,Amir,16,5,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Zade .,13,4,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Zade .,13,5,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Zade .,13,6,w,wicket,caught,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Ash,14,2,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Ash,14,3,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Ash,14,4,c,wicket,caught,-5
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Ash,14,6,7,runs,,7
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Nithin .,15,1,3,runs,,3
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Nithin .,15,6,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Amir,16,1,2,runs,,2
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Amir,16,3,0,runs,,0
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Amir,16,4,1,runs,,1
+spring2025,G1,2025-10-30,Toenails,Durban Mallu's,4,Chardonnay . & Kenedy,Kenedy,Amir,16,6,c,wicket,caught,-5

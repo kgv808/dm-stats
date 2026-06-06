@@ -1,0 +1,195 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Josh,1,1,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Josh,1,2,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Josh,1,3,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Josh,1,4,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Christian,2,2,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Christian,2,4,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Christian,2,5,4,runs,,4
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Divian,3,4,b,wicket,bowled,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Divian,3,5,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Divian,3,6,7,runs,,7
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Duncan,4,1,7,runs,,7
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Duncan,4,4,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Amir,Duncan,4,6,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Josh,1,5,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Josh,1,6,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Christian,2,1,nb2,extra,noball,4
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Christian,2,3,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Christian,2,6,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Divian,3,1,c,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Divian,3,2,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Divian,3,3,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Duncan,4,2,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Duncan,4,3,nb1,extra,noball,3
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,1,Amir & Chibin,Chibin,Duncan,4,5,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Bertus,5,1,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Bertus,5,2,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Bertus,5,4,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Gareth,6,2,7,runs,,7
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Gareth,6,4,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Gareth,6,5,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Francious,7,6,5,runs,,5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Sparks,8,1,3,runs,,3
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Akhil,Sparks,8,3,7,runs,,7
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Bertus,5,3,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Bertus,5,5,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Bertus,5,6,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Gareth,6,1,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Gareth,6,3,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Gareth,6,6,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Francious,7,1,nb,extra,noball,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Francious,7,2,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Francious,7,3,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Francious,7,4,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Francious,7,5,3,runs,,3
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Sparks,8,2,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Sparks,8,4,b,wicket,bowled,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Sparks,8,5,nb,extra,noball,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Sparks,8,6,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,2,Akhil & Vinay,Vinay,Sparks,8,7,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Bertus,9,1,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Bertus,9,3,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Bertus,9,4,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Bertus,9,6,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Gareth,10,2,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Gareth,10,3,nb,extra,noball,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Gareth,10,4,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Gareth,10,6,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Francious,11,1,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Francious,11,2,c,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Francious,11,5,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Francious,11,6,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Duncan,12,1,c,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Duncan,12,3,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Duncan,12,4,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Duncan,12,5,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Duncan,12,6,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Kiran Varghese,Duncan,12,7,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Shaun,Bertus,9,2,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Shaun,Bertus,9,5,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Shaun,Gareth,10,1,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Shaun,Gareth,10,5,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Shaun,Francious,11,3,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Shaun,Francious,11,4,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,3,Kiran Varghese & Shaun,Shaun,Duncan,12,2,3,runs,,3
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Josh,13,1,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Josh,13,3,b,wicket,bowled,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Josh,13,4,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Josh,13,5,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Sparks,14,4,3,runs,,3
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Christian,15,4,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Christian,15,5,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Christian,15,6,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Divian,16,1,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Divian,16,2,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Divian,16,3,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Divian,16,4,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Nithin,Divian,16,6,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Josh,13,2,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Josh,13,6,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Sparks,14,1,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Sparks,14,2,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Sparks,14,3,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Sparks,14,5,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Sparks,14,6,2,runs,,2
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Christian,15,1,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Christian,15,2,0,runs,,0
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Christian,15,3,1,runs,,1
+autumn2026,G7,2026-02-24,Durban Mallu's,Incredibles,4,Nithin & Goukol,Goukol,Divian,16,5,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Kiran Varghese,1,1,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Kiran Varghese,1,3,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Kiran Varghese,1,4,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Kiran Varghese,1,6,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Shaun,2,1,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Shaun,2,2,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Shaun,2,4,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Shaun,2,6,nb4,extra,noball,6
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Vinay,3,1,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Vinay,3,2,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Vinay,3,4,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Amir,4,1,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Amir,4,4,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Divian,Amir,4,6,4,runs,,4
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Kiran Varghese,1,2,4,runs,,4
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Kiran Varghese,1,5,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Shaun,2,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Shaun,2,5,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Vinay,3,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Vinay,3,5,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Vinay,3,6,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Amir,4,2,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Amir,4,3,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,1,Divian & Sparks,Sparks,Amir,4,5,c,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Goukol,5,1,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Goukol,5,4,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Goukol,5,6,3,runs,,3
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Chibin,6,1,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Chibin,6,5,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Akhil,7,2,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Akhil,7,3,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Akhil,7,4,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Akhil,7,6,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Nithin,8,1,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Nithin,8,2,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Francious,Nithin,8,5,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Goukol,5,2,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Goukol,5,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Goukol,5,5,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Chibin,6,2,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Chibin,6,3,b,wicket,bowled,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Chibin,6,4,nb4,extra,noball,6
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Chibin,6,6,nb,extra,noball,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Akhil,7,1,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Akhil,7,5,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Nithin,8,3,b,wicket,bowled,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Nithin,8,4,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,2,Francious & Christian,Christian,Nithin,8,6,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Kiran Varghese,9,1,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Kiran Varghese,9,2,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Kiran Varghese,9,4,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Kiran Varghese,9,5,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Vinay,10,2,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Vinay,10,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Vinay,10,5,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Vinay,10,6,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Goukol,11,2,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Goukol,11,4,7,runs,,7
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Goukol,11,6,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Shaun,12,1,nb,extra,noball,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Shaun,12,2,nb,extra,noball,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Shaun,12,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Josh,Shaun,12,5,b,wicket,bowled,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Kiran Varghese,9,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Kiran Varghese,9,6,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Vinay,10,1,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Vinay,10,4,3,runs,,3
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Goukol,11,1,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Goukol,11,3,7,runs,,7
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Goukol,11,5,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Shaun,12,4,c,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,3,Josh & Gareth,Gareth,Shaun,12,6,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Amir,13,1,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Amir,13,2,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Amir,13,4,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Chibin,14,2,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Chibin,14,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Chibin,14,5,w,wicket,caught,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Chibin,14,6,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Akhil,15,1,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Akhil,15,4,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Akhil,15,6,st,wicket,stumped,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Nithin,16,3,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Nithin,16,4,4,runs,,4
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Bertus,Nithin,16,6,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Amir,13,3,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Amir,13,5,ro,wicket,runout,-5
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Amir,13,6,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Chibin,14,1,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Chibin,14,4,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Akhil,15,2,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Akhil,15,3,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Akhil,15,5,2,runs,,2
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Nithin,16,1,0,runs,,0
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Nithin,16,2,1,runs,,1
+autumn2026,G7,2026-02-24,Incredibles,Durban Mallu's,4,Bertus & Duncan,Duncan,Nithin,16,5,2,runs,,2

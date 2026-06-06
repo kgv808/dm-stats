@@ -1,0 +1,193 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Lance .,1,1,nb3,extra,noball,5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Lance .,1,4,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Lance .,1,5,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Dylan Eriksen-Miller,2,3,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Dylan Eriksen-Miller,2,4,nb,extra,noball,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Dylan Eriksen-Miller,2,5,7,runs,,7
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Keagan,3,1,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Keagan,3,3,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Feebs,4,3,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Arun,Feebs,4,6,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Lance .,1,2,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Lance .,1,3,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Lance .,1,6,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Dylan Eriksen-Miller,2,1,c,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Dylan Eriksen-Miller,2,2,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Dylan Eriksen-Miller,2,6,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Keagan,3,2,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Keagan,3,4,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Keagan,3,5,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Keagan,3,6,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Feebs,4,1,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Feebs,4,2,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Feebs,4,4,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,1,Arun & Zach,Zach,Feebs,4,5,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Liam Chapman,5,1,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Liam Chapman,5,2,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Liam Chapman,5,3,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Liam Chapman,5,4,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Jared Em,6,5,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Justin Knocker,7,1,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Justin Knocker,7,5,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Brock Mcclue,8,4,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Brock Mcclue,8,5,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Yusuf .,Brock Mcclue,8,6,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Liam Chapman,5,5,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Liam Chapman,5,6,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Jared Em,6,1,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Jared Em,6,2,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Jared Em,6,3,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Jared Em,6,4,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Jared Em,6,6,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Justin Knocker,7,2,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Justin Knocker,7,3,6,runs,,6
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Justin Knocker,7,4,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Justin Knocker,7,6,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Brock Mcclue,8,1,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Brock Mcclue,8,2,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,2,Yusuf . & Kiran N,Kiran N,Brock Mcclue,8,3,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Lance .,9,1,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Lance .,9,5,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Dylan Eriksen-Miller,10,1,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Dylan Eriksen-Miller,10,6,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Justin Knocker,11,1,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Justin Knocker,11,3,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Justin Knocker,11,5,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Jared Em,12,1,nb,extra,noball,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Jared Em,12,2,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Godfrey,Jared Em,12,6,c,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Lance .,9,2,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Lance .,9,3,w,wicket,caught,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Lance .,9,4,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Lance .,9,6,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Dylan Eriksen-Miller,10,2,nb,extra,noball,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Dylan Eriksen-Miller,10,3,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Dylan Eriksen-Miller,10,4,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Dylan Eriksen-Miller,10,5,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Justin Knocker,11,2,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Justin Knocker,11,4,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Justin Knocker,11,6,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Jared Em,12,3,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Jared Em,12,4,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,3,Godfrey & Shaun,Shaun,Jared Em,12,5,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Keagan,13,1,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Keagan,13,2,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Keagan,13,5,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Liam Chapman,14,1,4,runs,,4
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Liam Chapman,14,4,4,runs,,4
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Liam Chapman,14,6,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Feebs,15,1,nb3,extra,noball,5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Feebs,15,3,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Brock Mcclue,16,1,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Brock Mcclue,16,2,2,runs,,2
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Zayd,Brock Mcclue,16,4,3,runs,,3
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Keagan,13,3,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Keagan,13,4,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Keagan,13,6,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Liam Chapman,14,2,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Liam Chapman,14,3,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Liam Chapman,14,5,4,runs,,4
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Feebs,15,2,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Feebs,15,4,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Feebs,15,5,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Feebs,15,6,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Brock Mcclue,16,3,1,runs,,1
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Brock Mcclue,16,5,0,runs,,0
+spring2025,G2,2025-11-04,Durban Mallu's,The Gravel Donkeys,4,Zayd & Kiran Varghese,Kiran Varghese,Brock Mcclue,16,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Kiran Varghese,1,1,nb,extra,noball,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Kiran Varghese,1,2,b,wicket,bowled,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Kiran Varghese,1,3,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Kiran Varghese,1,4,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Kiran Varghese,1,5,4,runs,,4
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Godfrey,2,1,w,wicket,caught,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Godfrey,2,2,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Godfrey,2,5,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Zach,3,1,b,wicket,bowled,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Zach,3,2,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Zach,3,3,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Zach,3,5,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Yusuf .,4,2,5,runs,,5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Yusuf .,4,5,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Liam Chapman,Yusuf .,4,6,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Kiran Varghese,1,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Godfrey,2,3,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Godfrey,2,4,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Godfrey,2,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Zach,3,4,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Zach,3,6,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Yusuf .,4,1,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Yusuf .,4,3,b,wicket,bowled,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,1,Liam Chapman & Lance .,Lance .,Yusuf .,4,4,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Zayd,5,1,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Zayd,5,2,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Zayd,5,4,7,runs,,7
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Zayd,5,6,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Shaun,6,2,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Shaun,6,4,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Shaun,6,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Arun,7,1,7,runs,,7
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Arun,7,3,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Arun,7,5,3,runs,,3
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Kiran N,8,1,3,runs,,3
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Kiran N,8,3,3,runs,,3
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Brock Mcclue,Kiran N,8,5,c,wicket,caught,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Zayd,5,3,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Zayd,5,5,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Shaun,6,1,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Shaun,6,3,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Shaun,6,5,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Arun,7,2,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Arun,7,4,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Arun,7,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Kiran N,8,2,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Kiran N,8,4,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,2,Brock Mcclue & Dylan Eriksen-Miller,Dylan Eriksen-Miller,Kiran N,8,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Shaun,9,1,w,wicket,caught,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Shaun,9,2,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Shaun,9,5,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Shaun,9,6,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Arun,10,1,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Arun,10,2,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Arun,10,3,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Arun,10,6,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Godfrey,11,1,b,wicket,bowled,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Godfrey,11,2,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Godfrey,11,6,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Kiran Varghese,12,1,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Kiran Varghese,12,3,c,wicket,caught,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Kiran Varghese,12,4,w,wicket,caught,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Justin Knocker,Kiran Varghese,12,5,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Shaun,9,3,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Shaun,9,4,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Arun,10,4,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Arun,10,5,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Godfrey,11,3,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Godfrey,11,4,b,wicket,bowled,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Godfrey,11,5,c,wicket,caught,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Kiran Varghese,12,2,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,3,Justin Knocker & Jared Em,Jared Em,Kiran Varghese,12,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Zach,13,1,c,wicket,caught,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Zach,13,3,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Zach,13,6,7,runs,,7
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Yusuf .,14,1,4,runs,,4
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Yusuf .,14,3,7,runs,,7
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Yusuf .,14,5,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Kiaran N,15,2,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Kiaran N,15,4,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Kiaran N,15,5,3,runs,,3
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Zayd,16,1,1,runs,,1
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Zayd,16,3,4,runs,,4
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Feebs,Zayd,16,5,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Zach,13,2,5,runs,,5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Zach,13,4,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Zach,13,5,4,runs,,4
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Yusuf .,14,2,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Yusuf .,14,4,4,runs,,4
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Yusuf .,14,6,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Kiaran N,15,1,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Kiaran N,15,3,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Kiaran N,15,6,0,runs,,0
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Zayd,16,2,2,runs,,2
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Zayd,16,4,ro,wicket,runout,-5
+spring2025,G2,2025-11-04,The Gravel Donkeys,Durban Mallu's,4,Feebs & Keagan,Keagan,Zayd,16,6,2,runs,,2

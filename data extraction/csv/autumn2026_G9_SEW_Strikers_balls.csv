@@ -1,0 +1,196 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Jessie,1,1,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Jessie,1,2,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Jessie,1,3,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Jan,2,3,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Jan,2,4,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Jan,2,6,nb,extra,noball,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Kyle,3,2,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Kyle,3,3,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Kyle,3,5,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Garry,4,2,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Garry,4,3,3,runs,,3
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Garry,4,5,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Ameer,Garry,4,6,7,runs,,7
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Jessie,1,4,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Jessie,1,5,b,wicket,bowled,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Jessie,1,6,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Jan,2,1,nb,extra,noball,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Jan,2,2,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Jan,2,5,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Kyle,3,1,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Kyle,3,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Kyle,3,6,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Garry,4,1,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,1,Ameer & Chibin,Chibin,Garry,4,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Kevin,5,1,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Kevin,5,3,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Kevin,5,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Jan,6,6,3,runs,,3
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Shaun Graver,7,1,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Shaun Graver,7,2,3,runs,,3
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Shaun Graver,7,6,b,wicket,bowled,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Masindi,8,2,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Masindi,8,3,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Masindi,8,5,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Masindi,8,6,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Shaun,Masindi,8,7,b,wicket,bowled,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Kevin,5,2,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Kevin,5,5,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Kevin,5,6,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Jan,6,1,nb,extra,noball,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Jan,6,2,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Jan,6,3,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Jan,6,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Jan,6,5,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Shaun Graver,7,3,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Shaun Graver,7,4,b,wicket,bowled,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Shaun Graver,7,5,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Masindi,8,1,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,2,Shaun & Kiran Varghese,Kiran Varghese,Masindi,8,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Garry,9,1,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Garry,9,4,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Garry,9,5,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kyle,10,1,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kyle,10,3,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kyle,10,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Shaun Graver,11,1,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Shaun Graver,11,2,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Shaun Graver,11,4,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Shaun Graver,11,5,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kemp,12,3,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kemp,12,4,nb,extra,noball,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kemp,12,5,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kemp,12,6,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Ashwin,Kemp,12,7,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Garry,9,2,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Garry,9,3,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Garry,9,6,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Kyle,10,2,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Kyle,10,5,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Kyle,10,6,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Shaun Graver,11,3,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Shaun Graver,11,6,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Kemp,12,1,nb,extra,noball,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,3,Ashwin & Dony,Dony,Kemp,12,2,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Kevin,13,1,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Kevin,13,2,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Kevin,13,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Masindi,14,1,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Masindi,14,4,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Masindi,14,5,3,runs,,3
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Kemp,15,4,4,runs,,4
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Kemp,15,6,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Jessie,16,3,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Nandu,Jessie,16,5,1,runs,,1
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Kevin,13,3,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Kevin,13,5,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Kevin,13,6,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Masindi,14,2,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Masindi,14,3,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Masindi,14,6,3,runs,,3
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Kemp,15,1,nb,extra,noball,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Kemp,15,2,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Kemp,15,3,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Kemp,15,5,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Jessie,16,1,0,runs,,0
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Jessie,16,2,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Jessie,16,4,2,runs,,2
+autumn2026,G9,2026-03-11,Durban Mallu's,SEW Strikers,4,Nandu & Akhil,Akhil,Jessie,16,6,3,runs,,3
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Kiran Varghese,1,1,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Kiran Varghese,1,3,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Kiran Varghese,1,4,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Kiran Varghese,1,6,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Dony,2,1,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Dony,2,3,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Dony,2,5,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Ameer,3,3,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Ameer,3,6,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Chibin,4,2,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Kyle,Chibin,4,5,3,runs,,3
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Kiran Varghese,1,2,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Kiran Varghese,1,5,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Dony,2,2,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Dony,2,4,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Dony,2,6,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Ameer,3,1,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Ameer,3,2,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Ameer,3,4,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Ameer,3,5,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Chibin,4,1,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Chibin,4,3,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Chibin,4,4,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,1,Kyle & Jan,Jan,Chibin,4,6,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Akhil,5,1,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Akhil,5,2,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Akhil,5,3,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Akhil,5,5,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Ashwin,6,1,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Ashwin,6,3,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Ashwin,6,4,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Ashwin,6,6,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Shaun,7,1,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Shaun,7,2,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Shaun,7,5,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Shaun,7,6,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Nandu,8,5,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Nandu,8,6,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Kevin,Nandu,8,7,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Akhil,5,4,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Akhil,5,6,b,wicket,bowled,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Ashwin,6,2,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Ashwin,6,5,3,runs,,3
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Shaun,7,3,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Shaun,7,4,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Nandu,8,1,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Nandu,8,2,b,wicket,bowled,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Nandu,8,3,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,2,Kevin & Jessie,Jessie,Nandu,8,4,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Kiran Varghese,9,1,nb7,extra,noball,9
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Kiran Varghese,9,3,7,runs,,7
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Kiran Varghese,9,6,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Ashwin,10,3,5,runs,,5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Ashwin,10,4,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Ameer,11,2,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Ameer,11,5,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Shaun Graver,Nandu,12,3,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Kiran Varghese,9,2,3,runs,,3
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Kiran Varghese,9,4,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Kiran Varghese,9,5,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ashwin,10,1,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ashwin,10,2,3,runs,,3
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ashwin,10,5,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ashwin,10,6,4,runs,,4
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ameer,11,1,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ameer,11,3,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ameer,11,4,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Ameer,11,6,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Nandu,12,1,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Nandu,12,2,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Nandu,12,4,b,wicket,bowled,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Nandu,12,5,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,3,Shaun Graver & Garry,Garry,Nandu,12,6,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Shaun,13,1,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Shaun,13,2,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Shaun,13,4,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Shaun,13,6,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Dony,14,1,nb,extra,noball,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Dony,14,2,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Chibin,15,3,c,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Chibin,15,4,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Chibin,15,5,5,runs,,5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Masindi,Akhil,16,6,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Shaun,13,3,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Shaun,13,5,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Dony,14,3,3,runs,,3
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Dony,14,4,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Dony,14,5,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Dony,14,6,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Chibin,15,1,w,wicket,caught,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Chibin,15,2,2,runs,,2
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Chibin,15,6,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Akhil,16,1,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Akhil,16,2,1,runs,,1
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Akhil,16,3,ro,wicket,runout,-5
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Akhil,16,4,0,runs,,0
+autumn2026,G9,2026-03-11,SEW Strikers,Durban Mallu's,4,Masindi & Kemp,Kemp,Akhil,16,5,2,runs,,2

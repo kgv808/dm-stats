@@ -1,0 +1,193 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Phen10,1,1,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Phen10,1,2,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Phen10,1,4,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Phen10,1,6,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Mekyle,2,1,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Mekyle,2,4,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Mekyle,2,6,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Eckhard,3,1,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Eckhard,3,3,c,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Eckhard,3,5,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Jason Edrs,4,1,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Jason Edrs,4,3,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Jason Edrs,4,4,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Don,Jason Edrs,4,5,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Phen10,1,3,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Phen10,1,5,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Mekyle,2,2,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Mekyle,2,3,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Mekyle,2,5,3,runs,,3
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Eckhard,3,2,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Eckhard,3,4,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Eckhard,3,6,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Jason Edrs,4,2,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,1,Don & Akhil,Akhil,Jason Edrs,4,6,c,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Shaun,5,1,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Shaun,5,2,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Shaun,5,4,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Shaun,5,5,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Chin,6,3,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Chin,6,5,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Mekyle,7,1,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Mekyle,7,3,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Mekyle,7,6,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Chin,8,2,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Shaun,Chin,8,4,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Shaun,5,3,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Shaun,5,6,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,6,1,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,6,2,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,6,4,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,6,6,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Mekyle,7,2,c,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Mekyle,7,4,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Mekyle,7,5,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,8,1,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,8,3,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,8,5,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,2,Shaun & Kieran,Kieran,Chin,8,6,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Brandon,9,1,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Brandon,9,2,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Brandon,9,5,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Shaun,10,1,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Shaun,10,5,7,runs,,7
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Eckhard,11,2,c,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Eckhard,11,3,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Eckhard,11,4,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Siphe,12,3,5,runs,,5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Arun,Siphe,12,6,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Brandon,9,3,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Brandon,9,4,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Brandon,9,6,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Shaun,10,2,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Shaun,10,3,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Shaun,10,4,nb1,extra,noball,3
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Shaun,10,6,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Eckhard,11,1,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Eckhard,11,5,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Eckhard,11,6,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Siphe,12,1,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Siphe,12,2,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Siphe,12,4,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,3,Arun & Chibin,Chibin,Siphe,12,5,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Jason Edrs,13,1,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Jason Edrs,13,3,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Jason Edrs,13,5,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Brandon,14,2,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Brandon,14,5,nb2,extra,noball,4
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Siphe,15,1,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Siphe,15,3,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Siphe,15,5,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Phen10,16,1,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Phen10,16,3,w1,wicket,caught,-4
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Phen10,16,5,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Vish,Phen10,16,6,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Jason Edrs,13,2,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Jason Edrs,13,4,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Jason Edrs,13,6,2,runs,,2
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Brandon,14,1,3,runs,,3
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Brandon,14,3,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Brandon,14,4,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Brandon,14,6,0,runs,,0
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Siphe,15,2,w1,wicket,caught,-4
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Siphe,15,4,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Siphe,15,6,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Phen10,16,2,1,runs,,1
+autumn2026,G13,2026-04-23,Durban Mallu's,Haduuuuken,4,Vish & Aaron,Aaron,Phen10,16,4,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Kieran,1,1,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Kieran,1,2,w1,wicket,caught,-4
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Kieran,1,5,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Vish,2,2,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Vish,2,3,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Vish,2,5,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Shaun,3,2,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Shaun,3,3,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Shaun,3,6,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Aaron,4,2,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Aaron,4,4,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Jason Edrs,Aaron,4,6,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Kieran,1,3,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Kieran,1,4,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Kieran,1,6,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Vish,2,1,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Vish,2,4,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Vish,2,6,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Shaun,3,1,3,runs,,3
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Shaun,3,4,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Shaun,3,5,3,runs,,3
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Aaron,4,1,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Aaron,4,3,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,1,Jason Edrs & Eckhard,Eckhard,Aaron,4,5,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Chibin,5,1,nb,extra,noball,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Chibin,5,2,nb2,extra,noball,4
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Chibin,5,5,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Arun,6,3,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Arun,6,5,4,runs,,4
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Don,7,1,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Don,7,3,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Don,7,6,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Akhil,8,2,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Akhil,8,3,3,runs,,3
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Mekyle,Akhil,8,6,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Chibin,5,3,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Chibin,5,4,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Chibin,5,6,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Arun,6,1,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Arun,6,2,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Arun,6,4,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Arun,6,6,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Don,7,2,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Don,7,4,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Don,7,5,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Akhil,8,1,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Akhil,8,4,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,2,Mekyle & Shaun,Shaun,Akhil,8,5,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Kieran,9,1,nb,extra,noball,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Kieran,9,2,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Kieran,9,5,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Don,10,1,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Don,10,4,4,runs,,4
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Shaun,11,4,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Shaun,11,5,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Aaron,12,3,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Aaron,12,4,c,wicket,caught,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Phen10,Aaron,12,6,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Kieran,9,3,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Kieran,9,4,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Kieran,9,6,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Don,10,2,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Don,10,3,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Don,10,5,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Don,10,6,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Shaun,11,1,nb,extra,noball,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Shaun,11,2,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Shaun,11,3,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Shaun,11,6,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Aaron,12,1,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Aaron,12,2,3,runs,,3
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,3,Phen10 & Chin,Chin,Aaron,12,5,4,runs,,4
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Chibin,13,1,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Chibin,13,3,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Chibin,13,5,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Chibin,13,6,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Arun,14,1,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Arun,14,4,w,wicket,caught,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Arun,14,5,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Arun,14,6,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Vish,15,3,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Vish,15,4,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Vish,15,6,2,runs,,2
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Akhil,16,1,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Akhil,16,2,3,runs,,3
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Siphe,Akhil,16,5,7,runs,,7
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Chibin,13,2,4,runs,,4
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Chibin,13,4,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Arun,14,2,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Arun,14,3,1,runs,,1
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Vish,15,1,0,runs,,0
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Vish,15,2,c,wicket,caught,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Vish,15,5,4,runs,,4
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Akhil,16,3,r,wicket,runout,-5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Akhil,16,4,5,runs,,5
+autumn2026,G13,2026-04-23,Haduuuuken,Durban Mallu's,4,Siphe & Brandon,Brandon,Akhil,16,6,0,runs,,0

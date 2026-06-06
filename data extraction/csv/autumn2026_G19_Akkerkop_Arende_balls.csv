@@ -1,0 +1,193 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Gerhard,1,1,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Gerhard,1,5,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Collin,2,3,4,runs,,4
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Collin,2,5,3,runs,,3
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Juandre,3,1,3,runs,,3
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Juandre,3,4,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Wian,4,3,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Ice,Wian,4,6,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Gerhard,1,2,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Gerhard,1,3,st,wicket,stumped,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Gerhard,1,4,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Gerhard,1,6,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Collin,2,1,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Collin,2,2,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Collin,2,4,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Collin,2,6,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Juandre,3,2,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Juandre,3,3,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Juandre,3,5,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Juandre,3,6,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Wian,4,1,w,wicket,caught,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Wian,4,2,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Wian,4,4,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,1,Ice & Chibin,Chibin,Wian,4,5,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Theo Van Heerden,5,1,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Theo Van Heerden,5,3,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Theo Van Heerden,5,6,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Roodt,6,2,5,runs,,5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Roodt,6,4,7,runs,,7
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Roodt,6,6,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Barend,7,1,w,wicket,caught,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Barend,7,2,nb,extra,noball,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Barend,7,3,nb3,extra,noball,5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Stefan,8,1,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Stefan,8,2,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Arun,Stefan,8,6,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Theo Van Heerden,5,2,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Theo Van Heerden,5,4,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Theo Van Heerden,5,5,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Roodt,6,1,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Roodt,6,3,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Roodt,6,5,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Barend,7,4,nb,extra,noball,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Barend,7,5,nb,extra,noball,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Barend,7,6,nb,extra,noball,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Stefan,8,3,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Stefan,8,4,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,2,Arun & Kiran Varghese,Kiran Varghese,Stefan,8,5,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Barend,9,1,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Barend,9,4,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Barend,9,5,5,runs,,5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Barend,9,6,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Theo Van Heerden,10,3,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Theo Van Heerden,10,5,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Juandre,11,3,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Juandre,11,4,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Roodt,12,4,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Vijay,Roodt,12,5,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Barend,9,2,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Barend,9,3,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Theo Van Heerden,10,1,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Theo Van Heerden,10,2,7,runs,,7
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Theo Van Heerden,10,4,7,runs,,7
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Theo Van Heerden,10,6,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Juandre,11,1,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Juandre,11,2,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Juandre,11,5,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Juandre,11,6,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Roodt,12,1,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Roodt,12,2,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Roodt,12,3,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,3,Vijay & Akhil,Akhil,Roodt,12,6,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Collin,13,1,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Collin,13,2,3,runs,,3
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Collin,13,4,c,wicket,caught,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Wian,14,2,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Wian,14,3,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Wian,14,5,3,runs,,3
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Gerhard,15,3,3,runs,,3
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Gerhard,15,5,3,runs,,3
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Stefan,16,2,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Stefan,16,3,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Zaid,Stefan,16,6,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Collin,13,3,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Collin,13,5,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Collin,13,6,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Wian,14,1,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Wian,14,4,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Wian,14,6,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Gerhard,15,1,0,runs,,0
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Gerhard,15,2,1,runs,,1
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Gerhard,15,4,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Gerhard,15,6,3,runs,,3
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Stefan,16,1,2,runs,,2
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Stefan,16,4,w,wicket,caught,-5
+autumn2026,G19,2026-06-02,Durban Mallu's,Akkerkop Arende,4,Zaid & Ashwin,Ashwin,Stefan,16,5,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Kiran Varghese,1,1,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Kiran Varghese,1,6,5,runs,,5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Chibin,2,1,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Chibin,2,2,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Chibin,2,5,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Vijay,3,3,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Vijay,3,5,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Vijay,3,6,7,runs,,7
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Ice,4,1,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Theo Van Heerden,Ice,4,4,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Kiran Varghese,1,2,nb,extra,noball,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Kiran Varghese,1,3,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Kiran Varghese,1,4,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Kiran Varghese,1,5,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Chibin,2,3,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Chibin,2,4,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Chibin,2,6,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Vijay,3,1,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Vijay,3,2,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Vijay,3,4,5,runs,,5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Ice,4,2,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Ice,4,3,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Ice,4,5,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,1,Theo Van Heerden & Wian,Wian,Ice,4,6,st,wicket,stumped,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Zaid,5,1,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Zaid,5,4,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Arun,6,2,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Arun,6,4,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Arun,6,5,3,runs,,3
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Ashwin,7,1,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Ashwin,7,3,nb,extra,noball,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Ashwin,7,4,c,wicket,caught,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Ashwin,7,5,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Akhil,8,1,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Akhil,8,2,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Akhil,8,4,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Gerhard,Akhil,8,6,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Zaid,5,2,w,wicket,caught,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Zaid,5,3,3,runs,,3
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Zaid,5,5,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Zaid,5,6,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Arun,6,1,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Arun,6,3,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Arun,6,6,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Ashwin,7,2,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Ashwin,7,6,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Akhil,8,3,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,2,Gerhard & Barend,Barend,Akhil,8,5,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Kiran Varghese,9,1,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Kiran Varghese,9,2,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Kiran Varghese,9,6,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Chibin,10,1,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Chibin,10,2,w,wicket,caught,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Chibin,10,3,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Chibin,10,4,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Vijay,11,2,4,runs,,4
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Vijay,11,4,3,runs,,3
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Vijay,11,6,5,runs,,5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Akhil,12,1,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Akhil,12,4,4,runs,,4
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Roodt,Akhil,12,6,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Kiran Varghese,9,3,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Kiran Varghese,9,4,b,wicket,bowled,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Kiran Varghese,9,5,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Chibin,10,5,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Chibin,10,6,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Vijay,11,1,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Vijay,11,3,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Vijay,11,5,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Akhil,12,2,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Akhil,12,3,c,wicket,caught,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,3,Roodt & Juandre,Juandre,Akhil,12,5,3,runs,,3
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Zaid,13,1,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Zaid,13,4,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Zaid,13,5,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Arun,14,1,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Arun,14,2,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Arun,14,5,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Arun,14,6,4,runs,,4
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Ashwin,15,1,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Ashwin,15,3,b,wicket,bowled,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Ashwin,15,4,3,runs,,3
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Ice,16,4,ls,extra,legside,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Stefan,Ice,16,5,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Zaid,13,2,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Zaid,13,3,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Zaid,13,6,b,wicket,bowled,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Arun,14,3,c,wicket,caught,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Arun,14,4,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Ashwin,15,2,2,runs,,2
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Ashwin,15,5,b,wicket,bowled,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Ashwin,15,6,r,wicket,runout,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Ice,16,1,b,wicket,bowled,-5
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Ice,16,2,0,runs,,0
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Ice,16,3,1,runs,,1
+autumn2026,G19,2026-06-02,Akkerkop Arende,Durban Mallu's,4,Stefan & Collin,Collin,Ice,16,6,0,runs,,0

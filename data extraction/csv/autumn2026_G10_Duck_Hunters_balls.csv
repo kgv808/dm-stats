@@ -1,0 +1,195 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Jesse Kotze,1,1,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Jesse Kotze,1,4,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Ruben Van Tonder,2,1,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Ruben Van Tonder,2,4,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Ruben Van Tonder,2,5,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Evert Van Schalwyk,3,4,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Dian Botha,4,2,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Ameer,Dian Botha,4,4,7,runs,,7
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Jesse Kotze,1,2,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Jesse Kotze,1,3,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Jesse Kotze,1,5,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Jesse Kotze,1,6,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Ruben Van Tonder,2,2,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Ruben Van Tonder,2,3,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Ruben Van Tonder,2,6,3,runs,,3
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Evert Van Schalwyk,3,1,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Evert Van Schalwyk,3,2,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Evert Van Schalwyk,3,3,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Evert Van Schalwyk,3,5,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Evert Van Schalwyk,3,6,w1,wicket,caught,-4
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Dian Botha,4,1,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Dian Botha,4,3,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Dian Botha,4,5,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Dian Botha,4,6,w1,wicket,caught,-4
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,1,Ameer & Chibin,Chibin,Dian Botha,4,7,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,Marnus Kotze,5,1,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,Marnus Kotze,5,2,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,Marnus Kotze,5,6,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,Zander Jansen Van Rensburg,6,1,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,Zander Jansen Van Rensburg,6,2,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,Zander Jansen Van Rensburg,6,5,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,James Van Der Merwe,7,3,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Vijay,Rickard Swartz,8,1,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Marnus Kotze,5,3,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Marnus Kotze,5,4,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Marnus Kotze,5,5,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Zander Jansen Van Rensburg,6,3,b,wicket,bowled,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Zander Jansen Van Rensburg,6,4,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Zander Jansen Van Rensburg,6,6,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,James Van Der Merwe,7,1,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,James Van Der Merwe,7,2,3,runs,,3
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,James Van Der Merwe,7,4,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,James Van Der Merwe,7,5,c,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,James Van Der Merwe,7,6,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Rickard Swartz,8,2,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Rickard Swartz,8,3,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Rickard Swartz,8,4,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Rickard Swartz,8,5,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,2,Vijay & Kieran,Kieran,Rickard Swartz,8,6,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Marnus Kotze,9,1,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Marnus Kotze,9,4,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Marnus Kotze,9,5,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Dian Botha,10,2,c,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Dian Botha,10,3,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Dian Botha,10,4,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Dian Botha,10,6,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Zander Jansen Van Rensburg,11,1,4,runs,,4
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Zander Jansen Van Rensburg,11,3,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Zander Jansen Van Rensburg,11,4,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Zander Jansen Van Rensburg,11,5,nb2,extra,noball,4
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Rickard Swartz,12,1,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Rickard Swartz,12,2,3,runs,,3
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Rickard Swartz,12,5,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Arun,Rickard Swartz,12,6,7,runs,,7
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Marnus Kotze,9,2,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Marnus Kotze,9,3,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Marnus Kotze,9,6,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Dian Botha,10,1,c,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Dian Botha,10,5,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Zander Jansen Van Rensburg,11,2,4,runs,,4
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Zander Jansen Van Rensburg,11,6,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Rickard Swartz,12,3,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,3,Arun & Shaun,Shaun,Rickard Swartz,12,4,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Jesse Kotze,13,1,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Jesse Kotze,13,3,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Jesse Kotze,13,4,nb,extra,noball,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Jesse Kotze,13,5,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Ruben Van Tonder,14,2,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Ruben Van Tonder,14,3,1,runs,,1
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Ruben Van Tonder,14,6,3,runs,,3
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Evert Van Schalwyk,15,1,nb,extra,noball,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Evert Van Schalwyk,15,2,7,runs,,7
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Evert Van Schalwyk,15,3,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Evert Van Schalwyk,15,4,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,Evert Van Schalwyk,15,6,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,James Van Der Merwe,16,1,4,runs,,4
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,James Van Der Merwe,16,3,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Ice,James Van Der Merwe,16,5,7,runs,,7
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,Jesse Kotze,13,2,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,Jesse Kotze,13,6,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,Ruben Van Tonder,14,1,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,Ruben Van Tonder,14,4,0,runs,,0
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,Ruben Van Tonder,14,5,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,Evert Van Schalwyk,15,5,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,James Van Der Merwe,16,2,5,runs,,5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,James Van Der Merwe,16,4,2,runs,,2
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,James Van Der Merwe,16,6,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Durban Mallu's,Duck Hunters,4,Ice & Akhil,Akhil,James Van Der Merwe,16,7,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Kieran,1,1,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Kieran,1,3,6,runs,,6
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Kieran,1,6,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Chibin,2,1,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Chibin,2,4,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Chibin,2,6,3,runs,,3
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Ameer,3,1,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Ameer,3,3,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Ameer,3,4,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Ameer,3,6,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Akhil,4,1,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Akhil,4,3,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Akhil,4,5,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Evert Van Schalwyk,Akhil,4,6,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Kieran,1,2,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Kieran,1,4,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Kieran,1,5,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Chibin,2,2,b,wicket,bowled,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Chibin,2,3,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Chibin,2,5,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Ameer,3,2,5,runs,,5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Ameer,3,5,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Akhil,4,2,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,1,Evert Van Schalwyk & Jesse Kotze,Jesse Kotze,Akhil,4,4,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Shaun,5,1,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Shaun,5,6,nb,extra,noball,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Vijay,6,3,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Vijay,6,5,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Vijay,6,6,c,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Arun,7,2,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Arun,7,4,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Ice,8,3,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Ice,8,4,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,James Van Der Merwe,Ice,8,6,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Shaun,5,2,nb,extra,noball,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Shaun,5,3,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Shaun,5,4,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Shaun,5,5,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Vijay,6,1,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Vijay,6,2,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Vijay,6,4,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Arun,7,1,nb2,extra,noball,4
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Arun,7,3,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Arun,7,5,nb,extra,noball,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Arun,7,6,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Ice,8,1,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Ice,8,2,5,runs,,5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,2,James Van Der Merwe & Rickard Swartz,Rickard Swartz,Ice,8,5,3,runs,,3
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Kieran,9,1,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Kieran,9,2,b,wicket,bowled,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Kieran,9,3,c,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Kieran,9,5,3,runs,,3
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Ameer,10,3,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Ameer,10,4,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Ameer,10,6,7,runs,,7
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Vijay,11,1,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Vijay,11,4,b,wicket,bowled,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Vijay,11,5,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Vijay,11,6,st,wicket,stumped,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Ice,12,3,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Ice,12,5,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Dian Botha,Ice,12,6,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Kieran,9,4,3,runs,,3
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Kieran,9,6,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Ameer,10,1,st,wicket,stumped,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Ameer,10,2,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Ameer,10,5,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Vijay,11,2,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Vijay,11,3,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Ice,12,1,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Ice,12,2,w1,wicket,caught,-4
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,3,Dian Botha & Zander Jansen Van Rensburg,Zander Jansen Van Rensburg,Ice,12,4,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Shaun,13,1,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Shaun,13,3,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Shaun,13,4,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Shaun,13,6,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Akhil,14,1,0,runs,,0
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Akhil,14,2,7,runs,,7
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Akhil,14,4,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Akhil,14,6,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Chibin,15,1,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Chibin,15,2,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Chibin,15,3,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Chibin,15,4,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Chibin,15,5,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Arun,16,1,4,runs,,4
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Arun,16,4,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Ruben Van Tonder,Arun,16,5,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Shaun,13,2,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Shaun,13,5,c,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Akhil,14,3,1,runs,,1
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Akhil,14,5,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Chibin,15,6,r,wicket,runout,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Arun,16,2,w,wicket,caught,-5
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Arun,16,3,2,runs,,2
+autumn2026,G10,2026-03-17,Duck Hunters,Durban Mallu's,4,Ruben Van Tonder & Marnus Kotze,Marnus Kotze,Arun,16,6,c,wicket,caught,-5

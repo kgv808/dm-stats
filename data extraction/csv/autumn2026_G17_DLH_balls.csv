@@ -1,0 +1,195 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Jacque,1,1,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Jacque,1,4,nb,extra,noball,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Jacque,1,5,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Jacque,1,6,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Waldo Buffel,2,1,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Waldo Buffel,2,3,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Waldo Buffel,2,5,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Peanut,3,2,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Peanut,3,4,7,runs,,7
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Stef,4,3,7,runs,,7
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Nithin,Stef,4,5,4,runs,,4
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Jacque,1,2,ls,extra,legside,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Jacque,1,3,4,runs,,4
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Waldo Buffel,2,2,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Waldo Buffel,2,4,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Waldo Buffel,2,6,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Peanut,3,1,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Peanut,3,3,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Peanut,3,5,ls,extra,legside,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Peanut,3,6,3,runs,,3
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Stef,4,1,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Stef,4,2,3,runs,,3
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Stef,4,4,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,1,Nithin & Akhil,Akhil,Stef,4,6,4,runs,,4
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Quan,5,1,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Quan,5,2,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Quan,5,4,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Quan,5,5,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Duran Nassif,6,1,5,runs,,5
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Duran Nassif,6,5,nb,extra,noball,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Duran Nassif,6,6,3,runs,,3
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Tolla,7,1,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Tolla,7,2,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Tolla,7,5,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Steven,8,2,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Steven,8,3,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Arun,Steven,8,5,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Quan,5,3,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Quan,5,6,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Duran Nassif,6,2,ls,extra,legside,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Duran Nassif,6,3,nb,extra,noball,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Duran Nassif,6,4,c,wicket,caught,-5
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Tolla,7,3,b,wicket,bowled,-5
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Tolla,7,4,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Tolla,7,6,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Steven,8,1,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Steven,8,4,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,2,Arun & Kiran Varghese,Kiran Varghese,Steven,8,6,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Jacque,9,1,nb,extra,noball,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Jacque,9,2,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Peanut,10,1,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Peanut,10,4,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Duran Nassif,11,2,nb,extra,noball,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Duran Nassif,11,3,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Duran Nassif,11,4,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Duran Nassif,11,6,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Stef,12,1,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Stef,12,3,ls,extra,legside,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Stef,12,4,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Vijay,Stef,12,6,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Jacque,9,3,nb,extra,noball,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Jacque,9,4,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Jacque,9,5,nb,extra,noball,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Jacque,9,6,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Peanut,10,2,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Peanut,10,3,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Peanut,10,5,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Peanut,10,6,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Duran Nassif,11,1,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Duran Nassif,11,5,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Stef,12,2,4,runs,,4
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,3,Vijay & Shaun,Shaun,Stef,12,5,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Quan,13,1,nb2,extra,noball,4
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Quan,13,5,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Waldo Buffel,14,2,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Waldo Buffel,14,4,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Waldo Buffel,14,6,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Tolla,15,1,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Tolla,15,3,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Tolla,15,5,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Steven,16,4,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Vish,Steven,16,6,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Quan,13,2,ls,extra,legside,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Quan,13,3,ls,extra,legside,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Quan,13,4,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Quan,13,6,ls1,extra,legside,3
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Waldo Buffel,14,1,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Waldo Buffel,14,3,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Waldo Buffel,14,5,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Tolla,15,2,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Tolla,15,4,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Tolla,15,6,2,runs,,2
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Steven,16,1,w,wicket,caught,-5
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Steven,16,2,0,runs,,0
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Steven,16,3,1,runs,,1
+autumn2026,G17,2026-05-21,Durban Mallu's,DLH,4,Vish & Ashwin,Ashwin,Steven,16,5,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Akhil,1,1,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Akhil,1,2,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Vijay,2,1,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Vijay,2,4,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Kiran Varghese,3,1,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Kiran Varghese,3,2,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Kiran Varghese,3,5,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Kiran Varghese,3,6,5,runs,,5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Shaun,4,1,w,wicket,caught,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Shaun,4,2,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Shaun,4,4,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Tolla,Shaun,4,6,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Akhil,1,3,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Akhil,1,4,nb,extra,noball,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Akhil,1,5,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Akhil,1,6,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Vijay,2,2,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Vijay,2,3,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Vijay,2,5,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Vijay,2,6,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Kiran Varghese,3,3,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Kiran Varghese,3,4,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Shaun,4,3,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Shaun,4,5,nb,extra,noball,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,1,Tolla & Jacque,Jacque,Shaun,4,7,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Nithin,5,1,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Nithin,5,4,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Arun,6,1,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Arun,6,3,w,wicket,caught,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Arun,6,4,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Arun,6,6,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Ashwin,7,2,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Ashwin,7,3,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Ashwin,7,5,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Ashwin,7,6,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Vish,8,1,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Vish,8,4,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Duran Nassif,Vish,8,5,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Nithin,5,2,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Nithin,5,3,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Nithin,5,5,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Nithin,5,6,st,wicket,stumped,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Arun,6,2,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Arun,6,5,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Ashwin,7,1,7,runs,,7
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Ashwin,7,4,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Vish,8,2,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Vish,8,3,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,2,Duran Nassif & Stef,Stef,Vish,8,6,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Kiran Varghese,9,1,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Kiran Varghese,9,2,7,runs,,7
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Arun,10,1,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Arun,10,3,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Arun,10,4,5,runs,,5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Arun,10,6,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Akhil,11,2,c,wicket,caught,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Akhil,11,3,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Akhil,11,4,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Akhil,11,6,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Ashwin,12,1,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Peanut,Ashwin,12,4,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Kiran Varghese,9,3,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Kiran Varghese,9,4,nb,extra,noball,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Kiran Varghese,9,5,b,wicket,bowled,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Kiran Varghese,9,6,nb,extra,noball,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Arun,10,2,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Arun,10,5,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Akhil,11,1,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Akhil,11,5,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Ashwin,12,2,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Ashwin,12,3,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Ashwin,12,5,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Ashwin,12,6,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,3,Peanut & Waldo Buffel,Waldo Buffel,Ashwin,12,7,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Shaun,13,1,7,runs,,7
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Shaun,13,4,3,runs,,3
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Vijay,14,3,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Vijay,14,5,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Vish,15,1,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Vish,15,3,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Vish,15,5,b,wicket,bowled,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Vish,15,6,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Nithin,16,1,7,runs,,7
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Nithin,16,3,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Quan,Nithin,16,4,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Shaun,13,2,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Shaun,13,3,1,runs,,1
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Shaun,13,5,w,wicket,caught,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Shaun,13,6,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Vijay,14,1,ls,extra,legside,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Vijay,14,2,4,runs,,4
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Vijay,14,4,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Vijay,14,6,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Vish,15,2,r,wicket,runout,-5
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Vish,15,4,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Nithin,16,2,2,runs,,2
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Nithin,16,5,0,runs,,0
+autumn2026,G17,2026-05-21,DLH,Durban Mallu's,4,Quan & Steven,Steven,Nithin,16,6,1,runs,,1

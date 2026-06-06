@@ -509,7 +509,7 @@
     </div>
     <div class="data-note" style="margin-top:14px">
       <span class="data-note-icon">⚠️</span>
-      <span>Detailed stats (SR, 7s, DF, DB, Ex) confirmed from all 18 scorecards. G = games with complete detail data for that player.</span>
+      <span>Detailed stats (SR, 7s, DF, DB, Ex) confirmed from all 19 scorecards. G = games with complete detail data for that player.</span>
     </div>
     <div class="stats-legend">
       <div class="legend-title">Legend</div>
@@ -634,43 +634,484 @@
   </div>
 </div>
 
-<script>// ─── DATA LOADER ─────────────────────────────────────────────────────────────
-async function init() {
-  try {
-    const res = await fetch('data/games.json');
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const d = await res.json();
-    seasons = d.seasons || [];
-    games = d.games || [];
-    games.forEach(g => { if (g.dateVal) g.dateVal = new Date(g.dateVal); });
-    gameStats = d.gameStats || [];
-    gameStats.forEach(g => { if (g.dateVal) g.dateVal = new Date(g.dateVal); });
-    pairsData = d.pairsData || [];
-    pairsData.forEach(p => { if (p.dateVal) p.dateVal = new Date(p.dateVal); });
-    bowlingData = d.bowlingData || [];
-    bowlingData.forEach(b => { if (b.dateVal) b.dateVal = new Date(b.dateVal); });
-  } catch(err) {
-    document.body.innerHTML = '<div style="color:#ff4444;padding:40px;font-family:sans-serif;"><h2>Could not load game data</h2><p>Make sure <code>data/games.json</code> exists next to this file.</p><pre>' + err + '</pre></div>';
-    return;
-  }
-  refresh();
-}
+<script>
+const seasons=[
+  {id:'spring2025',label:'Spring 2025',sub:'Spring 2025 · C3 Division · Fourways Falcons',cls:'sp'},
+  {id:'autumn2026',label:'Autumn 2026',sub:'Autumn 2026 · C1 Division · Hillfox Action Sports',cls:'au'},
+];
 
+const games=[
+  // Spring 2025 · Fourways Falcons · 4pt win + 1pt per skin = max 8
+  {season:'spring2025',date:'30 Oct 2025',dateVal:new Date('2025-10-30'),opponent:'Toenails',dmScore:127,oppScore:-6,dmSkins:4,oppSkins:0,result:'win',points:8,maxPoints:8,fixtureId:'2266917'},
+  {season:'spring2025',date:'04 Nov 2025',dateVal:new Date('2025-11-04'),opponent:'The Gravel Donkeys',dmScore:81,oppScore:74,dmSkins:3,oppSkins:1,result:'win',points:7,maxPoints:8,fixtureId:'2274656'},
+  {season:'spring2025',date:'04 Nov 2025',dateVal:new Date('2025-11-04'),opponent:'MATCHFIXERS',dmScore:98,oppScore:78,dmSkins:2,oppSkins:2,result:'win',points:6,maxPoints:8,fixtureId:'2266920'},
+  {season:'spring2025',date:'25 Nov 2025',dateVal:new Date('2025-11-25'),opponent:'The Gravel Donkeys',dmScore:94,oppScore:134,dmSkins:2,oppSkins:2,result:'loss',points:2,maxPoints:8,fixtureId:'2266930'},
+  {season:'spring2025',date:'25 Nov 2025',dateVal:new Date('2025-11-25'),opponent:'Just The Tip And Run 22',dmScore:39,oppScore:103,dmSkins:1,oppSkins:3,result:'loss',points:1,maxPoints:8,fixtureId:'2266927'},
+  {season:'spring2025',date:'04 Dec 2025',dateVal:new Date('2025-12-04'),opponent:'Toenails',dmScore:141,oppScore:36,dmSkins:3,oppSkins:1,result:'win',points:7,maxPoints:8,fixtureId:'2266932'},
+  // Autumn 2026 · Hillfox Action Sports · 3pt win + 1pt per skin = max 7
+  {season:'autumn2026',date:'24 Feb 2026',dateVal:new Date('2026-02-24'),opponent:'Incredibles',dmScore:59,oppScore:87,dmSkins:1,oppSkins:3,result:'loss',points:1,maxPoints:7,fixtureId:'2293054'},
+  {season:'autumn2026',date:'04 Mar 2026',dateVal:new Date('2026-03-04'),opponent:'Akkerkop Arende',dmScore:54,oppScore:70,dmSkins:2,oppSkins:2,result:'loss',points:2,maxPoints:7,fixtureId:'2293056'},
+  {season:'autumn2026',date:'11 Mar 2026',dateVal:new Date('2026-03-11'),opponent:'SEW Strikers',dmScore:58,oppScore:27,dmSkins:3,oppSkins:1,result:'win',points:6,maxPoints:7,fixtureId:'2303782'},
+  {season:'autumn2026',date:'17 Mar 2026',dateVal:new Date('2026-03-17'),opponent:'Duck Hunters',dmScore:93,oppScore:48,dmSkins:3,oppSkins:1,result:'win',points:6,maxPoints:7,fixtureId:'2293062'},
+  {season:'autumn2026',date:'02 Apr 2026',dateVal:new Date('2026-04-02'),opponent:'Super Kings',dmScore:108,oppScore:119,dmSkins:1,oppSkins:3,result:'loss',points:1,maxPoints:7,fixtureId:'2293058'},
+  {season:'autumn2026',date:'15 Apr 2026',dateVal:new Date('2026-04-15'),opponent:'Akkerkop Arende',dmScore:52,oppScore:136,dmSkins:1,oppSkins:3,result:'loss',points:1,maxPoints:7,fixtureId:'2293071'},
+  {season:'autumn2026',date:'23 Apr 2026',dateVal:new Date('2026-04-23'),opponent:'Haduuuuken',dmScore:89,oppScore:90,dmSkins:2,oppSkins:2,result:'loss',points:2,maxPoints:7,fixtureId:'2314795'},
+  {season:'autumn2026',date:'29 Apr 2026',dateVal:new Date('2026-04-29'),opponent:'Akkerkop Arende',dmScore:103,oppScore:104,dmSkins:2,oppSkins:2,result:'loss',points:2,maxPoints:7,fixtureId:'2293080'},
+  {season:'autumn2026',date:'06 May 2026',dateVal:new Date('2026-05-06'),opponent:'Duck Hunters',dmScore:42,oppScore:75,dmSkins:2,oppSkins:2,result:'loss',points:2,maxPoints:7,fixtureId:'2293077'},
+  {season:'autumn2026',date:'12 May 2026',dateVal:new Date('2026-05-12'),opponent:'Morning Wood Warriors',dmScore:107,oppScore:109,dmSkins:2,oppSkins:2,result:'loss',points:2,maxPoints:7,fixtureId:'2318041'},
+  {season:'autumn2026',date:'21 May 2026',dateVal:new Date('2026-05-21'),opponent:'DLH',dmScore:138,oppScore:84,dmSkins:3,oppSkins:1,result:'win',points:6,maxPoints:7,fixtureId:'2320060'},
+  {season:'autumn2026',date:'27 May 2026',dateVal:new Date('2026-05-27'),opponent:'Duck Hunters',dmScore:88,oppScore:67,dmSkins:2,oppSkins:2,result:'win',points:5,maxPoints:7,fixtureId:'2322095'},
+  {season:'autumn2026',date:'02 Jun 2026',dateVal:new Date('2026-06-02'),opponent:'Akkerkop Arende',dmScore:110,oppScore:61,dmSkins:3,oppSkins:1,result:'win',points:7,maxPoints:7,fixtureId:'2322997'},
+];
 
-let seasons = []; // loaded from data/games.json
+let gameStats=[];
 
-let games = []; // loaded from data/games.json
-
-let gameStats = []; // loaded from data/games.json
 
 // Pairs data — confirmed from scorecards. skin scores sum-verified against game totals.
 // oppScore: opponent batting skin total. skinResult: 'win'|'loss'|'tie'|'jackpot-win'|'unknown'
 // Spring 2025 G1–G6: fully confirmed from PDF scorecards. All Autumn 2026: fully confirmed. See Part 7 of player_stats_reference.md.
-let pairsData = []; // loaded from data/games.json
+const pairsData=[
+  // G1 · 30 Oct 2025 · vs Toenails · Total 127 ✓ · OPP sum -6+-7+-16+23=-6 ✅
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,p1:'Zayd',p2:'Chibin',score:37,oppScore:-6,skinResult:'win'},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,p1:'Kiran Varghese',p2:'Zach',score:28,oppScore:-7,skinResult:'win'},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,p1:'Ashwin',p2:'Arun',score:28,oppScore:-16,skinResult:'win'},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,p1:'Amir',p2:'Nithin Thomas',score:34,oppScore:23,skinResult:'win'},
+  // G3 · 04 Nov 2025 · vs MATCHFIXERS · Total 98 ✓ · OPP sum 25+-1+28+26=78 ✅
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,p1:'Nithin Thomas',p2:'Zach',score:24,oppScore:25,skinResult:'loss'},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,p1:'Yusuf',p2:'Shaun',score:20,oppScore:-1,skinResult:'win'},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,p1:'Arun',p2:'Vijay',score:24,oppScore:28,skinResult:'loss'},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,p1:'Zayd',p2:'Kiran Varghese',score:30,oppScore:26,skinResult:'win'},
+  // G2 · 04 Nov 2025 · vs The Gravel Donkeys · Total 81 ✓ · OPP sum 6+18+1+49=74 ✅
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,p1:'Arun',p2:'Zach',score:28,oppScore:6,skinResult:'win'},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,p1:'Yusuf',p2:'Kiran Varghese',score:19,oppScore:18,skinResult:'win'},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,p1:'Godfrey',p2:'Shaun',score:16,oppScore:1,skinResult:'win'},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,p1:'Zayd',p2:'Kiran Varghese',score:18,oppScore:49,skinResult:'loss'},
+  // G5 · 25 Nov 2025 · vs Just The Tip And Run 22 · Total 39 ✓ · OPP sum 23+23+20+37=103 ✅
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,p1:'Amir',p2:'Chibin',score:35,oppScore:23,skinResult:'win'},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,p1:'Vijay',p2:'Kiran Varghese',score:5,oppScore:23,skinResult:'loss'},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,p1:'Arun',p2:'Godfrey',score:8,oppScore:20,skinResult:'loss'},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,p1:'Zayd',p2:'Yusuf',score:-9,oppScore:37,skinResult:'loss'},
+  // G4 · 25 Nov 2025 · vs The Gravel Donkeys · Total 94 ✓ · OPP sum 21+49+12+52=134 ✅
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,p1:'Amir',p2:'Chibin',score:28,oppScore:21,skinResult:'win'},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,p1:'Yusuf',p2:'Vijay',score:25,oppScore:49,skinResult:'loss'},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,p1:'Ashwin',p2:'Arun',score:27,oppScore:12,skinResult:'win'},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,p1:'Zayd',p2:'Kiran Varghese',score:14,oppScore:52,skinResult:'loss'},
+  // G6 · 04 Dec 2025 · vs Toenails · Total 141 ✓ · OPP sum 13+11+31+-19=36 ✅
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,p1:'Zayd',p2:'Chibin',score:53,oppScore:13,skinResult:'win'},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,p1:'Ashwin',p2:'Dony',score:32,oppScore:11,skinResult:'win'},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,p1:'Vijay',p2:'Kiran Varghese',score:30,oppScore:31,skinResult:'loss'},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,p1:'Jesse',p2:'Godfrey',score:26,oppScore:-19,skinResult:'win'},
+  // G7 · 24 Feb 2026 · vs Incredibles · Total 59 ✓ · OPP sum 29+14+27+17=87 ✅
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,p1:'Amir',p2:'Chibin',score:28,oppScore:29,skinResult:'loss'},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,p1:'Akhil',p2:'Vinay',score:28,oppScore:14,skinResult:'win'},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,p1:'Kiran Varghese',p2:'Shaun',score:-10,oppScore:27,skinResult:'loss'},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,p1:'Nithin Thomas',p2:'Goukol',score:13,oppScore:17,skinResult:'loss'},
+  // G8 · 04 Mar 2026 · vs Akkerkop Arende · Total 54 ✓ · OPP sum 17+5+32+16=70 ✅
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,p1:'Chibin',p2:'Akhil',score:22,oppScore:17,skinResult:'win'},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,p1:'Vijay',p2:'Shaun',score:20,oppScore:5,skinResult:'win'},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,p1:'Arun',p2:'Kiran Varghese',score:8,oppScore:32,skinResult:'loss'},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,p1:'Ashwin',p2:'Nithin Thomas',score:4,oppScore:16,skinResult:'loss'},
+  // G9 · 11 Mar 2026 · vs SEW Strikers · Total 58 ✓ · OPP sum 5+16+3+3=27 ✅
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,p1:'Amir',p2:'Chibin',score:10,oppScore:5,skinResult:'win'},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,p1:'Shaun',p2:'Kiran Varghese',score:0,oppScore:16,skinResult:'loss'},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,p1:'Ashwin',p2:'Dony',score:25,oppScore:3,skinResult:'win'},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,p1:'Nandu',p2:'Akhil',score:23,oppScore:3,skinResult:'win'},
+  // G10 · 17 Mar 2026 · vs Duck Hunters · Total 93 ✓ · OPP sum 14+17+14+3=48 ✅
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,p1:'Amir',p2:'Chibin',score:37,oppScore:14,skinResult:'win'},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,p1:'Vijay',p2:'Kiran Varghese',score:4,oppScore:17,skinResult:'loss'},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,p1:'Arun',p2:'Shaun',score:15,oppScore:14,skinResult:'win'},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,p1:'Nithin Thomas',p2:'Akhil',score:37,oppScore:3,skinResult:'win'},
+  // G11 · 02 Apr 2026 · vs Super Kings · Total 108 ✓ · OPP sum 22+36+23+38=119 ✅
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,p1:'Chibin',p2:'Ashwin',score:39,oppScore:22,skinResult:'win'},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,p1:'Godfrey',p2:'Shaun',score:28,oppScore:36,skinResult:'loss'},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,p1:'Kiran Varghese',p2:'Yusuf',score:11,oppScore:23,skinResult:'loss'},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,p1:'Zayd',p2:'Akhil',score:30,oppScore:38,skinResult:'loss'},
+  // G12 · 15 Apr 2026 · vs Akkerkop Arende · Total 52 ✓ · OPP sum 21+38+51+26=136 ✅
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,p1:'Amir',p2:'Chibin',score:22,oppScore:21,skinResult:'win'},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,p1:'Ashwin',p2:'Kiran Varghese',score:6,oppScore:38,skinResult:'loss'},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,p1:'Vijay',p2:'Dony',score:3,oppScore:51,skinResult:'loss'},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,p1:'Nithin Thomas',p2:'Merlin',score:21,oppScore:26,skinResult:'loss'},
+  // G13 · 23 Apr 2026 · vs Haduuuuken · Total 89 ✓ · OPP sum 33+16+16+25=90 ✅
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,p1:'Don',p2:'Akhil',score:23,oppScore:33,skinResult:'loss'},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,p1:'Shaun',p2:'Kiran Varghese',score:2,oppScore:16,skinResult:'loss'},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,p1:'Arun',p2:'Chibin',score:34,oppScore:16,skinResult:'win'},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,p1:'Vishnu',p2:'Aaron',score:30,oppScore:25,skinResult:'win'},
+  // G14 · 29 Apr 2026 · vs Akkerkop Arende · Total 103 ✓ · OPP sum 30+24+26+24=104 ✅
+  // S3 tied 26–26 → jackpot carried to S4. DM win S4 43–24 = outright win + jackpot = 2 skins total.
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,p1:'Nithin Thomas',p2:'Chibin',score:20,oppScore:30,skinResult:'loss'},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,p1:'Akhil',p2:'Shaun',score:14,oppScore:24,skinResult:'loss'},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,p1:'Arun',p2:'Vijay',score:26,oppScore:26,skinResult:'tie'},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,p1:'Vishnu',p2:'Aaron',score:43,oppScore:24,skinResult:'jackpot-win'},
+  // G15 · 06 May 2026 · vs Duck Hunters · Total 42 ✓ · OPP sum 22+29+24+0=75 ✅
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,p1:'Amir',p2:'Don',score:23,oppScore:22,skinResult:'win'},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,p1:'Ashwin',p2:'Nithin Thomas',score:10,oppScore:29,skinResult:'loss'},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,p1:'Akhil',p2:'Nithin G',score:-22,oppScore:24,skinResult:'loss'},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,p1:'Arun',p2:'Kiran Varghese',score:31,oppScore:0,skinResult:'win'},
+  // G16 · 12 May 2026 · vs Morning Wood Warriors · Total 107 ✓ · OPP sum 6+37+25+41=109 ✅
+  // Note: Skin 1 'Unspecified' on scorecard = Nithin Thomas (only unaccounted batter in squad)
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,p1:'Nithin Thomas',p2:'Akhil',score:15,oppScore:6,skinResult:'win'},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,p1:'Shaun',p2:'Kiran Varghese',score:17,oppScore:37,skinResult:'loss'},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,p1:'Ashwin',p2:'Dony',score:35,oppScore:25,skinResult:'win'},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,p1:'Zayd',p2:'Alex',score:40,oppScore:41,skinResult:'loss'},
+  // G17 · 21 May 2026 · vs DLH · Total 138 ✓ · OPP sum 28+22+13+21=84 ✅
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,p1:'Nithin Thomas',p2:'Akhil',score:52,oppScore:28,skinResult:'win'},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,p1:'Arun',p2:'Kiran Varghese',score:14,oppScore:22,skinResult:'loss'},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,p1:'Vijay',p2:'Shaun',score:36,oppScore:13,skinResult:'win'},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,p1:'Vishnu',p2:'Ashwin',score:36,oppScore:21,skinResult:'win'},
+  // G18 · 27 May 2026 · vs Duck Hunters · Total 88 ✓ · OPP sum 34+35+(-7)+5=67 ✅
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,p1:'Nithin Thomas',p2:'Chibin',score:7,oppScore:34,skinResult:'loss'},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,p1:'Akhil',p2:'Kiran Varghese',score:20,oppScore:35,skinResult:'loss'},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,p1:'Arun',p2:'Shaun',score:11,oppScore:-7,skinResult:'win'},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,p1:'Zayd',p2:'Vishnu',score:50,oppScore:5,skinResult:'win'},
+  // G19 · 02 Jun 2026 · vs Akkerkop Arende (Bronze Final) · Total 110 ✓ · OPP sum 32+18+21+(-10)=61 ✅
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,p1:'Nithin Thomas',p2:'Chibin',score:24,oppScore:32,skinResult:'loss'},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,p1:'Arun',p2:'Kiran Varghese',score:34,oppScore:18,skinResult:'win'},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,p1:'Vijay',p2:'Akhil',score:28,oppScore:21,skinResult:'win'},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,p1:'Zayd',p2:'Ashwin',score:24,oppScore:-10,skinResult:'win'},
+];
 
 // Bowling data — over-by-over RC (net). All RC values derived from scorecard skin subtotals
 // and cross-checked against player summary totals. G2/G5/G6 bowler assignments corrected from scorecard images.
-let bowlingData = []; // loaded from data/games.json
+const bowlingData=[
+  // G1 · 30 Oct 2025 · vs Toenails · OPP skin totals: S1=-6 S2=-7 S3=-16 S4=23 ✅
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:2,bowler:'Chibin',rc:10},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:3,bowler:'Ashwin',rc:6},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:4,bowler:'Zach',rc:14},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:1,bowler:'Zayd',rc:-1},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:2,bowler:'Nithin Thomas',rc:-3},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:3,bowler:'Arun',rc:2},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:4,bowler:'Amir',rc:-2},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:1,bowler:'Kiran Varghese',rc:-7},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:2,bowler:'Zach',rc:-5},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:3,bowler:'Arun',rc:-1},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:4,bowler:'Chibin',rc:-3},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:1,bowler:'Zayd',rc:10},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:2,bowler:'Ashwin',rc:3},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:3,bowler:'Nithin Thomas',rc:5},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:4,bowler:'Amir',rc:16},
+  // G2 · 04 Nov 2025 · vs The Gravel Donkeys · OPP skin totals: S1=6 S2=18 S3=1 S4=49 ✅
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:1,bowler:'Kiran Varghese',rc:1},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:2,bowler:'Godfrey',rc:7},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:3,bowler:'Zach',rc:0},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:4,bowler:'Yusuf',rc:-2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:1,bowler:'Zayd',rc:5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:2,bowler:'Shaun',rc:7},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:3,bowler:'Arun',rc:8},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:4,bowler:'Kiran Ninan',rc:-2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:1,bowler:'Shaun',rc:6},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:2,bowler:'Arun',rc:5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:3,bowler:'Godfrey',rc:-12},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:4,bowler:'Kiran Varghese',rc:2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:1,bowler:'Zach',rc:13},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:2,bowler:'Yusuf',rc:21},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:3,bowler:'Kiran Ninan',rc:9},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:4,bowler:'Zayd',rc:6},
+  // G3 · 04 Nov 2025 · vs MATCHFIXERS · OPP skin totals: S1=25 S2=-1 S3=28 S4=26 ✅
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:1,bowler:'Zayd',rc:10},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:2,bowler:'Zach',rc:2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:3,bowler:'Vijay',rc:10},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:4,bowler:'Shaun',rc:3},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:1,bowler:'Kiran Varghese',rc:-3},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:2,bowler:'Arun',rc:-5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:3,bowler:'Yusuf',rc:6},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:4,bowler:'Nithin Thomas',rc:1},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:1,bowler:'Shaun',rc:2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:2,bowler:'Yusuf',rc:8},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:3,bowler:'Arun',rc:14},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:4,bowler:'Kiran Varghese',rc:4},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:1,bowler:'Zayd',rc:11},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:2,bowler:'Zach',rc:5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:3,bowler:'Vijay',rc:12},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:4,bowler:'Nithin Thomas',rc:-2},
+  // G4 · 25 Nov 2025 · vs The Gravel Donkeys · OPP skin totals: S1=21 S2=49 S3=12 S4=52 ✅
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:2,bowler:'Chibin',rc:8},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:3,bowler:'Vijay',rc:-2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:4,bowler:'Amir',rc:9},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:1,bowler:'Zayd',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:2,bowler:'Ashwin',rc:19},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:3,bowler:'Amir',rc:8},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:4,bowler:'Vijay',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:1,bowler:'Yusuf',rc:10},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:2,bowler:'Arun',rc:1},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:3,bowler:'Chibin',rc:7},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:4,bowler:'Ashwin',rc:-6},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:1,bowler:'Yusuf',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:2,bowler:'Kiran Varghese',rc:4},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:3,bowler:'Arun',rc:24},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:4,bowler:'Zayd',rc:13},
+  // G5 · 25 Nov 2025 · vs Just The Tip And Run 22 · OPP skin totals: S1=23 S2=23 S3=20 S4=37 ✅
+  // Bowler assignments corrected from scorecard image — all 16 overs previously wrong
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:1,bowler:'Kiran Varghese',rc:10},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:2,bowler:'Godfrey',rc:-1},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:3,bowler:'Amir',rc:2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:4,bowler:'Zayd',rc:12},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:1,bowler:'Yusuf',rc:4},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:2,bowler:'Vijay',rc:6},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:3,bowler:'Arun',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:4,bowler:'Chibin',rc:2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:1,bowler:'Kiran Varghese',rc:3},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:2,bowler:'Arun',rc:13},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:3,bowler:'Vijay',rc:8},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:4,bowler:'Yusuf',rc:-4},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:1,bowler:'Godfrey',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:2,bowler:'Chibin',rc:12},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:3,bowler:'Amir',rc:-2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:4,bowler:'Zayd',rc:16},
+  // G6 · 04 Dec 2025 · vs Toenails · OPP skin totals: S1=13 S2=11 S3=31 S4=-19 ✅
+  // Bowler assignments corrected from scorecard image
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:1,bowler:'Kiran Ninan',rc:7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:2,bowler:'Godfrey',rc:-16},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:3,bowler:'Vijay',rc:14},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:4,bowler:'Dony',rc:8},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:1,bowler:'Zayd',rc:-1},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:2,bowler:'Chibin',rc:7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:3,bowler:'Ashwin',rc:12},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:4,bowler:'Jesse',rc:-7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:1,bowler:'Dony',rc:21},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:2,bowler:'Ashwin',rc:7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:3,bowler:'Vijay',rc:-1},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:4,bowler:'Chibin',rc:4},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:1,bowler:'Jesse',rc:-6},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:2,bowler:'Godfrey',rc:-2},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:3,bowler:'Kiran Ninan',rc:-14},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:4,bowler:'Zayd',rc:3},
+  // G7 · 24 Feb 2026 · vs Incredibles — confirmed from scorecard 2293054
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:1,bowler:'Kiran Varghese',rc:11},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:2,bowler:'Shaun',rc:14},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:3,bowler:'Vinay',rc:6},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:4,bowler:'Amir',rc:-2},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:1,bowler:'Goukol',rc:11},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:2,bowler:'Chibin',rc:6},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:3,bowler:'Akhil',rc:2},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:4,bowler:'Nithin Thomas',rc:-5},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:2,bowler:'Vinay',rc:9},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:3,bowler:'Goukol',rc:20},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:4,bowler:'Shaun',rc:-9},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:1,bowler:'Amir',rc:2},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:2,bowler:'Chibin',rc:10},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:3,bowler:'Akhil',rc:-4},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:4,bowler:'Nithin Thomas',rc:9},
+  // G8 · 04 Mar 2026 · vs Akkerkop Arende — corrected from scorecard 2293056
+  // Autumn format: 4 bowlers per skin, 1 over each. RC = net (gross - wickets×5).
+  // Verified: all player over-RCs sum to their confirmed gameStats RC ✅
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:2,bowler:'Chibin',rc:3},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:3,bowler:'Vijay',rc:2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:4,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:1,bowler:'Akhil',rc:3},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:2,bowler:'Arun',rc:1},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:3,bowler:'Ashwin',rc:2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:4,bowler:'Nithin Thomas',rc:-1},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:1,bowler:'Chibin',rc:9},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:2,bowler:'Shaun',rc:-2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:3,bowler:'Arun',rc:9},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:4,bowler:'Akhil',rc:16},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:1,bowler:'Ashwin',rc:-2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:2,bowler:'Kiran Varghese',rc:15},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:3,bowler:'Vijay',rc:2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:4,bowler:'Nithin Thomas',rc:1},
+  // G9 · 11 Mar 2026 · vs SEW Strikers — confirmed from scorecard 2303782
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:2,bowler:'Dony',rc:4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:3,bowler:'Amir',rc:-2},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:4,bowler:'Chibin',rc:10},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:1,bowler:'Akhil',rc:-4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:2,bowler:'Ashwin',rc:6},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:3,bowler:'Shaun',rc:-4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:4,bowler:'Nandu',rc:2},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:1,bowler:'Kiran Varghese',rc:18},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:2,bowler:'Ashwin',rc:7},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:3,bowler:'Amir',rc:-6},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:4,bowler:'Nandu',rc:-11},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:1,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:2,bowler:'Dony',rc:-4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:3,bowler:'Chibin',rc:4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:4,bowler:'Akhil',rc:-5},
+  // G10 · 17 Mar 2026 · vs Duck Hunters — confirmed from scorecard 2293062
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:1,bowler:'Kiran Varghese',rc:12},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:2,bowler:'Chibin',rc:-4},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:3,bowler:'Amir',rc:3},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:4,bowler:'Akhil',rc:6},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:1,bowler:'Shaun',rc:9},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:2,bowler:'Vijay',rc:-5},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:3,bowler:'Arun',rc:12},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:4,bowler:'Nithin Thomas',rc:5},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:1,bowler:'Kiran Varghese',rc:-7},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:2,bowler:'Amir',rc:8},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:3,bowler:'Vijay',rc:-8},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:4,bowler:'Nithin Thomas',rc:3},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:1,bowler:'Shaun',rc:3},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:2,bowler:'Akhil',rc:14},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:3,bowler:'Chibin',rc:-10},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:4,bowler:'Arun',rc:7},
+  // G11 · 02 Apr 2026 · vs Super Kings — confirmed from scorecard 2293058
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:1,bowler:'Kiran Varghese',rc:5},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:2,bowler:'Chibin',rc:3},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:3,bowler:'Godfrey',rc:10},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:4,bowler:'Shaun',rc:4},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:1,bowler:'Yusuf',rc:13},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:2,bowler:'Ashwin',rc:6},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:3,bowler:'Akhil',rc:3},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:4,bowler:'Zayd',rc:14},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:2,bowler:'Godfrey',rc:4},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:3,bowler:'Ashwin',rc:0},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:4,bowler:'Yusuf',rc:12},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:1,bowler:'Chibin',rc:13},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:2,bowler:'Zayd',rc:12},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:3,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:4,bowler:'Akhil',rc:8},
+  // G12 · 15 Apr 2026 · vs Akkerkop Arende — confirmed from scorecard 2293071
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:1,bowler:'Kiran Varghese',rc:13},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:2,bowler:'Chibin',rc:9},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:3,bowler:'Vijay',rc:0},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:4,bowler:'Amir',rc:-1},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:1,bowler:'Merlin',rc:12},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:2,bowler:'Ashwin',rc:6},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:3,bowler:'Dony',rc:15},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:4,bowler:'Nithin Thomas',rc:5},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:1,bowler:'Kiran Varghese',rc:12},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:2,bowler:'Dony',rc:8},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:3,bowler:'Ashwin',rc:19},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:4,bowler:'Merlin',rc:12},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:1,bowler:'Amir',rc:0},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:2,bowler:'Chibin',rc:14},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:3,bowler:'Vijay',rc:10},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:4,bowler:'Nithin Thomas',rc:2},
+  // G13 · 23 Apr 2026 · vs Haduuuuken — confirmed from scorecard 2314795
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:1,bowler:'Kiran Varghese',rc:8},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:2,bowler:'Vishnu',rc:7},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:3,bowler:'Shaun',rc:12},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:4,bowler:'Aaron',rc:6},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:1,bowler:'Chibin',rc:11},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:2,bowler:'Arun',rc:2},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:3,bowler:'Don',rc:8},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:4,bowler:'Akhil',rc:-5},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:1,bowler:'Kiran Varghese',rc:9},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:2,bowler:'Don',rc:4},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:3,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:4,bowler:'Aaron',rc:-2},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:1,bowler:'Chibin',rc:10},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:2,bowler:'Arun',rc:2},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:3,bowler:'Vishnu',rc:3},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:4,bowler:'Akhil',rc:10},
+  // G14 · 29 Apr 2026 · vs Akkerkop Arende — confirmed from scorecard 2293080
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:1,bowler:'Chibin',rc:4},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:2,bowler:'Shaun',rc:7},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:3,bowler:'Arun',rc:4},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:4,bowler:'Akhil',rc:15},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:1,bowler:'Vishnu',rc:-3},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:2,bowler:'Vijay',rc:6},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:3,bowler:'Aaron',rc:9},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:4,bowler:'Nithin Thomas',rc:12},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:1,bowler:'Chibin',rc:7},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:2,bowler:'Shaun',rc:10},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:3,bowler:'Arun',rc:7},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:4,bowler:'Aaron',rc:2},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:1,bowler:'Vishnu',rc:9},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:2,bowler:'Vijay',rc:16},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:3,bowler:'Akhil',rc:4},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:4,bowler:'Nithin Thomas',rc:-5},
+  // G15 · 06 May 2026 · vs Duck Hunters — confirmed from scorecard 2293077
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:1,bowler:'Kiran Varghese',rc:1},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:2,bowler:'Don',rc:11},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:3,bowler:'Ashwin',rc:7},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:4,bowler:'Akhil',rc:3},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:1,bowler:'Nithin G',rc:7},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:2,bowler:'Amir',rc:-4},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:3,bowler:'Arun',rc:11},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:4,bowler:'Nithin Thomas',rc:15},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:2,bowler:'Don',rc:9},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:3,bowler:'Amir',rc:0},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:4,bowler:'Nithin G',rc:9},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:1,bowler:'Nithin Thomas',rc:-10},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:2,bowler:'Arun',rc:1},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:3,bowler:'Ashwin',rc:5},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:4,bowler:'Akhil',rc:4},
+  // G16 · 12 May 2026 · vs Morning Wood Warriors — confirmed from scorecard 2318041
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:1,bowler:'Kiran Varghese',rc:8},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:2,bowler:'Shaun',rc:6},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:3,bowler:'Ashwin',rc:-3},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:4,bowler:'Nithin Thomas',rc:-5},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:1,bowler:'Shaun',rc:3},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:2,bowler:'Alex',rc:13},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:3,bowler:'Dony',rc:12},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:4,bowler:'Akhil',rc:9},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:1,bowler:'Zayd',rc:8},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:2,bowler:'Kiran Varghese',rc:3},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:3,bowler:'Alex',rc:9},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:4,bowler:'Dony',rc:5},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:1,bowler:'Zayd',rc:12},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:2,bowler:'Ashwin',rc:16},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:3,bowler:'Nithin Thomas',rc:13},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:4,bowler:'Akhil',rc:0},
+  // G17 · 21 May 2026 · vs DLH — confirmed from scorecard 2320060
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:1,bowler:'Akhil',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:2,bowler:'Vijay',rc:3},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:3,bowler:'Kiran Varghese',rc:11},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:4,bowler:'Shaun',rc:8},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:1,bowler:'Nithin Thomas',rc:-1},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:2,bowler:'Arun',rc:-4},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:3,bowler:'Ashwin',rc:19},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:4,bowler:'Vishnu',rc:8},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:2,bowler:'Arun',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:3,bowler:'Akhil',rc:-10},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:4,bowler:'Ashwin',rc:11},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:1,bowler:'Shaun',rc:8},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:2,bowler:'Vijay',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:3,bowler:'Vishnu',rc:-4},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:4,bowler:'Nithin Thomas',rc:11},
+  // G18 · 27 May 2026 · vs Duck Hunters — confirmed from scorecard 2322095
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:1,bowler:'Kiran Varghese',rc:11},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:2,bowler:'Akhil',rc:9},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:3,bowler:'Vishnu',rc:3},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:4,bowler:'Shaun',rc:11},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:1,bowler:'Zayd',rc:-10},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:2,bowler:'Arun',rc:18},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:3,bowler:'Chibin',rc:15},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:4,bowler:'Nithin Thomas',rc:12},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:1,bowler:'Kiran Varghese',rc:2},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:2,bowler:'Vishnu',rc:-13},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:3,bowler:'Arun',rc:6},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:4,bowler:'Akhil',rc:-2},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:1,bowler:'Shaun',rc:0},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:2,bowler:'Chibin',rc:-2},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:3,bowler:'Nithin Thomas',rc:1},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:4,bowler:'Zayd',rc:6},
+  // G19 · 02 Jun 2026 · vs Akkerkop Arende (Bronze Final) · OPP skin totals: S1=32 S2=18 S3=21 S4=-10 ✅
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:2,bowler:'Chibin',rc:8},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:3,bowler:'Vijay',rc:17},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:4,bowler:'Nithin Thomas',rc:1},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:1,bowler:'Zayd',rc:10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:2,bowler:'Arun',rc:8},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:3,bowler:'Ashwin',rc:-10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:4,bowler:'Akhil',rc:10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:1,bowler:'Kiran Varghese',rc:1},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:2,bowler:'Chibin',rc:-4},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:3,bowler:'Vijay',rc:17},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:4,bowler:'Akhil',rc:7},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:1,bowler:'Zayd',rc:-1},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:2,bowler:'Arun',rc:2},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:3,bowler:'Ashwin',rc:-10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:4,bowler:'Nithin Thomas',rc:-1},
+];
 
 let activeSeason='all',sortKey='contrib',sortDir=1,sortDetailKey='avgSR',sortDetailDir=1,searchTerm='';
 let statsMinGames=1,pbMinGames=1;
@@ -1833,10 +2274,20 @@ function refresh(){
   if(active&&active.id==='teamsheet')renderTeamSheet();
 }
 
-
-
-init();
-
+// Load gameStats from games.json, then initialise
+fetch('data/games.json')
+  .then(r => r.json())
+  .then(data => {
+    gameStats = data.gameStats.map(g => ({
+      ...g,
+      dateVal: new Date(g.dateVal)
+    }));
+    refresh();
+  })
+  .catch(err => {
+    console.error('Failed to load games.json:', err);
+    refresh();
+  });
 </script>
 </body>
 </html>

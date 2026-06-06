@@ -1,0 +1,194 @@
+season,game,date,batting_team,bowling_team,skin,pair,batter,bowler,over,ball,delivery_raw,delivery_type,delivery_sub,runs
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,Josh,1,1,5,runs,,5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,Josh,1,3,7,runs,,7
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,Josh,1,5,7,runs,,7
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,Zazu,2,6,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,"Puddin """,3,2,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,"Puddin """,3,3,w1,wicket,caught,-4
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,"Puddin """,3,5,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,"Puddin """,3,6,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,Jordan,4,3,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Amir,Jordan,4,6,3,runs,,3
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Josh,1,2,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Josh,1,4,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Josh,1,6,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Zazu,2,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Zazu,2,2,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Zazu,2,3,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Zazu,2,4,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Zazu,2,5,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,"Puddin """,3,1,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,"Puddin """,3,4,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Jordan,4,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Jordan,4,2,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Jordan,4,4,s,wicket,stumped,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,1,Amir & Chiban,Chiban,Jordan,4,5,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Sticky,5,1,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Sticky,5,4,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Josh,6,2,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Josh,6,3,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Josh,6,4,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Tim .,7,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Tim .,7,2,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Tim .,7,6,s,wicket,stumped,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Siphe,8,2,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Vijay .,Siphe,8,3,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Sticky,5,2,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Sticky,5,3,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Sticky,5,5,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Sticky,5,6,3,runs,,3
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Josh,6,1,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Josh,6,5,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Josh,6,6,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Tim .,7,3,b,wicket,bowled,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Tim .,7,4,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Tim .,7,5,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Siphe,8,1,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Siphe,8,4,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Siphe,8,5,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,2,Vijay . & Kiaran V,Kiaran V,Siphe,8,6,3,runs,,3
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Mekyle,9,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Mekyle,9,2,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Mekyle,9,5,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Sticky,10,6,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Mekyle,11,2,3,runs,,3
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Mekyle,11,5,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Jordan,12,1,3,runs,,3
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Arun,Jordan,12,5,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Mekyle,9,3,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Mekyle,9,4,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Mekyle,9,6,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Sticky,10,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Sticky,10,2,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Sticky,10,3,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Sticky,10,4,nb,extra,noball,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Sticky,10,5,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Mekyle,11,1,7,runs,,7
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Mekyle,11,3,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Mekyle,11,4,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Mekyle,11,6,b,wicket,bowled,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Jordan,12,2,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Jordan,12,3,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Jordan,12,4,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,3,Arun & Godfrey,Godfrey,Jordan,12,6,s,wicket,stumped,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Zazu,13,1,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Zazu,13,4,3,runs,,3
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,"Puddin """,14,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,"Puddin """,14,2,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,"Puddin """,14,3,7,runs,,7
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Tim .,15,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Tim .,15,2,s,wicket,stumped,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Tim .,15,3,1,runs,,1
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Siphe,16,1,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Siphe,16,2,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Zayd,Siphe,16,4,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Zazu,13,2,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Zazu,13,3,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Zazu,13,5,b,wicket,bowled,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Zazu,13,6,nb,extra,noball,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,"Puddin """,14,4,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,"Puddin """,14,5,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,"Puddin """,14,6,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Tim .,15,4,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Tim .,15,5,0,runs,,0
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Tim .,15,6,s,wicket,stumped,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Siphe,16,3,2,runs,,2
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Siphe,16,5,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Durban Mallu's,Just The Tip And Run 22,4,Zayd & Yusuf .,Yusuf .,Siphe,16,6,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Kiaran V,1,1,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Kiaran V,1,2,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Kiaran V,1,4,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Kiaran V,1,6,4,runs,,4
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Godfrey,2,1,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Godfrey,2,5,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Godfrey,2,6,b,wicket,bowled,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Amir,3,3,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Amir,3,5,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Amir,3,6,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Zayd,4,2,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Zayd,4,4,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Zazu,Zayd,4,5,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Kiaran V,1,3,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Kiaran V,1,5,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Godfrey,2,2,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Godfrey,2,3,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Godfrey,2,4,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Amir,3,1,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Amir,3,2,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Amir,3,4,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Zayd,4,1,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Zayd,4,3,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Zayd,4,6,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,1,Zazu & Siphe,Siphe,Zayd,4,7,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Yusuf .,5,1,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Yusuf .,5,3,3,runs,,3
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Vijay .,6,2,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Vijay .,6,3,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Vijay .,6,4,7,runs,,7
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Arun,7,3,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Arun,7,4,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Arun,7,6,3,runs,,3
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Chiban,8,3,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Mekyle,Chiban,8,6,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Yusuf .,5,2,nb2,extra,noball,4
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Yusuf .,5,4,b,wicket,bowled,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Yusuf .,5,5,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Yusuf .,5,6,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Vijay .,6,1,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Vijay .,6,5,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Vijay .,6,6,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Arun,7,1,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Arun,7,2,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Arun,7,5,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Chiban,8,1,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Chiban,8,2,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Chiban,8,4,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,2,Mekyle & Sticky,Sticky,Chiban,8,5,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Kiaran V,9,1,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Kiaran V,9,3,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Arun,10,2,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Arun,10,4,3,runs,,3
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Arun,10,6,3,runs,,3
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Vijay .,11,1,s,wicket,stumped,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Vijay .,11,2,7,runs,,7
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Vijay .,11,5,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Yusuf .,12,2,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Yusuf .,12,3,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh","Puddin """,Yusuf .,12,5,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Kiaran V,9,2,3,runs,,3
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Kiaran V,9,4,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Kiaran V,9,5,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Kiaran V,9,6,r,wicket,runout,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Arun,10,1,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Arun,10,3,3,runs,,3
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Arun,10,5,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Vijay .,11,3,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Vijay .,11,4,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Vijay .,11,6,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Yusuf .,12,1,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Yusuf .,12,4,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,3,"Puddin "" & Josh",Josh,Yusuf .,12,6,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Godfrey,13,1,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Godfrey,13,2,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Godfrey,13,5,5,runs,,5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Chiban,14,1,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Chiban,14,3,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Chiban,14,6,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Amir,15,1,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Amir,15,2,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Amir,15,5,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Amir,15,6,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Zayd,16,1,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Zayd,16,2,7,runs,,7
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Zayd,16,4,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Jordan,Zayd,16,5,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Godfrey,13,3,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Godfrey,13,4,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Godfrey,13,6,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Chiban,14,2,2,runs,,2
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Chiban,14,4,w,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Chiban,14,5,3,runs,,3
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Amir,15,3,0,runs,,0
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Amir,15,4,c,wicket,caught,-5
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Zayd,16,3,1,runs,,1
+spring2025,G5,2025-11-25,Just The Tip And Run 22,Durban Mallu's,4,Jordan & Tim .,Tim .,Zayd,16,6,7,runs,,7
