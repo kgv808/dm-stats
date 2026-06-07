@@ -134,11 +134,24 @@ def load_stats_csvs() -> list:
 
 def load_balls_csvs() -> dict:
     """
-    Returns: { (game, canonical_name): {dotsFaced, dotsBowled, extras, sevens} }
-    sevens = Zone D full hits (delivery_raw == '7', i.e. back-net-on-the-full for 7 runs).
+    Returns: { (game, canonical_name): { batting stats, bowling stats, dismissal breakdown } }
+
+    Batting (while DM batting):
+      dotsFaced       — legal deliveries where batter scored 0 runs (second ball situations)
+      extras          — extras received (nb, ls, w extras)
+      sevens          — Zone D full hits (delivery_raw == '7')
+      dCaught         — times dismissed caught
+      dBowled         — times dismissed bowled
+      dRunOut         — times dismissed run out (voids zone bonus runs)
+      dStumped        — times dismissed stumped
+
+    Bowling (while opponent batting, DM bowler):
+      dotsBowled      — legal deliveries where bowler conceded 0 runs
     """
-    result = defaultdict(lambda: {'dotsFaced': 0, 'dotsBowled': 0,
-                                  'extras': 0, 'sevens': 0})
+    result = defaultdict(lambda: {
+        'dotsFaced': 0, 'dotsBowled': 0, 'extras': 0, 'sevens': 0,
+        'dCaught': 0, 'dBowled': 0, 'dRunOut': 0, 'dStumped': 0,
+    })
 
     for path in sorted(glob.glob(str(CSV_DIR / '*_balls.csv'))):
         stem = Path(path).stem.replace('_balls', '')
@@ -155,9 +168,9 @@ def load_balls_csvs() -> dict:
                 dtype   = row['delivery_type']
                 runs    = int(row['runs']) if row['runs'] else 0
                 raw     = row['delivery_raw'].strip()
+                sub     = row.get('delivery_sub', '').lower().strip()
 
                 if dm_batting and batter:
-                    # Dot balls are stored as delivery_type='runs', runs=0
                     if dtype == 'runs' and runs == 0:
                         result[(game, batter)]['dotsFaced'] += 1
                     elif dtype == 'extra':
@@ -165,6 +178,17 @@ def load_balls_csvs() -> dict:
                     # Sevens: Zone D full hit (back net on the full = 7 runs)
                     if raw == '7':
                         result[(game, batter)]['sevens'] += 1
+                    # Dismissal type breakdown (each costs -5 runs to the team)
+                    if dtype == 'wicket':
+                        if 'runout' in sub or sub in ('r', 'ro'):
+                            result[(game, batter)]['dRunOut'] += 1
+                        elif 'stump' in sub or sub == 'st':
+                            result[(game, batter)]['dStumped'] += 1
+                        elif 'bowl' in sub or sub == 'b':
+                            result[(game, batter)]['dBowled'] += 1
+                        else:
+                            # caught (delivery_raw 'w', 'c') and anything else
+                            result[(game, batter)]['dCaught'] += 1
 
                 if not dm_batting and bowler:
                     if dtype == 'runs' and runs == 0:
@@ -180,6 +204,7 @@ GAME_FIELDS = [
     'name',
     'rs', 'rc', 'wkts', 'contrib', 'sr', 'ob', 'econ',
     'dotsFaced', 'dotsBowled', 'extras', 'sevens',
+    'dCaught', 'dBowled', 'dRunOut', 'dStumped',
 ]
 
 
@@ -215,6 +240,10 @@ def build_player_games(stats_rows, balls_map, meta) -> list:
             'dotsBowled': b.get('dotsBowled', 0),
             'extras':     b.get('extras', 0),
             'sevens':     b.get('sevens', 0),
+            'dCaught':    b.get('dCaught', 0),
+            'dBowled':    b.get('dBowled', 0),
+            'dRunOut':    b.get('dRunOut', 0),
+            'dStumped':   b.get('dStumped', 0),
         })
     return game_records
 
@@ -349,7 +378,8 @@ def main():
     top10 = sorted(alltime_rows, key=lambda x: x['contrib_total'], reverse=True)[:10]
     print("  Name                  GP    RS    RC  Wkts  Contrib     SR  Econ")
     for r in top10:
-        vals = (r['name'], r['gp'], r['rs_total'], r['rc_total'], r['wkts_total'], r['contrib_total'], r['sr_avg'], r['econ_avg'])
+        vals = (r['name'], r['gp'], r['rs_total'], r['rc_total'], r['wkts_total'],
+                r['contrib_total'], r['sr_avg'], r['econ_avg'])
         print("  %-20s %3d %5d %5d %5d %7d %6.1f %6.2f" % vals)
 
 

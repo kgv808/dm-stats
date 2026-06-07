@@ -381,6 +381,12 @@
   .lg-skin-score{font-family:'Bebas Neue',sans-serif;font-size:15px;color:var(--text);flex-shrink:0;}
   .lg-skin-icon{font-size:13px;flex-shrink:0;}
 
+
+  /* ── Rankings sections ────────────────────────────────────────────────── */
+  .rankings-section{margin-bottom:28px;}
+  .rankings-section-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:8px;}
+  .rankings-section-title .section-icon{font-size:18px;}
+  .rank-val.red{color:var(--red);}
   /* ── Rankings tab ─────────────────────────────────────────────────────── */
   .rankings-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;}
   .rank-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
@@ -445,10 +451,10 @@
   <div class="tab active" onclick="showTab('insights')">Insights</div>
   <div class="tab" onclick="showTab('results')">Results</div>
   <div class="tab" onclick="showTab('stats')">Player Stats</div>
-  <div class="tab" onclick="showTab('pairsbowling')">Pairs &amp; Bowling</div>
-  <div class="tab" onclick="showTab('teamsheet')">Team Sheet</div>
   <div class="tab" onclick="showTab('rankings')">Rankings</div>
   <div class="tab" onclick="showTab('form')">Form</div>
+  <div class="tab" onclick="showTab('pairsbowling')">Pairs &amp; Bowling</div>
+  <div class="tab" onclick="showTab('teamsheet')">Team Sheet</div>
 </div>
 
 <div class="content">
@@ -543,13 +549,16 @@
         <th class="s-num" onclick="sortDetailTable('dotsFaced',event)"><div class="col-header">DF <span class="sort-icon">↕</span></div></th>
         <th class="s-num" onclick="sortDetailTable('dotsBowled',event)"><div class="col-header">DB <span class="sort-icon">↕</span></div></th>
         <th class="s-num" onclick="sortDetailTable('extras',event)"><div class="col-header">Ex <span class="sort-icon">↕</span></div></th>
+        <th class="s-num" onclick="sortDetailTable('dRunOut',event)"><div class="col-header">RO <span class="sort-icon">↕</span></div></th>
+        <th class="s-num" onclick="sortDetailTable('dCaught',event)"><div class="col-header">Ct <span class="sort-icon">↕</span></div></th>
+        <th class="s-num" onclick="sortDetailTable('dBowled',event)"><div class="col-header">Bd <span class="sort-icon">↕</span></div></th>
       </tr></thead>
       <tbody id="detailStatsBody"></tbody>
     </table>
     </div>
     <div class="data-note" style="margin-top:14px">
       <span class="data-note-icon">⚠️</span>
-      <span>Detailed stats (SR, 7s, DF, DB, Ex) confirmed from all 19 scorecards. G = games with complete detail data for that player.</span>
+      <span>Detailed stats (SR, 7s, DF, DB, Ex, RO/Ct/Bd) confirmed from all 19 scorecards. G = games with complete detail data for that player.</span>
     </div>
     <div class="stats-legend">
       <div class="legend-title">Legend</div>
@@ -565,6 +574,9 @@
         <div class="legend-item"><span class="legend-abbr">DF</span><span class="legend-desc">Dot Balls Faced — legal deliveries where no run was scored while batting</span></div>
         <div class="legend-item"><span class="legend-abbr">DB</span><span class="legend-desc">Dot Balls Bowled — legal deliveries where no run was conceded while bowling</span></div>
         <div class="legend-item"><span class="legend-abbr">Ex</span><span class="legend-desc">Extras Given — wides, no-balls and legsides conceded while bowling</span></div>
+        <div class="legend-item"><span class="legend-abbr">RO</span><span class="legend-desc">Run-Outs — dismissed attempting a run (each = −5 to skin total; often voids a 7-run Zone D hit)</span></div>
+        <div class="legend-item"><span class="legend-abbr">Ct</span><span class="legend-desc">Caught Dismissals — dismissed via a caught delivery</span></div>
+        <div class="legend-item"><span class="legend-abbr">Bd</span><span class="legend-desc">Bowled Dismissals — dismissed bowled</span></div>
       </div>
     </div>
   </div>
@@ -1199,13 +1211,17 @@ function getDetailAggregated(sf){
   const src=(sf==='all'?gameStats:gameStats.filter(g=>g.season===sf)).filter(g=>g.sr!==null&&g.sr!==undefined);
   const agg={};
   src.forEach(g=>{
-    if(!agg[g.name])agg[g.name]={name:g.name,detailGames:0,srSum:0,sevens:0,dotsFaced:0,dotsBowled:0,extras:0};
+    if(!agg[g.name])agg[g.name]={name:g.name,detailGames:0,srSum:0,sevens:0,dotsFaced:0,dotsBowled:0,extras:0,dCaught:0,dBowled:0,dRunOut:0,dStumped:0};
     agg[g.name].detailGames++;
     agg[g.name].srSum+=g.sr;
     agg[g.name].sevens+=(g.sevens||0);
     agg[g.name].dotsFaced+=(g.dotsFaced||0);
     agg[g.name].dotsBowled+=(g.dotsBowled||0);
     agg[g.name].extras+=(g.extras||0);
+    agg[g.name].dCaught+=(g.dCaught||0);
+    agg[g.name].dBowled+=(g.dBowled||0);
+    agg[g.name].dRunOut+=(g.dRunOut||0);
+    agg[g.name].dStumped+=(g.dStumped||0);
   });
   return Object.values(agg).map(p=>({...p,avgSR:+(p.srSum/p.detailGames).toFixed(1)}));
 }
@@ -1325,7 +1341,7 @@ function renderDetailStats(){
   });
   const tbody=document.getElementById('detailStatsBody');
   if(!tbody)return;
-  if(!sorted.length){tbody.innerHTML='<tr><td colspan="8" class="empty-state">No players meet the minimum games threshold.</td></tr>';return;}
+  if(!sorted.length){tbody.innerHTML='<tr><td colspan="11" class="empty-state">No players meet the minimum games threshold.</td></tr>';return;}
   tbody.innerHTML=sorted.map((p,i)=>{
     const rank=i+1,rc=rank<=3?`rank-${rank}`:'';
     const srCls=p.avgSR>=150?'pos':p.avgSR>=80?'zero':'neg';
@@ -1338,6 +1354,9 @@ function renderDetailStats(){
       <td class="s-num">${p.dotsFaced}</td>
       <td class="s-num">${p.dotsBowled}</td>
       <td class="s-num">${p.extras}</td>
+      <td class="s-num" style="color:${p.dRunOut>10?'var(--red)':p.dRunOut>5?'var(--accent)':'inherit'}">${p.dRunOut}</td>
+      <td class="s-num">${p.dCaught}</td>
+      <td class="s-num">${p.dBowled}</td>
     </tr>`;
   }).join('');
 }
@@ -2334,26 +2353,53 @@ function renderRankings(){
   const f=activeSeason==='all'?gameStats:gameStats.filter(g=>g.season===activeSeason);
   if(!f.length){document.getElementById('rankingsContent').innerHTML='<div style="color:var(--muted);padding:20px">No data for this season.</div>';return;}
 
+  // Build win-game set from hardcoded games array
+  const filteredGames=activeSeason==='all'?games:games.filter(g=>g.season===activeSeason);
+  const winFixtures=new Set(filteredGames.filter(g=>g.result==='win').map(g=>String(g.fixtureId)));
+
   // Aggregate per player
   const byPlayer={};
   f.forEach(g=>{
-    if(!byPlayer[g.name]) byPlayer[g.name]={name:g.name,gp:0,rs:0,rc:0,wkts:0,contrib:0,sevens:0,dotsBowled:0,ob:0,srNum:0,srDen:0,rcOb:0};
+    if(!byPlayer[g.name]) byPlayer[g.name]={
+      name:g.name,gp:0,rs:0,rc:0,wkts:0,contrib:0,sevens:0,
+      dotsBowled:0,ob:0,bestRS:0,twentyPlus:0,
+      winContrib:0,winGP:0,allRS:[],srNumerator:0,srDenominator:0,
+      dCaught:0,dBowled:0,dRunOut:0,dStumped:0,dotsFaced:0
+    };
     const p=byPlayer[g.name];
     p.gp++; p.rs+=g.rs; p.rc+=g.rc; p.wkts+=g.wkts; p.contrib+=g.contrib;
-    p.sevens+=g.sevens; p.dotsBowled+=g.dotsBowled; p.ob+=g.ob; p.rcOb+=g.rc;
-    if(g.sr>0){p.srNum+=g.rs;p.srDen+=g.rs/g.sr*100/100;}
+    p.sevens+=g.sevens; p.dotsBowled+=g.dotsBowled; p.ob+=g.ob;
+    p.dotsFaced+=(g.dotsFaced||0);
+    p.dCaught+=(g.dCaught||0); p.dBowled+=(g.dBowled||0);
+    p.dRunOut+=(g.dRunOut||0); p.dStumped+=(g.dStumped||0);
+    if(g.rs>p.bestRS) p.bestRS=g.rs;
+    if(g.rs>=20) p.twentyPlus++;
+    p.allRS.push(g.rs);
+    if(g.sr>0){p.srNumerator+=g.rs;p.srDenominator+=g.rs/g.sr*100/100;}
+    if(winFixtures.has(String(g.fixtureId))){p.winContrib+=g.contrib;p.winGP++;}
   });
+
   const players=Object.values(byPlayer).map(p=>({
     ...p,
-    avgContrib:p.gp?+(p.contrib/p.gp).toFixed(1):0,
-    econ:p.ob?+(p.rc/p.ob).toFixed(2):0,
+    avgRS:   p.gp?+(p.rs/p.gp).toFixed(1):0,
+    avgContrib: p.gp?+(p.contrib/p.gp).toFixed(1):0,
+    avgWinContrib: p.winGP?+(p.winContrib/p.winGP).toFixed(1):0,
+    econ:    p.ob?+(p.rc/p.ob).toFixed(2):0,
+    wktsPerOver: p.ob?+(p.wkts/p.ob).toFixed(2):0,
+    avgSR:   p.srDenominator?+(p.srNumerator/p.srDenominator).toFixed(1):0,
+    allrounder: p.rs + p.wkts*10,
+    totalDismissals: p.dCaught+p.dBowled+p.dRunOut+p.dStumped,
+    roRate: (p.dCaught+p.dBowled+p.dRunOut+p.dStumped)>0?+(p.dRunOut/(p.dCaught+p.dBowled+p.dRunOut+p.dStumped)*100).toFixed(0):0,
+    dfPerGame: p.gp?+(p.dotsFaced/p.gp).toFixed(1):0,
   })).filter(p=>p.gp>0);
 
   function posClass(i){return i===0?'gold':i===1?'silver':i===2?'bronze':'';}
   function medal(i){return i===0?'🥇':i===1?'🥈':i===2?'🥉':'';}
 
-  function leaderCard(title,icon,sorted,valFn,valClass,subFn){
-    const top=sorted.slice(0,5);
+  function leaderCard(title,icon,sorted,valFn,valClass,subFn,minGP){
+    const eligible=minGP?sorted.filter(p=>p.gp>=minGP):sorted;
+    const top=eligible.slice(0,5);
+    if(!top.length) return '';
     const rows=top.map((p,i)=>`
       <div class="rank-row">
         <div class="rank-pos ${posClass(i)}">${medal(i)||i+1}</div>
@@ -2366,30 +2412,82 @@ function renderRankings(){
     </div>`;
   }
 
-  const cards=[
-    leaderCard('Top Scorers','🏏',
+  function section(title,icon,cards){
+    const filled=cards.filter(Boolean);
+    return `<div class="rankings-section">
+      <div class="rankings-section-title"><span class="section-icon">${icon}</span>${title}</div>
+      <div class="rankings-grid">${filled.join('')}</div>
+    </div>`;
+  }
+
+  // ── Batting ────────────────────────────────────────────────────────────────
+  const batting = section('Batting','🏏',[
+    leaderCard('Top Scorers — Total RS','📊',
       [...players].sort((a,b)=>b.rs-a.rs),
-      p=>p.rs,'',p=>`${p.gp} games · avg ${p.gp?Math.round(p.rs/p.gp):0}/g`),
+      p=>p.rs,'',p=>`${p.gp} games · avg ${p.avgRS}/g`),
+    leaderCard('Batting Average — RS per Game','📈',
+      [...players].sort((a,b)=>b.avgRS-a.avgRS),
+      p=>p.avgRS,'',p=>`${p.gp} games · ${p.rs} total RS`,2),
+    leaderCard('Best Strike Rate','⚡',
+      [...players].filter(p=>p.avgSR>0).sort((a,b)=>b.avgSR-a.avgSR),
+      p=>p.avgSR+'%','accent',p=>`${p.gp} games`,2),
+    leaderCard('Most 7s — Zone D Full Hits','💥',
+      [...players].sort((a,b)=>b.sevens-a.sevens),
+      p=>p.sevens,'accent',p=>`${p.gp} games played`),
+    leaderCard('Highest Single Game Score','🎯',
+      [...players].sort((a,b)=>b.bestRS-a.bestRS),
+      p=>p.bestRS,'',p=>`${p.gp} games · avg ${p.avgRS}/g`),
+    leaderCard('Consistency — 20+ Run Games','🎖️',
+      [...players].sort((a,b)=>b.twentyPlus-a.twentyPlus),
+      p=>p.twentyPlus,'',p=>`${p.gp} games · ${+(p.twentyPlus/p.gp*100).toFixed(0)}% hit rate`),
+    leaderCard('Run-Out Risk — Most Run-Outs','⚠️',
+      [...players].filter(p=>p.totalDismissals>=5).sort((a,b)=>b.dRunOut-a.dRunOut),
+      p=>p.dRunOut,'neg',p=>`${p.roRate}% of ${p.totalDismissals} dismissals · ${p.gp} games`),
+    leaderCard('Second Ball Pressure — Dots/Game','🔴',
+      [...players].filter(p=>p.gp>=3).sort((a,b)=>b.dfPerGame-a.dfPerGame),
+      p=>p.dfPerGame,'neg',p=>`${p.dotsFaced} total dots · ${p.gp} games`),
+  ]);
+
+  // ── Bowling ────────────────────────────────────────────────────────────────
+  const bowling = section('Bowling','🎳',[
     leaderCard('Most Wickets','🎯',
       [...players].sort((a,b)=>b.wkts-a.wkts),
-      p=>p.wkts,'accent',p=>`${p.gp} games · ${p.ob} overs bowled`),
-    leaderCard('Best Avg Contribution','⭐',
-      [...players].filter(p=>p.gp>=2).sort((a,b)=>b.avgContrib-a.avgContrib),
-      p=>p.avgContrib>0?'+'+p.avgContrib:p.avgContrib,'',p=>`${p.gp} games · total ${p.contrib>0?'+':''}${p.contrib}`),
-    leaderCard('Most 7s','💥',
-      [...players].sort((a,b)=>b.sevens-a.sevens),
-      p=>p.sevens,'accent',p=>`${p.gp} games · Zone D full hits`),
-    leaderCard('Best Economy','🔒',
+      p=>p.wkts,'accent',p=>`${p.ob} overs · ${p.gp} games`),
+    leaderCard('Best Economy — RC per Over','🔒',
       [...players].filter(p=>p.ob>=2).sort((a,b)=>a.econ-b.econ),
-      p=>p.econ,'blue',p=>`${p.ob} overs · ${p.wkts} wkts`),
+      p=>p.econ,'blue',p=>`${p.ob} overs · ${p.wkts} wkts`,2),
+    leaderCard('Wickets per Over','🌀',
+      [...players].filter(p=>p.ob>=2).sort((a,b)=>b.wktsPerOver-a.wktsPerOver),
+      p=>p.wktsPerOver,'accent',p=>`${p.wkts} wkts from ${p.ob} overs`,2),
     leaderCard('Dot Ball Kings','🧱',
       [...players].sort((a,b)=>b.dotsBowled-a.dotsBowled),
       p=>p.dotsBowled,'blue',p=>`${p.ob} overs bowled`),
-  ];
+    leaderCard('Most Overs Bowled','🏃',
+      [...players].sort((a,b)=>b.ob-a.ob),
+      p=>p.ob,'',p=>`${p.wkts} wkts · econ ${p.econ}`),
+  ]);
 
-  document.getElementById('rankingsContent').innerHTML=`<div class="rankings-grid">${cards.join('')}</div>`;
+  // ── All-round & Impact ─────────────────────────────────────────────────────
+  const general = section('All-Round & Impact','⭐',[
+    leaderCard('Best Avg Contribution — RS − RC','🏆',
+      [...players].filter(p=>p.gp>=2).sort((a,b)=>b.avgContrib-a.avgContrib),
+      p=>(p.avgContrib>=0?'+':'')+p.avgContrib,'',
+      p=>`${p.gp} games · total ${p.contrib>=0?'+':''}${p.contrib}`,2),
+    leaderCard('Total Contribution — All Games','📋',
+      [...players].sort((a,b)=>b.contrib-a.contrib),
+      p=>(p.contrib>=0?'+':'')+p.contrib,'',p=>`${p.gp} games · avg ${p.avgContrib>=0?'+':''}${p.avgContrib}/g`),
+    leaderCard('Clutch — Avg Contribution in Wins','🏅',
+      [...players].filter(p=>p.winGP>=1).sort((a,b)=>b.avgWinContrib-a.avgWinContrib),
+      p=>(p.avgWinContrib>=0?'+':'')+p.avgWinContrib,'',
+      p=>`${p.winGP} wins contributed to`),
+    leaderCard('All-Rounder Score — RS + (Wkts×10)','🌟',
+      [...players].sort((a,b)=>b.allrounder-a.allrounder),
+      p=>p.allrounder,'accent',
+      p=>`${p.rs} RS + ${p.wkts} wkts`),
+  ]);
+
+  document.getElementById('rankingsContent').innerHTML = batting + bowling + general;
 }
-
 // ── Form ──────────────────────────────────────────────────────────────────────
 function renderForm(){
   const f=activeSeason==='all'?gameStats:gameStats.filter(g=>g.season===activeSeason);
