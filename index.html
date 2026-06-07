@@ -511,72 +511,122 @@
   </div>
 
   <div id="stats" class="panel">
-    <div class="min-games-wrap">
-      <span class="min-games-label">Min Games</span>
-      <div class="min-games-pills" id="statsMinGamesPills">
-        <button class="mg-pill active" onclick="setStatsMinGames(1,this)">All</button>
-        <button class="mg-pill" onclick="setStatsMinGames(2,this)">2+</button>
-        <button class="mg-pill" onclick="setStatsMinGames(3,this)">3+</button>
-        <button class="mg-pill" onclick="setStatsMinGames(4,this)">4+</button>
-        <button class="mg-pill" onclick="setStatsMinGames(5,this)">5+</button>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+      <div class="pb-pills" id="statsSubPills">
+        <button class="pb-pill active" onclick="showStatsView('core',this)">Core Stats</button>
+        <button class="pb-pill" onclick="showStatsView('detail',this)">Batting &amp; Bowling</button>
+        <button class="pb-pill" onclick="showStatsView('dismissals',this)">Dismissals</button>
+      </div>
+      <div class="min-games-wrap" style="margin-bottom:0">
+        <span class="min-games-label">Min Games</span>
+        <div class="min-games-pills" id="statsMinGamesPills">
+          <button class="mg-pill active" onclick="setStatsMinGames(1,this)">All</button>
+          <button class="mg-pill" onclick="setStatsMinGames(2,this)">2+</button>
+          <button class="mg-pill" onclick="setStatsMinGames(3,this)">3+</button>
+          <button class="mg-pill" onclick="setStatsMinGames(4,this)">4+</button>
+          <button class="mg-pill" onclick="setStatsMinGames(5,this)">5+</button>
+        </div>
       </div>
     </div>
-    <div class="section-title" id="statsTitle">Player Statistics</div>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-    <table class="stats-table">
-      <thead><tr>
-        <th class="s-rank"></th>
-        <th class="s-name" onclick="sortTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortTable('games',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortTable('rs',event)"><div class="col-header">RS <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortTable('rc',event)"><div class="col-header">RC <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortTable('wkts',event)"><div class="col-header">Wkts <span class="sort-icon">↕</span></div></th>
-        <th class="s-avg" onclick="sortTable('avg',event)"><div class="col-header">Avg C/G <span class="sort-icon">↕</span></div></th>
-        <th class="s-contrib" onclick="sortTable('contrib',event)"><div class="col-header">Total C <span class="sort-icon">↓</span></div></th>
-      </tr></thead>
-      <tbody id="statsBody"></tbody>
-    </table>
+
+    <!-- ── Sub-tab 1: Core Stats ─────────────────────────────────────────── -->
+    <div id="statsView-core">
+      <div class="section-title" id="statsTitle">Player Statistics</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="stats-table">
+        <thead><tr>
+          <th class="s-rank"></th>
+          <th class="s-name" onclick="sortTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('games',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('rs',event)"><div class="col-header">RS <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('rc',event)"><div class="col-header">RC <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('wkts',event)"><div class="col-header">Wkts <span class="sort-icon">↕</span></div></th>
+          <th class="s-avg" onclick="sortTable('avg',event)"><div class="col-header">Avg C/G <span class="sort-icon">↕</span></div></th>
+          <th class="s-contrib" onclick="sortTable('contrib',event)"><div class="col-header">Total C <span class="sort-icon">↓</span></div></th>
+        </tr></thead>
+        <tbody id="statsBody"></tbody>
+      </table>
+      </div>
+      <div class="stats-legend">
+        <div class="legend-title">Legend</div>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="legend-abbr">G</span><span class="legend-desc">Games played</span></div>
+          <div class="legend-item"><span class="legend-abbr">RS</span><span class="legend-desc">Runs Scored</span></div>
+          <div class="legend-item"><span class="legend-abbr">RC</span><span class="legend-desc">Net Runs Conceded (gross runs minus wicket credits — each wicket = −5)</span></div>
+          <div class="legend-item"><span class="legend-abbr">Wkts</span><span class="legend-desc">Wickets taken while bowling</span></div>
+          <div class="legend-item"><span class="legend-abbr">Avg C/G</span><span class="legend-desc">Average Contribution per game</span></div>
+          <div class="legend-item"><span class="legend-abbr">Total C</span><span class="legend-desc">Total Contribution = RS − RC (higher is better)</span></div>
+        </div>
+      </div>
     </div>
-    <div class="detail-section-title">Detailed Stats</div>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-    <table class="detail-stats-table">
-      <thead><tr>
-        <th class="s-rank"></th>
-        <th class="s-name" onclick="sortDetailTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('detailGames',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('avgSR',event)"><div class="col-header">Avg SR <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('sevens',event)"><div class="col-header">7s <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('dotsFaced',event)"><div class="col-header">DF <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('dotsBowled',event)"><div class="col-header">DB <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('extras',event)"><div class="col-header">Ex <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('dRunOut',event)"><div class="col-header">RO <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('dCaught',event)"><div class="col-header">Ct <span class="sort-icon">↕</span></div></th>
-        <th class="s-num" onclick="sortDetailTable('dBowled',event)"><div class="col-header">Bd <span class="sort-icon">↕</span></div></th>
-      </tr></thead>
-      <tbody id="detailStatsBody"></tbody>
-    </table>
+
+    <!-- ── Sub-tab 2: Batting & Bowling Detail ───────────────────────────── -->
+    <div id="statsView-detail" style="display:none">
+      <div class="section-title">Batting &amp; Bowling Detail</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="detail-stats-table">
+        <thead><tr>
+          <th class="s-rank"></th>
+          <th class="s-name" onclick="sortDetailTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('detailGames',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('avgSR',event)"><div class="col-header">Avg SR <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('sevens',event)"><div class="col-header">7s <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('dotsFaced',event)"><div class="col-header">DF <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('dotsBowled',event)"><div class="col-header">DB <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('extras',event)"><div class="col-header">Ex <span class="sort-icon">↕</span></div></th>
+        </tr></thead>
+        <tbody id="detailStatsBody"></tbody>
+      </table>
+      </div>
+      <div class="data-note" style="margin-top:14px">
+        <span class="data-note-icon">⚠️</span>
+        <span>SR and ball-by-ball stats confirmed from all 19 scorecards. G = games with complete detail data for that player.</span>
+      </div>
+      <div class="stats-legend">
+        <div class="legend-title">Legend</div>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="legend-abbr">Avg SR</span><span class="legend-desc">Strike Rate — runs scored per 100 balls faced</span></div>
+          <div class="legend-item"><span class="legend-abbr">7s</span><span class="legend-desc">Zone D full hits — ball reaches the back net on the full (6 bonus + 1 physical run)</span></div>
+          <div class="legend-item"><span class="legend-abbr">DF</span><span class="legend-desc">Dot Balls Faced — legal deliveries where no run was scored while batting (each one creates a Second Ball dismissal risk)</span></div>
+          <div class="legend-item"><span class="legend-abbr">DB</span><span class="legend-desc">Dot Balls Bowled — legal deliveries where no run was conceded while bowling</span></div>
+          <div class="legend-item"><span class="legend-abbr">Ex</span><span class="legend-desc">Extras Given — wides, no-balls and legsides conceded while bowling (each worth +2 to the batting team)</span></div>
+        </div>
+      </div>
     </div>
-    <div class="data-note" style="margin-top:14px">
-      <span class="data-note-icon">⚠️</span>
-      <span>Detailed stats (SR, 7s, DF, DB, Ex, RO/Ct/Bd) confirmed from all 19 scorecards. G = games with complete detail data for that player.</span>
-    </div>
-    <div class="stats-legend">
-      <div class="legend-title">Legend</div>
-      <div class="legend-grid">
-        <div class="legend-item"><span class="legend-abbr">G</span><span class="legend-desc">Games played</span></div>
-        <div class="legend-item"><span class="legend-abbr">RS</span><span class="legend-desc">Runs Scored</span></div>
-        <div class="legend-item"><span class="legend-abbr">RC</span><span class="legend-desc">Net Runs Conceded (gross runs minus wicket credits — each wicket = −5)</span></div>
-        <div class="legend-item"><span class="legend-abbr">Wkts</span><span class="legend-desc">Wickets taken while bowling</span></div>
-        <div class="legend-item"><span class="legend-abbr">Avg C/G</span><span class="legend-desc">Average Contribution per game</span></div>
-        <div class="legend-item"><span class="legend-abbr">Total C</span><span class="legend-desc">Total Contribution = RS − RC (higher is better)</span></div>
-        <div class="legend-item"><span class="legend-abbr">SR</span><span class="legend-desc">Strike Rate — runs scored per 100 balls faced</span></div>
-        <div class="legend-item"><span class="legend-abbr">7s</span><span class="legend-desc">Zone D full hits — ball reaches the back net on the full (6 bonus + 1 physical run)</span></div>
-        <div class="legend-item"><span class="legend-abbr">DF</span><span class="legend-desc">Dot Balls Faced — legal deliveries where no run was scored while batting</span></div>
-        <div class="legend-item"><span class="legend-abbr">DB</span><span class="legend-desc">Dot Balls Bowled — legal deliveries where no run was conceded while bowling</span></div>
-        <div class="legend-item"><span class="legend-abbr">Ex</span><span class="legend-desc">Extras Given — wides, no-balls and legsides conceded while bowling</span></div>
-        <div class="legend-item"><span class="legend-abbr">RO</span><span class="legend-desc">Run-Outs — dismissed attempting a run (each = −5 to skin total; often voids a 7-run Zone D hit)</span></div>
-        <div class="legend-item"><span class="legend-abbr">Ct</span><span class="legend-desc">Caught Dismissals — dismissed via a caught delivery</span></div>
-        <div class="legend-item"><span class="legend-abbr">Bd</span><span class="legend-desc">Bowled Dismissals — dismissed bowled</span></div>
+
+    <!-- ── Sub-tab 3: Dismissals ─────────────────────────────────────────── -->
+    <div id="statsView-dismissals" style="display:none">
+      <div class="section-title">Dismissal Breakdown</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="detail-stats-table">
+        <thead><tr>
+          <th class="s-rank"></th>
+          <th class="s-name" onclick="sortDismissalTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('detailGames',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('totalDismissals',event)"><div class="col-header">Total <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dRunOut',event)"><div class="col-header">RO <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('roRate',event)"><div class="col-header">RO% <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dCaught',event)"><div class="col-header">Ct <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dBowled',event)"><div class="col-header">Bd <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dStumped',event)"><div class="col-header">St <span class="sort-icon">↕</span></div></th>
+        </tr></thead>
+        <tbody id="dismissalStatsBody"></tbody>
+      </table>
+      </div>
+      <div class="data-note" style="margin-top:14px">
+        <span class="data-note-icon">ℹ️</span>
+        <span>Dismissal types sourced from ball-by-ball data across all 19 games. Each dismissal = −5 runs to the skin total.</span>
+      </div>
+      <div class="stats-legend">
+        <div class="legend-title">Legend</div>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="legend-abbr">Total</span><span class="legend-desc">Total dismissals across all games</span></div>
+          <div class="legend-item"><span class="legend-abbr">RO</span><span class="legend-desc">Run-Outs — highest cost dismissal; voids Zone D bonus runs if the 7 hasn't been completed</span></div>
+          <div class="legend-item"><span class="legend-abbr">RO%</span><span class="legend-desc">Percentage of dismissals that are run-outs — the key risk indicator</span></div>
+          <div class="legend-item"><span class="legend-abbr">Ct</span><span class="legend-desc">Caught — most common dismissal type</span></div>
+          <div class="legend-item"><span class="legend-abbr">Bd</span><span class="legend-desc">Bowled — dismissed by the ball hitting the stumps</span></div>
+          <div class="legend-item"><span class="legend-abbr">St</span><span class="legend-desc">Stumped — out of crease and the keeper removes the bails</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1178,12 +1228,78 @@ const bowlingData=[
 let activeSeason='all',sortKey='contrib',sortDir=1,sortDetailKey='avgSR',sortDetailDir=1,searchTerm='';
 let statsMinGames=1,pbMinGames=1;
 
+function showStatsView(view, btn) {
+  ['core','detail','dismissals'].forEach(v => {
+    const el = document.getElementById('statsView-' + v);
+    if (el) el.style.display = v === view ? '' : 'none';
+  });
+  document.querySelectorAll('#statsSubPills .pb-pill').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  if (view === 'dismissals') renderDismissalStats();
+}
+
+let sortDismissalKey = 'totalDismissals', sortDismissalDir = 1;
+
+function renderDismissalStats() {
+  const sf = activeSeason;
+  const src = (sf === 'all' ? gameStats : gameStats.filter(g => g.season === sf))
+    .filter(g => g.dCaught !== undefined);
+  const agg = {};
+  src.forEach(g => {
+    if (!agg[g.name]) agg[g.name] = {name:g.name, detailGames:0, dCaught:0, dBowled:0, dRunOut:0, dStumped:0};
+    agg[g.name].detailGames++;
+    agg[g.name].dCaught  += (g.dCaught  || 0);
+    agg[g.name].dBowled  += (g.dBowled  || 0);
+    agg[g.name].dRunOut  += (g.dRunOut  || 0);
+    agg[g.name].dStumped += (g.dStumped || 0);
+  });
+  const players = Object.values(agg).map(p => ({
+    ...p,
+    totalDismissals: p.dCaught + p.dBowled + p.dRunOut + p.dStumped,
+    roRate: (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) > 0
+      ? Math.round(p.dRunOut / (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) * 100) : 0,
+  }));
+  const sorted = [...players].sort((a, b) =>
+    sortDismissalDir === 1 ? b[sortDismissalKey] - a[sortDismissalKey] : a[sortDismissalKey] - b[sortDismissalKey]
+  );
+  const tbody = document.getElementById('dismissalStatsBody');
+  if (!tbody) return;
+  if (!sorted.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No data available.</td></tr>'; return; }
+  tbody.innerHTML = sorted.map((p, i) => {
+    const rank = i + 1, rc = rank <= 3 ? \`rank-\${rank}\` : '';
+    const roCol = p.roRate >= 35 ? 'neg' : p.roRate >= 20 ? 'zero' : '';
+    return \`<tr>
+      <td class="s-rank"><span class="rank \${rc}">\${rank}</span></td>
+      <td class="s-name player-name">\${p.name}</td>
+      <td class="s-num">\${p.detailGames}</td>
+      <td class="s-num">\${p.totalDismissals}</td>
+      <td class="s-num" style="color:\${p.dRunOut > 10 ? 'var(--red)' : p.dRunOut > 5 ? 'var(--accent)' : 'inherit'}">\${p.dRunOut}</td>
+      <td class="s-num"><span class="\${roCol}">\${p.roRate}%</span></td>
+      <td class="s-num">\${p.dCaught}</td>
+      <td class="s-num">\${p.dBowled}</td>
+      <td class="s-num">\${p.dStumped}</td>
+    </tr>\`;
+  }).join('');
+}
+
+function sortDismissalTable(key, event) {
+  if (sortDismissalKey === key) { sortDismissalDir = sortDismissalDir === 1 ? -1 : 1; }
+  else { sortDismissalKey = key; sortDismissalDir = key === 'name' ? -1 : 1; }
+  document.querySelectorAll('#statsView-dismissals th').forEach(th => th.classList.remove('sorted'));
+  event.currentTarget.closest('th').classList.add('sorted');
+  renderDismissalStats();
+}
+
 function setStatsMinGames(n,btn){
   statsMinGames=n;
   document.querySelectorAll('#statsMinGamesPills .mg-pill').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderStats();
   renderDetailStats();
+  // Re-render dismissals if that sub-tab is active
+  if (document.getElementById('statsView-dismissals') && document.getElementById('statsView-dismissals').style.display !== 'none') {
+    renderDismissalStats();
+  }
 }
 
 function setPbMinGames(n,btn){
@@ -2522,58 +2638,4 @@ function renderForm(){
       if(!g)return`<div class="form-dot empty">–</div>`;
       const cls=g.contrib>0?'pos':g.contrib<0?'neg':'zero';
       const label=g.contrib>0?'+'+g.contrib:g.contrib;
-      return`<div class="form-dot ${cls}" title="${gid}: ${label}">${label}</div>`;
-    });
-
-    // Last 3 games for trend
-    const last3=last5Games.slice(-3).map(gid=>gameMap[gid]).filter(Boolean);
-    const last3Avg=last3.length?last3.reduce((s,g)=>s+g.contrib,0)/last3.length:0;
-    const sAvg=seasonAvg[name];
-    const badge=trendBadge(last3Avg,sAvg);
-
-    // Recent RS and wkts
-    const recentGames=last5Games.map(gid=>gameMap[gid]).filter(Boolean);
-    const recentRS=recentGames.reduce((s,g)=>s+g.rs,0);
-    const recentWkts=recentGames.reduce((s,g)=>s+g.wkts,0);
-    const avgCStr=sAvg>=0?'+'+sAvg.toFixed(1):sAvg.toFixed(1);
-    const l3Str=last3Avg>=0?'+'+last3Avg.toFixed(1):last3Avg.toFixed(1);
-    const trendCls=last3Avg>sAvg+1?'up':last3Avg<sAvg-1?'down':'';
-
-    return`<div class="form-card">
-      <div class="form-card-header">
-        <div class="form-player-name">${name}</div>
-        <div class="form-trend-badge" title="Form trend">${badge}</div>
-      </div>
-      <div class="form-dots">${dotDivs.join('')}</div>
-      <div class="form-stats">
-        <div class="form-stat-item"><span class="form-stat-label">Season Avg C</span><span class="form-stat-val">${avgCStr}</span></div>
-        <div class="form-stat-item"><span class="form-stat-label">Last 3 Avg C</span><span class="form-stat-val ${trendCls}">${l3Str}</span></div>
-        <div class="form-stat-item"><span class="form-stat-label">Recent RS</span><span class="form-stat-val">${recentRS}</span></div>
-        <div class="form-stat-item"><span class="form-stat-label">Recent Wkts</span><span class="form-stat-val">${recentWkts}</span></div>
-      </div>
-    </div>`;
-  });
-
-  const seasonLabel=document.querySelector('.season-btn.active')?.textContent||'Season';
-  document.getElementById('formContent').innerHTML=`
-    <div class="form-note">Last 5 games · ${seasonLabel} · Contribution per game (RS − RC)</div>
-    <div class="form-grid">${cards.join('')}</div>`;
-}
-
-// Load gameStats from games.json, then initialise
-fetch('data/games.json')
-  .then(r => r.json())
-  .then(data => {
-    gameStats = data.gameStats.map(g => ({
-      ...g,
-      dateVal: new Date(g.dateVal)
-    }));
-    refresh();
-  })
-  .catch(err => {
-    console.error('Failed to load games.json:', err);
-    refresh();
-  });
-</script>
-</body>
-</html>
+      return`<div class="form-dot ${cls
