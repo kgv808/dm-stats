@@ -1259,8 +1259,7 @@ function renderDismissalStats() {
     roRate: (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) > 0
       ? Math.round(p.dRunOut / (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) * 100) : 0,
   }));
-  const mg = minGames;
-  const filtered = players.filter(p => p.detailGames >= mg);
+  const filtered = players.filter(p => p.detailGames >= statsMinGames);
   const sorted = [...filtered].sort((a, b) =>
     sortDismissalDir === 1 ? b[sortDismissalKey] - a[sortDismissalKey] : a[sortDismissalKey] - b[sortDismissalKey]
   );
