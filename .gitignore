@@ -36,6 +36,9 @@ data extraction/csv/spring2025_G6_Toenails.csv
 DM_Tracker_Final.html
 SESSION_SUMMARY.md
 
+# ── Claude / Cowork session files ─────────────────────────────────────────────
+.claude/
+
 # ── OS junk ───────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
