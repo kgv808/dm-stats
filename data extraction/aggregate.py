@@ -66,10 +66,24 @@ NAME_MAP = {
     'Nithin G': 'Nithin G',
 }
 
+# Game-specific overrides: {game: {raw_name: canonical}}
+# G2 is the one game where both Kirans played; the PDF extracted "Kiaran N"
+# for Kiran Ninan (not Varghese), so override the default NAME_MAP mapping.
+GAME_OVERRIDES = {
+    'G2': {
+        'Kiaran N': 'Kiran Ninan',
+    },
+}
 
-def normalise(name: str) -> str | None:
+
+def normalise(name: str, game: str = '') -> str | None:
     """Return canonical name, or None if not a DM player / unmapped."""
-    return NAME_MAP.get(name.strip())
+    n = name.strip()
+    if game and game in GAME_OVERRIDES:
+        override = GAME_OVERRIDES[game].get(n)
+        if override is not None:
+            return override
+    return NAME_MAP.get(n)
 
 
 # ── Load game metadata ─────────────────────────────────────────────────────────
@@ -109,7 +123,7 @@ def load_stats_csvs() -> list:
                 is_dm = ('durban' in team or 'mallu' in team or team == 'name')
                 if not is_dm:
                     continue
-                canonical = normalise(row['name'])
+                canonical = normalise(row['name'], game)
                 if not canonical:
                     continue
                 rs = int(row['rs']) if row['rs'] else 0
@@ -163,8 +177,8 @@ def load_balls_csvs() -> dict:
                 bat_team = row['batting_team'].lower()
                 dm_batting = 'durban' in bat_team or 'mallu' in bat_team
 
-                batter  = normalise(row['batter'])
-                bowler  = normalise(row['bowler'])
+                batter  = normalise(row['batter'], game)
+                bowler  = normalise(row['bowler'], game)
                 dtype   = row['delivery_type']
                 runs    = int(row['runs']) if row['runs'] else 0
                 raw     = row['delivery_raw'].strip()

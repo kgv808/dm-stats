@@ -1259,12 +1259,14 @@ function renderDismissalStats() {
     roRate: (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) > 0
       ? Math.round(p.dRunOut / (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) * 100) : 0,
   }));
-  const sorted = [...players].sort((a, b) =>
+  const mg = minGames;
+  const filtered = players.filter(p => p.detailGames >= mg);
+  const sorted = [...filtered].sort((a, b) =>
     sortDismissalDir === 1 ? b[sortDismissalKey] - a[sortDismissalKey] : a[sortDismissalKey] - b[sortDismissalKey]
   );
   const tbody = document.getElementById('dismissalStatsBody');
   if (!tbody) return;
-  if (!sorted.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No data available.</td></tr>'; return; }
+  if (!sorted.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No players meet the minimum games threshold.</td></tr>'; return; }
   tbody.innerHTML = sorted.map((p, i) => {
     const rank = i + 1, rc = rank <= 3 ? `rank-${rank}` : '';
     const roCol = p.roRate >= 35 ? 'neg' : p.roRate >= 20 ? 'zero' : '';
@@ -1457,7 +1459,7 @@ function renderDetailStats(){
   });
   const tbody=document.getElementById('detailStatsBody');
   if(!tbody)return;
-  if(!sorted.length){tbody.innerHTML='<tr><td colspan="11" class="empty-state">No players meet the minimum games threshold.</td></tr>';return;}
+  if(!sorted.length){tbody.innerHTML='<tr><td colspan="8" class="empty-state">No players meet the minimum games threshold.</td></tr>';return;}
   tbody.innerHTML=sorted.map((p,i)=>{
     const rank=i+1,rc=rank<=3?`rank-${rank}`:'';
     const srCls=p.avgSR>=150?'pos':p.avgSR>=80?'zero':'neg';
@@ -1470,9 +1472,6 @@ function renderDetailStats(){
       <td class="s-num">${p.dotsFaced}</td>
       <td class="s-num">${p.dotsBowled}</td>
       <td class="s-num">${p.extras}</td>
-      <td class="s-num" style="color:${p.dRunOut>10?'var(--red)':p.dRunOut>5?'var(--accent)':'inherit'}">${p.dRunOut}</td>
-      <td class="s-num">${p.dCaught}</td>
-      <td class="s-num">${p.dBowled}</td>
     </tr>`;
   }).join('');
 }
