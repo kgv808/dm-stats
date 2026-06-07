@@ -1266,19 +1266,19 @@ function renderDismissalStats() {
   if (!tbody) return;
   if (!sorted.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No data available.</td></tr>'; return; }
   tbody.innerHTML = sorted.map((p, i) => {
-    const rank = i + 1, rc = rank <= 3 ? \`rank-\${rank}\` : '';
+    const rank = i + 1, rc = rank <= 3 ? `rank-${rank}` : '';
     const roCol = p.roRate >= 35 ? 'neg' : p.roRate >= 20 ? 'zero' : '';
-    return \`<tr>
-      <td class="s-rank"><span class="rank \${rc}">\${rank}</span></td>
-      <td class="s-name player-name">\${p.name}</td>
-      <td class="s-num">\${p.detailGames}</td>
-      <td class="s-num">\${p.totalDismissals}</td>
-      <td class="s-num" style="color:\${p.dRunOut > 10 ? 'var(--red)' : p.dRunOut > 5 ? 'var(--accent)' : 'inherit'}">\${p.dRunOut}</td>
-      <td class="s-num"><span class="\${roCol}">\${p.roRate}%</span></td>
-      <td class="s-num">\${p.dCaught}</td>
-      <td class="s-num">\${p.dBowled}</td>
-      <td class="s-num">\${p.dStumped}</td>
-    </tr>\`;
+    return `<tr>
+      <td class="s-rank"><span class="rank ${rc}">${rank}</span></td>
+      <td class="s-name player-name">${p.name}</td>
+      <td class="s-num">${p.detailGames}</td>
+      <td class="s-num">${p.totalDismissals}</td>
+      <td class="s-num" style="color:${p.dRunOut > 10 ? 'var(--red)' : p.dRunOut > 5 ? 'var(--accent)' : 'inherit'}">${p.dRunOut}</td>
+      <td class="s-num"><span class="${roCol}">${p.roRate}%</span></td>
+      <td class="s-num">${p.dCaught}</td>
+      <td class="s-num">${p.dBowled}</td>
+      <td class="s-num">${p.dStumped}</td>
+    </tr>`;
   }).join('');
 }
 
@@ -2638,4 +2638,48 @@ function renderForm(){
       if(!g)return`<div class="form-dot empty">–</div>`;
       const cls=g.contrib>0?'pos':g.contrib<0?'neg':'zero';
       const label=g.contrib>0?'+'+g.contrib:g.contrib;
-      return`<div class="form-dot ${cls
+      return`<div class="form-dot ${cls}" title="${g.opponent}: ${label}">${label}</div>`;
+    });
+
+    const last3=last5Games.slice(-3).map(gid=>gameMap[gid]).filter(Boolean);
+    const last3Avg=last3.length?+(last3.reduce((s,g)=>s+g.contrib,0)/last3.length).toFixed(1):0;
+    const sAvg=+(seasonAvg[name]||0).toFixed(1);
+    const trend=trendBadge(last3Avg,sAvg);
+    return`<div class="form-card">
+      <div class="form-card-header">
+        <div class="form-player-name">${name}</div>
+        <div class="form-trend-badge">${trend}</div>
+      </div>
+      <div class="form-dots">${dotDivs.join('')}</div>
+      <div class="form-stats">
+        <div><div class="form-stat-label">Avg C/G</div><div class="form-stat-val ${sAvg>=0?'up':'down'}">${sAvg>=0?'+':''}${sAvg}</div></div>
+        <div><div class="form-stat-label">Last 3</div><div class="form-stat-val ${last3Avg>=0?'up':'down'}">${last3Avg>=0?'+':''}${last3Avg}</div></div>
+        <div><div class="form-stat-label">RS</div><div class="form-stat-val">${playerRows.reduce((s,g)=>s+g.rs,0)}</div></div>
+        <div><div class="form-stat-label">7s</div><div class="form-stat-val">${playerRows.reduce((s,g)=>s+(g.sevens||0),0)}</div></div>
+      </div>
+    </div>`;
+  });
+
+  const grid=document.createElement('div');
+  grid.className='form-grid';
+  grid.innerHTML=cards.join('');
+  document.getElementById('formContent').innerHTML='';
+  document.getElementById('formContent').appendChild(grid);
+}
+// Load gameStats from games.json, then initialise
+fetch('data/games.json')
+  .then(r => r.json())
+  .then(data => {
+    gameStats = data.gameStats.map(g => ({
+      ...g,
+      dateVal: new Date(g.dateVal)
+    }));
+    refresh();
+  })
+  .catch(err => {
+    console.error('Failed to load games.json:', err);
+    refresh();
+  });
+</script>
+</body>
+</html>
