@@ -13,7 +13,7 @@ A self-hosted web app for tracking player statistics, results, and performance a
 |-----|--------------|
 | Insights | Season summary, last game result, highlights, ladder standings, head-to-head records |
 | Results | Full match history with scores, skins points, and result badges |
-| Player Stats | Season aggregates (RS, RC, Wkts, Contribution) + Detailed Stats (SR, 7s, Dots Faced/Bowled, Extras) |
+| Player Stats | Three sub-tabs: Core Stats (RS, RC, Wkts, Contribution), Batting & Bowling (SR, 7s, Dots, Extras), Dismissals (type breakdown: caught/bowled/run-out/stumped) |
 | Pairs & Bowling | Batting pair records by skin, bowling performance heatmap |
 | Team Sheet | Pre-match squad selector with auto-generated batting pairs and bowling order |
 
@@ -98,4 +98,4 @@ RC can go negative — a bowler who takes wickets worth more than the runs they 
 | Season | Division | Venue | P | W | L |
 |--------|----------|-------|---|---|---|
 | Spring 2025 | C3 | Fourways Falcons | 6 | 4 | 2 |
-| Autumn 2026 | C1 | Hillfox Action Sports | 13 | 7 | 6 |
+| Autumn 2026 | C1 | Hillfox Action Sports | 13 | 5 | 8 |

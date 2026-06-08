@@ -43,15 +43,17 @@ dm-stats/                              ← GitHub repo (kgv808/dm-stats)
 **`games[]`** — one row per match (19 games):
 ```
 season, game (G1–G19), date, dateVal (ISO), opponent, dmScore, oppScore,
-dmSkins, oppSkins, result (win/loss), points, maxPoints, fixtureId
+dmSkins, oppSkins, result (win/loss), points, maxPoints, fixtureId,
+dmSkin1, dmSkin2, dmSkin3, dmSkin4,   ← DM net skin scores (from PDF)
+oppSkin1, oppSkin2, oppSkin3, oppSkin4 ← Opponent net skin scores (from PDF)
 ```
-Note: `dmSkins` and `oppSkins` are currently 0 for all games — not yet populated from CSVs.
 
 **`gameStats[]`** — one row per DM player per match (152 rows):
 ```
 season, game, date, dateVal (ISO), fixtureId, opponent, name,
 rs, rc, wkts, contrib, sr, ob, econ,
-sevens, dotsFaced, dotsBowled, extras
+sevens, dotsFaced, dotsBowled, extras,
+dCaught, dBowled, dRunOut, dStumped    ← dismissal type counts
 ```
 - `sevens` = Zone D full hits (delivery_raw == '7') — the 7-run back-net-on-the-full shot
 - `dotsFaced` = deliveries DM batter received where runs == 0 and delivery_type == 'runs'
@@ -59,6 +61,14 @@ sevens, dotsFaced, dotsBowled, extras
 - `extras` = extras DM batters received while batting (nb, ls, w)
 - `rc` = NET runs conceded (gross runs − wicket credits; each wicket = −5)
 - `econ` = rc / ob (can be negative for good bowlers — this is correct)
+
+**`pairStats[]`** — one row per DM batting pair per skin per game (76 rows):
+```
+game, season, date, opponent, result, skin (1–4),
+pair (string), batters (array of 2 canonical names),
+dmRuns, dmWickets,  ← DM batting totals from PDF skin scores
+oppRuns             ← Opponent batting total from PDF skin scores
+```
 
 **`seasons[]`** — Spring 2025 (C3, Fourways), Autumn 2026 (C1, Hillfox)
 
@@ -70,7 +80,7 @@ season, game, date,
 batting_team, bowling_team,
 skin (1–4), pair (e.g. "Nithin & Chibin"),
 batter, bowler,
-over (1–4 within skin), ball (1–6),
+over (1–16, global within team batting innings), ball (1–6),
 delivery_raw, delivery_type, delivery_sub, runs
 ```
 
@@ -106,7 +116,6 @@ Wides appear as `w` or `w1` with `delivery_type == 'extra'`.
 ```
 Season, SeasonLabel, GameWeek, Date, Opponent, Result, DMScore, OppScore, FixtureID, URL, PDFAvailable
 ```
-Missing: DMSkins, OppSkins, Points, MaxPoints — these need to be added manually when the data is available.
 
 ---
 
@@ -114,16 +123,18 @@ Missing: DMSkins, OppSkins, Points, MaxPoints — these need to be added manuall
 
 | Tab | What it shows | Data source |
 |-----|---------------|-------------|
-| Insights | Last game card, highlights, head-to-head records | `games[]` hardcoded |
-| Results | Full match history with scores and results | `games[]` hardcoded |
-| Player Stats | Season aggregates + detailed stats table | `gameStats[]` from games.json |
-| Rankings | 15 leaderboard cards across 3 sections | `gameStats[]` from games.json |
+| Insights | Last game card, highlights, head-to-head records | `games[]` from games.json |
+| Results | Full match history with scores and results | `games[]` from games.json |
+| Player Stats | 3 sub-tabs: Core Stats, Batting & Bowling, Dismissals | `gameStats[]` from games.json |
+| Rankings | Leaderboard cards — batting, bowling, dismissals | `gameStats[]` from games.json |
 | Form | Last 5 games per player, trend indicators | `gameStats[]` from games.json |
-| Pairs & Bowling | Batting pair records, bowling heatmap | `pairsData[]`, `bowlingData[]` hardcoded |
+| Pairs & Bowling | Batting pair records, bowling heatmap | `pairsData[]` from games.json, `bowlingData[]` hardcoded |
 | Team Sheet | Squad selector, pair builder, match day sheet | Derived from `gameStats[]` |
 
-**Known data gap:** `pairsData[]` and `bowlingData[]` are still hardcoded in index.html.
-These should eventually be moved to games.json and computed from the balls.csv pipeline.
+**Remaining hardcoded data:** `bowlingData[]` (per-over bowling breakdown) is still hardcoded
+in index.html. Computing it from balls.csv is blocked by a data gap: the PDF extractor does
+not capture extras for opponent batting overs, causing per-over rc totals to be systematically
+wrong (~7–21 runs short per skin). Fix requires updating extract_scorecard.py to capture extras.
 
 ---
 
@@ -179,11 +190,10 @@ The rate of dots per game is already surfaced. What's missing: sequential dot ba
 Requires: scanning consecutive rows in balls.csv for same batter, same skin.
 Stat: `secondBallRate = dots / ballsFaced`, `secondBallDismissals = count`.
 
-**2. Wicket Type Breakdown**
-From balls.csv where batting_team is DM and delivery_type == 'wicket':
-delivery_sub gives: caught, bowled, runout, stumped.
-Show per player: how do they get out? Run outs suggest risky running on 7s.
-Quick win — add to player stats or a new Insights card.
+**2. Wicket Type Breakdown** ✅ DONE
+dCaught, dBowled, dRunOut, dStumped now tracked in gameStats and displayed in the
+Dismissals sub-tab of Player Stats. Run-Out Risk and Second Ball Pressure leaderboard
+cards added to Rankings tab.
 
 **3. Skin Position Assignment per Player**
 From balls.csv: which skin (1–4) does each player consistently bat in?
@@ -221,11 +231,11 @@ Reveals batting profile: conservative (lots of 1s/2s), aggressive (lots of 4s/5s
 or wasteful (lots of 0s). Already partially covered by dotsFaced and sevens.
 Add `scoringDist: {0:n, 1:n, 2:n, ...}` to gameStats.
 
-**9. Pair Skin Totals from balls.csv**
-Currently pairsData is hardcoded. Calculate directly: for each skin, sum all DM runs
-(where batting_team is DM) grouped by (game, skin, pair). This replaces the hardcoded array
-and enables adding win/loss outcome per skin automatically.
-Add `pairStats[]` to games.json — high effort but fixes the hardcoding problem permanently.
+**9. Pair Skin Totals** ✅ DONE (via PDF, not balls.csv)
+`pairStats[]` is now in games.json. dmRuns/oppRuns come from PDF skin score parsing
+(not balls.csv — balls.csv misses extras for DM batting). pairsData in the app
+is now loaded dynamically from pairStats. bowlingData per-over rc still hardcoded —
+see note in app features table above.
 
 **10. Effective Economy per Bowler (Gross + Extras)**
 Currently econ is net (after wicket credits). Effective economy = raw runs conceded
@@ -282,6 +292,8 @@ The `extract_scorecard.py` reads PDFs via pdfplumber and outputs:
 
 Name normalisation is in `aggregate.py → NAME_MAP`. 42 PDF variants → 25 canonical names.
 If a new name appears that isn't in NAME_MAP, it will be silently dropped. Check output counts.
+`GAME_OVERRIDES` in aggregate.py handles per-game exceptions — currently G2 where `Kiaran N`
+maps to `Kiran Ninan` (not `Kiran Varghese`), the one game both Kirans played simultaneously.
 
 ---
 
@@ -313,6 +325,10 @@ Aaron, Alex, Don, Dony, Godfrey, Goukol, Jesse, Kiran Ninan, Merlin, Nandu, Nith
 **Seasons covered:**
 - Spring 2025 (G1–G6): Fourways Falcons, C3 Division
 - Autumn 2026 (G7–G19): Hillfox Action Sports, C1 Division
+
+**Season records:**
+- Spring 2025 (G1–G6): 4W 2L
+- Autumn 2026 (G7–G19): 5W 8L
 
 **Repeat opponents (meaningful sample size):**
 - Akkerkop Arende: 4 games (G8, G12, G14, G19) — DM record: 1W 3L
