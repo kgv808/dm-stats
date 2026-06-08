@@ -95,7 +95,7 @@ RC can go negative — a bowler who takes wickets worth more than the runs they 
 
 ## Season records
 
-| Season | Division | Venue | P | W | L |
-|--------|----------|-------|---|---|---|
-| Spring 2025 | C3 | Fourways Falcons | 6 | 4 | 2 |
-| Autumn 2026 | C1 | Hillfox Action Sports | 13 | 5 | 8 |
+| Season | Division | Venue | P | W | L | Medal |
+|--------|----------|-------|---|---|---|-------|
+| Spring 2025 | C3 | Fourways Falcons | 6 | 4 | 2 | Season ended early |
+| Autumn 2026 | C1 | Hillfox Action Sports | 13 | 5 | 8 | 🥉 Bronze |
