@@ -105,6 +105,7 @@ def load_skin_scores() -> dict:
     return skin_data
 
 
+
 def main():
     with open(GAMES_JSON, encoding='utf-8') as f:
         data = json.load(f)

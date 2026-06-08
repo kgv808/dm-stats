@@ -5775,5 +5775,2743 @@
       },
       "oppRuns": -10
     }
+  ],
+  "bowlingData": [
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 5
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 3
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": -11
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Zach",
+      "rc": -3
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -1
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Nithin Thomas",
+      "rc": -6
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 2
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Amir",
+      "rc": -2
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": -7
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Zach",
+      "rc": -5
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": -1
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Chibin",
+      "rc": -3
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -1
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 8
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Nithin Thomas",
+      "rc": 7
+    },
+    {
+      "game": "G1",
+      "season": "spring2025",
+      "date": "30 Oct 2025",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Amir",
+      "rc": 2
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 1
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Godfrey",
+      "rc": 0
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Zach",
+      "rc": 0
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Yusuf",
+      "rc": -2
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": 5
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Shaun",
+      "rc": 7
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 8
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Kiran Ninan",
+      "rc": -2
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": -1
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": 5
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Godfrey",
+      "rc": -12
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Kiran Varghese",
+      "rc": -5
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Zach",
+      "rc": 13
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Yusuf",
+      "rc": 21
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Kiran Ninan",
+      "rc": 9
+    },
+    {
+      "game": "G2",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Zayd",
+      "rc": 6
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -4
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Zach",
+      "rc": 2
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 10
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Shaun",
+      "rc": -4
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": -3
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": -19
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Yusuf",
+      "rc": 6
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -6
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": -5
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Yusuf",
+      "rc": 8
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 7
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Kiran Varghese",
+      "rc": 4
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": 4
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Zach",
+      "rc": -2
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 12
+    },
+    {
+      "game": "G3",
+      "season": "spring2025",
+      "date": "4 Nov 2025",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -2
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": -1
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 1
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": -2
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Amir",
+      "rc": 9
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -3
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 19
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Amir",
+      "rc": 1
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Vijay",
+      "rc": 4
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Yusuf",
+      "rc": 10
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": -6
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Chibin",
+      "rc": 0
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Ashwin",
+      "rc": -6
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Yusuf",
+      "rc": 11
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Kiran Varghese",
+      "rc": -3
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 24
+    },
+    {
+      "game": "G4",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Zayd",
+      "rc": 6
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 10
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Godfrey",
+      "rc": -1
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Amir",
+      "rc": -5
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Zayd",
+      "rc": 5
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Yusuf",
+      "rc": 4
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Vijay",
+      "rc": 6
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 4
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Chibin",
+      "rc": -5
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 3
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": 13
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 8
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Yusuf",
+      "rc": -4
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Godfrey",
+      "rc": 4
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 5
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Amir",
+      "rc": -2
+    },
+    {
+      "game": "G5",
+      "season": "spring2025",
+      "date": "25 Nov 2025",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Zayd",
+      "rc": 16
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 7
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Godfrey",
+      "rc": -16
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 7
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Dony",
+      "rc": 8
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -8
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 7
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": 12
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Jesse",
+      "rc": -7
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Dony",
+      "rc": 21
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 7
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": -1
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Chibin",
+      "rc": 4
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Jesse",
+      "rc": -6
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Godfrey",
+      "rc": -9
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Kiran Varghese",
+      "rc": -14
+    },
+    {
+      "game": "G6",
+      "season": "spring2025",
+      "date": "4 Dec 2025",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Zayd",
+      "rc": 3
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 4
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Shaun",
+      "rc": 14
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vinay",
+      "rc": -1
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Amir",
+      "rc": -2
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Goukol",
+      "rc": 11
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 6
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Akhil",
+      "rc": -5
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -5
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 7
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Vinay",
+      "rc": 2
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Goukol",
+      "rc": 20
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Shaun",
+      "rc": -9
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Amir",
+      "rc": -5
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": -4
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Akhil",
+      "rc": -4
+    },
+    {
+      "game": "G7",
+      "season": "autumn2026",
+      "date": "24 Feb 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 9
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 7
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 3
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 2
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Shaun",
+      "rc": 5
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Akhil",
+      "rc": 3
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": -6
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": 2
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -1
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Chibin",
+      "rc": 9
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Shaun",
+      "rc": -2
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 9
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 16
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Ashwin",
+      "rc": -2
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Kiran Varghese",
+      "rc": 15
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 2
+    },
+    {
+      "game": "G8",
+      "season": "autumn2026",
+      "date": "4 Mar 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 1
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 7
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Dony",
+      "rc": 4
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Amir",
+      "rc": -2
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Chibin",
+      "rc": 3
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Akhil",
+      "rc": -11
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 6
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Shaun",
+      "rc": -18
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nandu",
+      "rc": -12
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 4
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 7
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Amir",
+      "rc": -6
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Nandu",
+      "rc": -11
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": -2
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Dony",
+      "rc": -4
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Chibin",
+      "rc": -3
+    },
+    {
+      "game": "G9",
+      "season": "autumn2026",
+      "date": "11 Mar 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": -5
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 12
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": -4
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Amir",
+      "rc": 3
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 6
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": 2
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Vijay",
+      "rc": -12
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 12
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 5
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": -7
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Amir",
+      "rc": 8
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": -8
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -11
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": -4
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Akhil",
+      "rc": 14
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Chibin",
+      "rc": -17
+    },
+    {
+      "game": "G10",
+      "season": "autumn2026",
+      "date": "17 Mar 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Arun",
+      "rc": -7
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 5
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 3
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Godfrey",
+      "rc": 3
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Shaun",
+      "rc": 4
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Yusuf",
+      "rc": 13
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 6
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Akhil",
+      "rc": 3
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Zayd",
+      "rc": 14
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 7
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Godfrey",
+      "rc": 4
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": 0
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Yusuf",
+      "rc": 12
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Chibin",
+      "rc": 13
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Zayd",
+      "rc": 12
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Shaun",
+      "rc": -2
+    },
+    {
+      "game": "G11",
+      "season": "autumn2026",
+      "date": "2 Apr 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 8
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 13
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": -5
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 0
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Amir",
+      "rc": -1
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Merlin",
+      "rc": 5
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 6
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Dony",
+      "rc": 8
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 5
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 5
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Dony",
+      "rc": 1
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": 19
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Merlin",
+      "rc": -2
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Amir",
+      "rc": 0
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 7
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 10
+    },
+    {
+      "game": "G12",
+      "season": "autumn2026",
+      "date": "15 Apr 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 2
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 1
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Vishnu",
+      "rc": 7
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Shaun",
+      "rc": -2
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Aaron",
+      "rc": 6
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Chibin",
+      "rc": 11
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": 2
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Don",
+      "rc": 8
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": -5
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 2
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Don",
+      "rc": -3
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Shaun",
+      "rc": 5
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Aaron",
+      "rc": -2
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Chibin",
+      "rc": 10
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": -5
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Vishnu",
+      "rc": 3
+    },
+    {
+      "game": "G13",
+      "season": "autumn2026",
+      "date": "23 Apr 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 10
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Chibin",
+      "rc": -3
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Shaun",
+      "rc": 7
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": -3
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 15
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Vishnu",
+      "rc": -3
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Vijay",
+      "rc": 6
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Aaron",
+      "rc": 2
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 5
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Chibin",
+      "rc": -7
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Shaun",
+      "rc": -4
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 0
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Aaron",
+      "rc": 2
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Vishnu",
+      "rc": 9
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Vijay",
+      "rc": 16
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Akhil",
+      "rc": 4
+    },
+    {
+      "game": "G14",
+      "season": "autumn2026",
+      "date": "29 Apr 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -5
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 1
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Don",
+      "rc": -3
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": 0
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 3
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Nithin G",
+      "rc": 0
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Amir",
+      "rc": -4
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 4
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 15
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": -1
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Don",
+      "rc": 9
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Amir",
+      "rc": 0
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Nithin G",
+      "rc": 9
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Nithin Thomas",
+      "rc": -10
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": -6
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": 5
+    },
+    {
+      "game": "G15",
+      "season": "autumn2026",
+      "date": "6 May 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 4
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 8
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Shaun",
+      "rc": 6
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": -3
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -5
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": 3
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Alex",
+      "rc": 6
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Dony",
+      "rc": 5
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 9
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": 8
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Kiran Varghese",
+      "rc": 3
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Alex",
+      "rc": 9
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Dony",
+      "rc": -2
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -2
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Ashwin",
+      "rc": 9
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Nithin Thomas",
+      "rc": 13
+    },
+    {
+      "game": "G16",
+      "season": "autumn2026",
+      "date": "12 May 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 0
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Akhil",
+      "rc": 6
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Vijay",
+      "rc": 3
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Kiran Varghese",
+      "rc": 11
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Shaun",
+      "rc": 1
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Nithin Thomas",
+      "rc": -1
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": -11
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": 19
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Vishnu",
+      "rc": 8
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 6
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": 6
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Akhil",
+      "rc": -10
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Ashwin",
+      "rc": 11
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": 1
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Vijay",
+      "rc": 6
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Vishnu",
+      "rc": -4
+    },
+    {
+      "game": "G17",
+      "season": "autumn2026",
+      "date": "21 May 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 11
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 11
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Akhil",
+      "rc": 9
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vishnu",
+      "rc": 3
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Shaun",
+      "rc": 4
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -10
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": 18
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Chibin",
+      "rc": 15
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 5
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 2
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Vishnu",
+      "rc": -13
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Arun",
+      "rc": 6
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": -2
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Shaun",
+      "rc": 0
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": -9
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Nithin Thomas",
+      "rc": -6
+    },
+    {
+      "game": "G18",
+      "season": "autumn2026",
+      "date": "27 May 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Zayd",
+      "rc": 6
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 1,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 6
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 1,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": 8
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 1,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 17
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 1,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": 1
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 2,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": 3
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 2,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": 8
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 2,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": -10
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 2,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 10
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 3,
+      "over": 1,
+      "bowler": "Kiran Varghese",
+      "rc": 1
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 3,
+      "over": 2,
+      "bowler": "Chibin",
+      "rc": -11
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 3,
+      "over": 3,
+      "bowler": "Vijay",
+      "rc": 17
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 3,
+      "over": 4,
+      "bowler": "Akhil",
+      "rc": 7
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 4,
+      "over": 1,
+      "bowler": "Zayd",
+      "rc": -1
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 4,
+      "over": 2,
+      "bowler": "Arun",
+      "rc": 2
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 4,
+      "over": 3,
+      "bowler": "Ashwin",
+      "rc": -10
+    },
+    {
+      "game": "G19",
+      "season": "autumn2026",
+      "date": "2 Jun 2026",
+      "skin": 4,
+      "over": 4,
+      "bowler": "Nithin Thomas",
+      "rc": -1
+    }
   ]
 }
