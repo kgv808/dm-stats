@@ -2,7 +2,8 @@
 
 A self-hosted web app for tracking player statistics, results, and performance across seasons for the Durban Mallu's indoor Action Cricket team.
 
-**Live site:** [kgv808.github.io/dm-stats](https://kgv808.github.io/dm-stats)  
+**Live site (games.json):** [kgv808.github.io/dm-stats](https://kgv808.github.io/dm-stats)  
+**Live site (Supabase):** [kgv808.github.io/dm-stats/index_supabase.html](https://kgv808.github.io/dm-stats/index_supabase.html)  
 **Scorecard archive:** [kgv808.github.io/dm-stats/scorecards/](https://kgv808.github.io/dm-stats/scorecards/)
 
 ---
