@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Durban Mallu's — Season Tracker v2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+  :root{--green:#00E87A;--green-dim:#009F55;--bg:#06060A;--surface:#0E0E1A;--surface2:#13131F;--border:#1C1C32;--text:#EDF0FF;--muted:#525280;--accent:#FADB14;--red:#FF3355;--blue:#38BDF8;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;}
+  .hero{background:radial-gradient(ellipse at 10% 60%,rgba(0,232,122,0.07) 0%,transparent 55%),radial-gradient(ellipse at 85% 10%,rgba(56,189,248,0.04) 0%,transparent 55%),var(--bg);border-bottom:1px solid var(--border);padding:32px 28px 22px;position:relative;overflow:hidden;}
+  .hero::before{content:'DM';position:absolute;right:-5px;top:-25px;font-family:'Barlow Condensed',sans-serif;font-size:210px;font-weight:800;color:rgba(0,232,122,0.03);pointer-events:none;line-height:1;letter-spacing:-8px;}
+  .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(0,232,122,0.5) 50%,transparent 100%);}
+  .hero-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .hero-title{font-family:'Barlow Condensed',sans-serif;font-size:46px;font-weight:800;letter-spacing:-1px;color:var(--green);line-height:1;text-shadow:0 0 60px rgba(0,232,122,0.3);}
+  .hero-sub{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+  .season-selector{display:flex;flex-direction:column;gap:5px;align-items:flex-end;}
+  .season-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+  .season-buttons{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;}
+  .season-btn{padding:5px 16px;border-radius:20px;border:1px solid rgba(250,219,20,0.3);background:rgba(250,219,20,0.06);color:var(--accent);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:1px;transition:all 0.2s;}
+  .season-btn:hover{background:rgba(250,219,20,0.14);border-color:var(--accent);}
+  .season-btn.active{background:var(--accent);color:#06060A;border-color:var(--accent);}
+  .season-btn.sp{border-color:rgba(0,232,122,0.3);background:rgba(0,232,122,0.06);color:var(--green);}
+  .season-btn.sp:hover{background:rgba(0,232,122,0.14);border-color:var(--green);}
+  .season-btn.sp.active{background:var(--green);color:#06060A;}
+  .season-btn.au{border-color:rgba(56,189,248,0.3);background:rgba(56,189,248,0.06);color:var(--blue);}
+  .season-btn.au:hover{background:rgba(56,189,248,0.14);border-color:var(--blue);}
+  .season-btn.au.active{background:var(--blue);color:#06060A;}
+  .season-pills{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;}
+  .pill{background:rgba(14,14,26,0.8);border:1px solid var(--border);border-radius:10px;padding:10px 16px;display:flex;flex-direction:column;gap:2px;min-width:90px;backdrop-filter:blur(10px);}
+  .pill-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+  .pill-value{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;color:var(--accent);line-height:1;}
+  .pill-value.green{color:var(--green);}
+  .pill-fraction{display:flex;align-items:baseline;gap:1px;line-height:1;}
+  .pill-fraction .num{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;color:var(--accent);}
+  .pill-fraction.green .num{color:var(--green);}
+  .pill-fraction .sep{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--muted);margin:0 2px;}
+  .pill-fraction .den{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--muted);}
+  .pill-pct{font-size:10px;color:var(--muted);margin-top:2px;}
+  .tabs{display:flex;border-bottom:1px solid var(--border);padding:0 24px;background:var(--surface);overflow-x:auto;}
+  .tab{padding:14px 18px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;font-weight:600;white-space:nowrap;}
+  .tab.active{color:var(--green);border-bottom-color:var(--green);}
+  .tab:hover:not(.active){color:var(--text);}
+  .content{padding:22px 28px;}
+  .panel{display:none;}
+  .panel.active{display:block;}
+  .results-table{width:100%;border-collapse:collapse;table-layout:fixed;}
+  .results-table thead th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;white-space:nowrap;overflow:hidden;}
+  .results-table tbody tr{border-bottom:1px solid rgba(28,28,50,0.8);transition:background 0.15s;}
+  .results-table tbody tr:last-child{border-bottom:none;}
+  .results-table tbody tr:hover td{background:var(--surface2);}
+  .results-table tbody tr.win td:first-child{border-left:3px solid var(--green);}
+  .results-table tbody tr.loss td:first-child{border-left:3px solid var(--red);}
+  .results-table td{padding:12px 10px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;}
+  .col-date{width:100px;}.col-season{width:90px;}.col-opp{width:auto;}
+  .col-score{width:100px;text-align:right;}.col-skins{width:70px;text-align:center;}
+  .col-result{width:64px;text-align:center;}.col-pts{width:40px;text-align:right;}.col-link{width:36px;text-align:center;}
+  .muted-text{color:var(--muted);}
+  .score-dm{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:var(--green);}
+  .score-sep{font-family:'Barlow Condensed',sans-serif;font-size:14px;color:var(--muted);margin:0 2px;}
+  .score-opp{font-family:'Barlow Condensed',sans-serif;font-size:14px;color:var(--muted);}
+  .season-tag{display:inline-block;font-size:10px;letter-spacing:1px;color:var(--accent);background:rgba(250,219,20,0.08);border:1px solid rgba(250,219,20,0.2);border-radius:4px;padding:2px 6px;white-space:nowrap;max-width:80px;}
+  .season-tag.s2{color:var(--blue);background:rgba(56,189,248,0.08);border-color:rgba(56,189,248,0.2);}
+  .badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+  .badge.win{background:rgba(0,232,122,0.12);color:var(--green);border:1px solid rgba(0,232,122,0.2);}
+  .badge.loss{background:rgba(255,51,85,0.12);color:var(--red);border:1px solid rgba(255,51,85,0.2);}
+  .pts-val{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--accent);}
+  .scorecard-link{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:12px;transition:all 0.2s;}
+  .scorecard-link:hover{border-color:var(--green);color:var(--green);background:rgba(0,232,122,0.08);}
+  .section-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:14px;}
+  .stats-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;}
+  .stats-table th{text-align:left;padding:8px 10px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;}
+  .stats-table th:hover{color:var(--green);}
+  .stats-table th.sorted{color:var(--green);}
+  .stats-table td{padding:10px 10px;border-bottom:1px solid rgba(28,28,50,0.6);vertical-align:middle;white-space:nowrap;overflow:hidden;}
+  .stats-table tr:hover td{background:var(--surface2);}
+  .stats-table tr:last-child td{border-bottom:none;}
+  .s-rank{width:28px;}.s-name{width:auto;}.s-num{width:44px;text-align:right;}.s-avg{width:56px;text-align:right;}.s-contrib{width:130px;}
+  .rank{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--border);}
+  .rank-1{color:var(--accent);}.rank-2{color:#aaa;}.rank-3{color:#cd7f32;}
+  .player-name{font-weight:600;font-size:14px;}
+  .contrib-bar{display:flex;align-items:center;gap:6px;}
+  .bar-bg{width:50px;height:3px;background:var(--border);border-radius:2px;overflow:hidden;flex-shrink:0;}
+  .bar-fill{height:100%;border-radius:2px;background:var(--green);}
+  .bar-fill.neg{background:var(--red);}
+  .contrib-val{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;min-width:40px;text-align:right;}
+  .contrib-val.pos{color:var(--green);}.contrib-val.neg{color:var(--red);}.contrib-val.zero{color:var(--muted);}
+  .avg-val{font-size:12px;}
+  .avg-val.pos{color:var(--green);}.avg-val.neg{color:var(--red);}.avg-val.zero{color:var(--muted);}
+  .col-header{display:flex;align-items:center;gap:3px;}
+  .sort-icon{opacity:0.3;font-size:9px;}
+  .sorted .sort-icon{opacity:1;}
+  .data-note{display:flex;align-items:center;gap:8px;margin-top:14px;padding:10px 14px;background:rgba(250,219,20,0.04);border:1px solid rgba(250,219,20,0.12);border-radius:8px;font-size:12px;color:var(--muted);}
+  .data-note-icon{font-size:14px;flex-shrink:0;}
+  .insights-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:24px;}
+  .insight-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;transition:border-color 0.2s,transform 0.2s;}
+  .insight-card:hover{border-color:rgba(0,232,122,0.25);transform:translateY(-1px);}
+  .insight-card .ic-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+  .insight-card .ic-val{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:800;color:var(--accent);line-height:1;}
+  .insight-card .ic-val.green{color:var(--green);}
+  .insight-card .ic-val.red{color:var(--red);}
+  .insight-card .ic-sub{font-size:12px;color:var(--muted);margin-top:5px;}
+  .ladder-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;}
+  .ladder-table th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;white-space:nowrap;}
+  .ladder-table th.r{text-align:right;}
+  .ladder-table td{padding:10px 10px;border-bottom:1px solid rgba(28,28,50,0.6);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .ladder-table tr:last-child td{border-bottom:none;}
+  .ladder-table tr.dm-row td{background:rgba(0,232,122,0.04);border-left:3px solid var(--green);}
+  .ladder-table tr.dm-row td:first-child{padding-left:7px;}
+  .l-pos{width:36px;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--muted);}
+  .l-pos.p1{color:var(--accent);}.l-pos.p2{color:#aaa;}.l-pos.p3{color:#cd7f32;}
+  .l-team{width:auto;font-weight:600;}
+  .l-num{width:44px;text-align:right;color:var(--muted);}
+  .l-pts{width:48px;text-align:right;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;color:var(--accent);}
+  .l-dif{width:52px;text-align:right;}
+  .h2h-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;}
+  .h2h-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;transition:border-color 0.2s;}
+  .h2h-card:hover{border-color:rgba(0,232,122,0.25);}
+  .h2h-opponent{font-weight:700;font-size:15px;margin-bottom:10px;}
+  .h2h-record{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:800;margin-bottom:6px;}
+  .h2h-record .w{color:var(--green);}.h2h-record .d{color:var(--muted);}.h2h-record .l{color:var(--red);}
+  .h2h-games{display:flex;flex-direction:column;gap:4px;}
+  .h2h-game{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);padding:4px 0;border-top:1px solid var(--border);}
+  .h2h-game .hg-score{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;}
+  .h2h-game .hg-score.win{color:var(--green);}.h2h-game .hg-score.loss{color:var(--red);}
+  .h2h-season{font-size:10px;color:var(--muted);}
+  .empty-state{text-align:center;padding:40px;color:var(--muted);font-size:13px;}
+  .ladder-note{font-size:11px;color:var(--muted);margin-top:8px;}
+  .col-num{width:44px;text-align:center;}
+  .game-num{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--border);}
+  .results-controls{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .search-wrap{position:relative;flex:1;max-width:280px;}
+  .search-wrap svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:0.4;pointer-events:none;}
+  .search-input{width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:'Outfit',sans-serif;font-size:13px;padding:8px 10px 8px 32px;border-radius:8px;outline:none;transition:border-color 0.2s;}
+  .search-input:focus{border-color:var(--green);}
+  .search-input::placeholder{color:var(--muted);}
+  .search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;display:none;padding:2px;}
+  .search-clear.visible{display:block;}
+  .results-count{font-size:11px;color:var(--muted);letter-spacing:1px;}
+  .pairs-table{width:100%;border-collapse:collapse;font-size:13px;}
+  .pairs-table th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;white-space:nowrap;}
+  .pairs-table td{padding:10px 10px;border-bottom:1px solid rgba(28,28,50,0.6);vertical-align:middle;white-space:nowrap;}
+  .pairs-table tr:hover td{background:var(--surface2);}
+  .pairs-table tr:last-child td{border-bottom:none;}
+  .pair-names{font-weight:600;}
+  .pair-score{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;}
+  .pair-score.high{color:var(--green);}
+  .pair-score.mid{color:var(--accent);}
+  .pair-score.low{color:var(--red);}
+  .skin-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:2px 7px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);}
+  .game-group-header{background:var(--surface);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:6px 10px;border-bottom:1px solid var(--border);}
+  .bowling-table{width:100%;border-collapse:collapse;font-size:13px;}
+  .bowling-table th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;white-space:nowrap;}
+  .bowling-table td{padding:10px 10px;border-bottom:1px solid rgba(28,28,50,0.6);vertical-align:middle;white-space:nowrap;}
+  .bowling-table tr:hover td{background:var(--surface2);}
+  .bowling-table tr:last-child td{border-bottom:none;}
+  .rc-val{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+  .rc-val.good{color:var(--green);}.rc-val.ok{color:var(--accent);}.rc-val.bad{color:var(--red);}
+  .min-games-wrap{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+  .min-games-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);flex-shrink:0;}
+  .min-games-pills{display:flex;gap:5px;}
+  .mg-pill{padding:4px 12px;border-radius:20px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;cursor:pointer;transition:all 0.18s;}
+  .mg-pill:hover{border-color:var(--green);color:var(--green);}
+  .mg-pill.active{background:var(--green);border-color:var(--green);color:#06060A;}
+  .detail-stats-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:20px;}
+  .detail-stats-table th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;}
+  .detail-stats-table th:hover{color:var(--green);}
+  .detail-stats-table td{padding:10px 10px;border-bottom:1px solid rgba(28,28,50,0.6);vertical-align:middle;white-space:nowrap;overflow:hidden;}
+  .detail-stats-table tr:hover td{background:var(--surface2);}
+  .detail-stats-table tr:last-child td{border-bottom:none;}
+  .detail-section-title{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;color:var(--muted);margin:22px 0 4px;}
+  .stats-legend{margin-top:20px;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;}
+  .legend-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px;}
+  .legend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:6px 20px;}
+  .legend-item{display:flex;align-items:baseline;gap:8px;padding:3px 0;border-bottom:1px solid rgba(28,28,50,0.4);}
+  .legend-item:last-child{border-bottom:none;}
+  .legend-abbr{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--accent);flex-shrink:0;min-width:44px;}
+  .legend-desc{font-size:11px;color:var(--muted);line-height:1.4;}
+  .pb-controls{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
+  .pb-pills{display:flex;gap:6px;flex-wrap:wrap;}
+  .pb-pill{padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;}
+  .pb-pill:hover{border-color:var(--green);color:var(--green);}
+  .pb-pill.active{background:var(--green);border-color:var(--green);color:#06060A;}
+  .pb-filter-wrap{display:flex;align-items:center;gap:8px;}
+  .pb-filter-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+  .pb-filter-select{background:var(--surface2);border:1px solid var(--border);color:var(--text);font-family:'Outfit',sans-serif;font-size:12px;padding:6px 10px;border-radius:6px;outline:none;cursor:pointer;}
+  .pb-view{display:none;}.pb-view.active{display:block;}
+  .pair-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;transition:border-color 0.2s;}
+  .pair-card.hidden{display:none;}
+  .pair-card:hover{border-color:rgba(0,232,122,0.2);}
+  .pair-card-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px;}
+  .pair-names-big{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:0px;color:var(--text);}
+  .pair-meta{display:flex;gap:12px;align-items:center;}
+  .pair-avg{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;}
+  .pair-avg.high{color:var(--green);}.pair-avg.mid{color:var(--accent);}.pair-avg.low{color:var(--muted);}
+  .pair-apps{font-size:11px;color:var(--muted);letter-spacing:1px;}
+  .pair-games{display:flex;flex-wrap:wrap;gap:6px;}
+  .pair-game-chip{display:flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:11px;}
+  .pair-game-chip .pgc-score{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;}
+  .pair-game-chip .pgc-score.h{color:var(--green);}.pair-game-chip .pgc-score.m{color:var(--accent);}.pair-game-chip .pgc-score.l{color:var(--red);}
+  .pair-game-chip .pgc-info{color:var(--muted);font-size:10px;}
+  .pair-skins-record{font-size:11px;margin:4px 0 8px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+  .pair-sr-w{color:var(--green);font-weight:700;}
+  .pair-sr-l{color:var(--red);font-weight:700;}
+  .pair-sr-t{color:var(--accent);font-weight:700;}
+  .pair-sr-sep{color:var(--muted);}
+  .pair-sr-pct{color:var(--muted);font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:3px;padding:1px 5px;}
+  .pair-sr-unk{color:var(--muted);}
+  .pair-sr-pending{color:var(--muted);font-size:10px;font-style:italic;}
+  .bowling-game-block{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;}
+  .bowling-game-block.hidden{display:none;}
+  .bowling-game-head{background:var(--surface2);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+  .bowling-game-title{font-size:12px;font-weight:600;}
+  .bowling-skins-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border);}
+  .bowling-skin-col{border-right:1px solid var(--border);padding:10px;}
+  .bowling-skin-col:last-child{border-right:none;}
+  .bsc-header{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;text-align:center;}
+  .bsc-over{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-top:1px solid rgba(28,28,50,0.5);font-size:12px;}
+  .bsc-over:first-of-type{border-top:none;}
+  .bsc-bowler{font-weight:600;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:80px;}
+  .bsc-rc{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;flex-shrink:0;}
+  .bsc-rc.g{color:var(--green);}.bsc-rc.y{color:var(--accent);}.bsc-rc.r{color:var(--red);}
+  .bsc-total{margin-top:6px;padding-top:6px;border-top:1px solid var(--border);font-size:10px;text-align:right;font-weight:600;}
+  .heatmap-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:20px;}
+  .heatmap-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;}
+  .heatmap-card.hidden{display:none;}
+  .hc-name{font-weight:700;font-size:14px;margin-bottom:4px;}
+  .hc-avg{font-size:11px;color:var(--muted);margin-bottom:10px;}
+  .hc-grid{width:100%;border-collapse:collapse;font-size:11px;}
+  .hc-grid th{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:3px 5px;text-align:center;border-bottom:1px solid var(--border);}
+  .hc-grid td{padding:4px 5px;text-align:center;border-radius:3px;font-weight:600;}
+  .hc-cell-empty{color:var(--border);}
+  .hc-c0{background:rgba(0,232,122,0.4);color:#EDF0FF;}
+  .hc-c1{background:rgba(0,232,122,0.2);color:var(--green);}
+  .hc-c2{background:rgba(250,219,20,0.2);color:var(--accent);}
+  .hc-c3{background:rgba(255,140,0,0.2);color:#ff8c00;}
+  .hc-c4{background:rgba(255,51,85,0.2);color:var(--red);}
+  .pb-season-note{font-size:11px;color:var(--muted);background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:6px 12px;margin-bottom:14px;}
+  .ts-setup{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;}
+  .ts-squad-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+  .ts-squad-actions{display:flex;gap:6px;}
+  .ts-action-btn{padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-family:'Outfit',sans-serif;font-size:11px;cursor:pointer;transition:all 0.2s;}
+  .ts-action-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .ts-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;}
+  .ts-chip{padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s;user-select:none;}
+  .ts-chip:hover{border-color:var(--accent);}
+  .ts-chip.selected{background:rgba(250,219,20,0.1);border-color:var(--accent);color:var(--accent);}
+  .ts-generate-btn{width:100%;padding:12px;border-radius:8px;border:none;background:var(--green);color:#06060A;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all 0.2s;}
+  .ts-generate-btn:hover{opacity:0.85;transform:translateY(-1px);}
+  .ts-output-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:4px;}
+  @media(max-width:700px){.ts-output-grid{grid-template-columns:1fr;}}
+  .ts-subnav{display:flex;gap:6px;margin-bottom:16px;border-bottom:1px solid var(--border);padding-bottom:4px;flex-wrap:wrap;}
+  .ts-subnav-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:8px 14px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;cursor:pointer;border-radius:6px;transition:all 0.15s;font-family:'Outfit',sans-serif;}
+  .ts-subnav-btn:hover{color:var(--text);border-color:var(--text);}
+  .ts-subnav-btn.active{background:var(--accent);color:#06060A;border-color:var(--accent);}
+  .ts-subview{display:none;}
+  .ts-subview.active{display:block;}
+  .ts-use-method-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;padding:14px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);align-items:center;justify-content:space-between;}
+  .ts-use-method-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  .ts-use-method-buttons{display:flex;gap:8px;flex-wrap:wrap;}
+  .ts-use-btn{background:var(--accent);color:#06060A;border:none;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;border-radius:6px;font-family:'Outfit',sans-serif;transition:transform 0.1s;}
+  .ts-use-btn:hover{transform:translateY(-1px);}
+  .ts-use-btn.secondary{background:transparent;color:var(--text);border:1px solid var(--border);}
+  .md-empty{text-align:center;padding:60px 20px;color:var(--muted);}
+  .md-empty-icon{font-size:48px;margin-bottom:12px;opacity:0.5;}
+  .md-empty-title{font-size:16px;font-weight:600;color:var(--text);margin-bottom:6px;}
+  .md-empty-desc{font-size:13px;max-width:420px;margin:0 auto;line-height:1.5;}
+  .md-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+  .md-title{font-size:18px;font-weight:600;color:var(--text);}
+  .md-subtitle{font-size:11px;color:var(--muted);margin-top:2px;letter-spacing:0.5px;}
+  .md-actions{display:flex;gap:6px;flex-wrap:wrap;}
+  .md-section{margin-bottom:22px;}
+  .md-section-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .md-section-hint{font-size:9px;color:var(--muted);letter-spacing:1px;font-weight:400;text-transform:none;}
+  .md-batting-grid{display:grid;gap:10px;}
+  .md-batting-skin{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;}
+  .md-batting-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .md-batting-skin-label{font-size:12px;font-weight:600;color:var(--text);}
+  .md-batting-skin-num{font-size:10px;background:var(--accent);color:#06060A;padding:2px 8px;border-radius:4px;font-weight:700;letter-spacing:1px;}
+  .md-batting-selects{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
+  .md-pair-score{font-size:11px;color:var(--muted);text-align:right;}
+  .md-pair-score.good{color:var(--green);}
+  .md-pair-score.ok{color:var(--accent);}
+  .md-pair-score.bad{color:var(--red);}
+  .md-bowling-grid{display:grid;gap:10px;}
+  .md-bowling-skin{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;}
+  .md-bowling-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+  .md-over-row{display:grid;grid-template-columns:30px 1fr auto auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid rgba(28,28,50,0.5);}
+  .md-over-row:last-child{border-bottom:none;}
+  .md-over-label{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:1px;}
+  .md-rc-badge{font-size:11px;font-weight:600;padding:2px 6px;border-radius:4px;min-width:34px;text-align:center;}
+  .md-rc-badge.good{background:rgba(0,232,122,0.12);color:var(--green);}
+  .md-rc-badge.ok{background:rgba(250,219,20,0.12);color:var(--accent);}
+  .md-rc-badge.bad{background:rgba(255,51,85,0.12);color:var(--red);}
+  .md-rc-badge.none{background:rgba(120,120,120,0.1);color:var(--muted);font-size:9px;font-style:italic;}
+  .md-select{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 8px;font-size:12px;border-radius:6px;font-family:'Outfit',sans-serif;cursor:pointer;width:100%;}
+  .md-select:focus{outline:none;border-color:var(--accent);}
+  .md-notes{width:100%;min-height:80px;background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 12px;font-size:13px;font-family:'Outfit',sans-serif;border-radius:8px;resize:vertical;line-height:1.5;}
+  .md-notes:focus{outline:none;border-color:var(--accent);}
+  @media(max-width:600px){
+    .hero{padding:20px 16px 16px;}
+    .hero-title{font-size:34px;}
+    .hero-top{flex-direction:column;gap:8px;}
+    .season-selector{align-items:flex-start;}
+    .season-buttons{justify-content:flex-start;}
+    .season-pills{gap:6px;}
+    .pill{min-width:70px;padding:6px 10px;}
+    .pill-value,.pill-fraction .num{font-size:20px;}
+    .tabs{padding:0 8px;}
+    .tab{padding:10px 12px;font-size:10px;letter-spacing:1px;}
+    .content{padding:14px 12px;}
+    .results-table,.stats-table,.ladder-table,.pairs-table,.bowling-table,.detail-stats-table{font-size:12px;}
+    .results-table th,.stats-table th,.ladder-table th,.pairs-table th,.bowling-table th,.detail-stats-table th{padding:5px 7px;}
+    .results-table td,.stats-table td,.ladder-table td,.pairs-table td,.bowling-table td,.detail-stats-table td{padding:7px 7px;}
+    .insights-grid{grid-template-columns:1fr;gap:10px;}
+    .h2h-grid{grid-template-columns:1fr;gap:8px;}
+    .legend-grid{grid-template-columns:1fr;}
+    .pair-skins-record{flex-wrap:wrap;gap:4px;}
+    .game-chips{flex-wrap:wrap;}
+    .bowling-skins-grid{grid-template-columns:repeat(2,1fr);}
+    .bsc-bowler{max-width:none;white-space:normal;font-size:10px;}
+    .heatmap-cards{grid-template-columns:1fr;gap:10px;}
+    .ts-step{padding:12px;}
+    .md-batting-selects{grid-template-columns:1fr;}
+    .md-over-row{grid-template-columns:26px 1fr auto;}
+    .md-over-row .md-extras-badge{display:none;}
+    .last-game-header{flex-wrap:wrap;gap:6px;}
+    .skin-breakdown-row{font-size:12px;}
+  }
+  .ts-method{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;}
+  .ts-method-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;font-weight:600;}
+  .ts-method-desc{font-size:11px;color:var(--muted);margin-bottom:12px;line-height:1.5;}
+  .ts-section-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px;font-weight:500;}
+  .ts-alloc-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:8px;}
+  .ts-alloc-table th{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:4px 6px;text-align:left;border-bottom:1px solid var(--border);}
+  .ts-alloc-table td{padding:5px 6px;border-bottom:1px solid rgba(28,28,50,0.4);vertical-align:middle;}
+  .ts-alloc-table tr:last-child td{border-bottom:none;}
+  .ts-conf{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 5px;border-radius:3px;text-transform:uppercase;}
+  .ts-conf.high{background:rgba(0,232,122,0.12);color:var(--green);}
+  .ts-conf.med{background:rgba(250,219,20,0.12);color:var(--accent);}
+  .ts-conf.low{background:rgba(255,51,85,0.12);color:var(--red);}
+  .ts-pass{font-size:9px;color:var(--muted);padding:1px 4px;border:1px solid var(--border);border-radius:3px;}
+  .ext-badge{display:inline-block;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:4px;}
+  .ext-badge.ok{color:var(--muted);border:1px solid var(--border);}
+  .ext-badge.warn{background:rgba(250,219,20,0.12);color:var(--accent);}
+  .ext-badge.high{background:rgba(255,51,85,0.12);color:var(--red);}
+  .ts-summary-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid rgba(28,28,50,0.4);font-size:12px;}
+  .ts-summary-row:last-child{border-bottom:none;}
+  .ts-summary-slots{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--accent);}
+  .ts-est{font-size:10px;color:var(--muted);font-style:italic;}
+  .latest-game-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:4px;transition:border-color 0.2s;}
+  .latest-game-card:hover{border-color:rgba(0,232,122,0.2);}
+  .lg-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px;}
+  .lg-opponent{font-size:16px;font-weight:700;color:var(--text);}
+  .lg-date{font-size:11px;color:var(--muted);margin-top:2px;}
+  .lg-result-block{text-align:right;flex-shrink:0;}
+  .lg-score{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;line-height:1;margin-top:4px;}
+  .lg-score-sep{color:var(--muted);font-size:16px;}
+  .lg-margin{font-size:11px;margin-top:2px;}
+  .lg-skins{display:flex;flex-direction:column;gap:5px;}
+  .lg-skin-row{display:flex;align-items:center;gap:8px;font-size:12px;padding:4px 0;border-top:1px solid var(--border);}
+  .lg-skin-label{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--muted);width:20px;flex-shrink:0;}
+  .lg-skin-pair{flex:1;font-weight:600;}
+  .lg-skin-score{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--text);flex-shrink:0;}
+  .lg-skin-icon{font-size:13px;flex-shrink:0;}
+  .rankings-section{margin-bottom:28px;}
+  .rankings-section-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;letter-spacing:2px;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:8px;}
+  .rankings-section-title .section-icon{font-size:18px;}
+  .rank-val.red{color:var(--red);}
+  .rankings-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;}
+  .rank-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;}
+  .rank-card:hover{border-color:rgba(0,232,122,0.15);transform:translateY(-1px);}
+  .rank-card-title{padding:12px 14px 10px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px;}
+  .rank-card-icon{font-size:14px;}
+  .rank-row{display:flex;align-items:center;padding:10px 14px;gap:10px;border-bottom:1px solid rgba(28,28,50,0.5);transition:background 0.15s;}
+  .rank-row:last-child{border-bottom:none;}
+  .rank-row:hover{background:var(--surface2);}
+  .rank-pos{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--muted);width:22px;text-align:center;flex-shrink:0;}
+  .rank-pos.gold{color:var(--accent);}
+  .rank-pos.silver{color:#b0b8c1;}
+  .rank-pos.bronze{color:#cd7f32;}
+  .rank-name{flex:1;font-weight:600;font-size:13px;}
+  .rank-sub{font-size:11px;color:var(--muted);}
+  .rank-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:var(--green);}
+  .rank-val.accent{color:var(--accent);}
+  .rank-val.blue{color:var(--blue);}
+  .form-note{font-size:12px;color:var(--muted);margin-bottom:14px;letter-spacing:0.5px;}
+  .form-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;}
+  .form-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;transition:border-color 0.2s;}
+  .form-card:hover{border-color:rgba(0,232,122,0.15);}
+  .form-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+  .form-player-name{font-weight:700;font-size:15px;}
+  .form-trend-badge{font-size:18px;line-height:1;}
+  .form-dots{display:flex;gap:5px;margin-bottom:10px;}
+  .form-dot{flex:1;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;transition:opacity 0.15s;}
+  .form-dot.pos{background:rgba(0,232,122,0.15);color:var(--green);border:1px solid rgba(0,232,122,0.3);}
+  .form-dot.neg{background:rgba(255,51,85,0.12);color:var(--red);border:1px solid rgba(255,51,85,0.25);}
+  .form-dot.zero{background:var(--surface2);color:var(--muted);border:1px solid var(--border);}
+  .form-dot.empty{background:transparent;border:1px dashed var(--border);color:var(--border);}
+  .form-stats{display:flex;gap:12px;font-size:11px;color:var(--muted);}
+  .form-stat-item{display:flex;flex-direction:column;gap:1px;}
+  .form-stat-label{letter-spacing:1px;text-transform:uppercase;font-size:10px;}
+  .form-stat-val{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:var(--text);}
+  .form-stat-val.up{color:var(--green);}
+  .form-stat-val.down{color:var(--red);}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-top">
+    <div>
+      <div class="hero-title">Durban Mallu's</div>
+      <div class="hero-sub" id="heroSub">All Seasons</div>
+    </div>
+    <div class="season-selector">
+      <div class="season-label">Season</div>
+      <div class="season-buttons" id="seasonButtons"></div>
+    </div>
+  </div>
+  <div class="season-pills">
+    <div class="pill"><span class="pill-label">Record</span><span class="pill-value green" id="pillRecord">—</span></div>
+    <div class="pill"><span class="pill-label">Points</span><div class="pill-fraction" id="pillPoints"></div><div class="pill-pct" id="pillPointsPct"></div></div>
+    <div class="pill"><span class="pill-label">Skins Won</span><div class="pill-fraction green" id="pillSkins"></div><div class="pill-pct" id="pillSkinsPct"></div></div>
+    <div class="pill"><span class="pill-label">Games</span><span class="pill-value" id="pillGames">—</span></div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('insights')">Insights</div>
+  <div class="tab" onclick="showTab('results')">Results</div>
+  <div class="tab" onclick="showTab('stats')">Player Stats</div>
+  <div class="tab" onclick="showTab('rankings')">Rankings</div>
+  <div class="tab" onclick="showTab('form')">Form</div>
+  <div class="tab" onclick="showTab('pairsbowling')">Pairs &amp; Bowling</div>
+  <div class="tab" onclick="showTab('teamsheet')">Team Sheet</div>
+</div>
+
+<div class="content">
+  <div id="insights" class="panel active">
+    <div class="section-title">Last Game</div>
+    <div id="latestGameCard" class="latest-game-card"></div>
+    <div class="section-title" style="margin-top:20px">Highlights</div>
+    <div class="insights-grid" id="highlightsGrid"></div>
+    <div id="ladderSection">
+      <div class="section-title" style="margin-top:8px">Final Ladder — Autumn 2026 C1 · Hillfox Action Sports</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="ladder-table">
+        <thead><tr>
+          <th class="l-pos">#</th><th class="l-team">Team</th>
+          <th class="l-num r">Pld</th><th class="l-num r">W</th><th class="l-num r">L</th>
+          <th class="l-dif r">Dif</th><th class="l-num r">Skins</th><th class="l-pts r">Pts</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="l-pos p1">1</td><td class="l-team">Akkerkop Arende</td><td class="l-num">10</td><td class="l-num">7</td><td class="l-num">3</td><td class="l-dif" style="color:var(--green)">+209</td><td class="l-num">22</td><td class="l-pts">43</td></tr>
+          <tr><td class="l-pos p2">2</td><td class="l-team">Seabamboese</td><td class="l-num">10</td><td class="l-num">5</td><td class="l-num">5</td><td class="l-dif" style="color:var(--green)">+12</td><td class="l-num">19</td><td class="l-pts">34</td></tr>
+          <tr class="dm-row"><td class="l-pos p3" style="color:var(--green)">3</td><td class="l-team" style="color:var(--green)">Durban Mallu's ★</td><td class="l-num">11</td><td class="l-num">3</td><td class="l-num">8</td><td class="l-dif" style="color:var(--red)">-46</td><td class="l-num">22</td><td class="l-pts">31</td></tr>
+          <tr><td class="l-pos">4</td><td class="l-team">Duck Hunters</td><td class="l-num">9</td><td class="l-num">4</td><td class="l-num">5</td><td class="l-dif" style="color:var(--green)">+105</td><td class="l-num">15</td><td class="l-pts">27</td></tr>
+          <tr><td class="l-pos">5</td><td class="l-team">Morning Wood Warriors</td><td class="l-num">6</td><td class="l-num">4</td><td class="l-num">2</td><td class="l-dif" style="color:var(--green)">+52</td><td class="l-num">14</td><td class="l-pts">26</td></tr>
+          <tr><td class="l-pos">6</td><td class="l-team">DLH</td><td class="l-num">6</td><td class="l-num">2</td><td class="l-num">4</td><td class="l-dif" style="color:var(--red)">-230</td><td class="l-num">9</td><td class="l-pts">15</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="ladder-note">★ DM qualified 3rd for knockout. Won G18 vs Duck Hunters 88–67 to advance. Won G19 Bronze Final vs Akkerkop Arende 110–61 🥉</div>
+    </div>
+    <div class="section-title" style="margin-top:24px">Head-to-Head Records</div>
+    <div class="h2h-grid" id="h2hGrid"></div>
+  </div>
+
+  <div id="results" class="panel">
+    <div class="results-controls">
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" id="oppSearch" type="text" placeholder="Search opponent…" oninput="onSearch()" />
+        <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+      </div>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="results-table">
+      <thead><tr>
+        <th class="col-num">#</th>
+        <th class="col-date">Date</th><th class="col-season">Season</th><th class="col-opp">Opponent</th>
+        <th class="col-score" style="text-align:right">Score</th><th class="col-skins">Skins</th>
+        <th class="col-result">Result</th><th class="col-pts" style="text-align:right">Pts</th><th class="col-link"></th>
+      </tr></thead>
+      <tbody id="resultsBody"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div id="stats" class="panel">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+      <div class="pb-pills" id="statsSubPills">
+        <button class="pb-pill active" onclick="showStatsView('core',this)">Core Stats</button>
+        <button class="pb-pill" onclick="showStatsView('detail',this)">Batting &amp; Bowling</button>
+        <button class="pb-pill" onclick="showStatsView('dismissals',this)">Dismissals</button>
+      </div>
+      <div class="min-games-wrap" style="margin-bottom:0">
+        <span class="min-games-label">Min Games</span>
+        <div class="min-games-pills" id="statsMinGamesPills">
+          <button class="mg-pill active" onclick="setStatsMinGames(1,this)">All</button>
+          <button class="mg-pill" onclick="setStatsMinGames(2,this)">2+</button>
+          <button class="mg-pill" onclick="setStatsMinGames(3,this)">3+</button>
+          <button class="mg-pill" onclick="setStatsMinGames(4,this)">4+</button>
+          <button class="mg-pill" onclick="setStatsMinGames(5,this)">5+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Sub-tab 1: Core Stats ─────────────────────────────────────────── -->
+    <div id="statsView-core">
+      <div class="section-title" id="statsTitle">Player Statistics</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="stats-table">
+        <thead><tr>
+          <th class="s-rank"></th>
+          <th class="s-name" onclick="sortTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('games',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('rs',event)"><div class="col-header">RS <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('rc',event)"><div class="col-header">RC <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortTable('wkts',event)"><div class="col-header">Wkts <span class="sort-icon">↕</span></div></th>
+          <th class="s-avg" onclick="sortTable('avg',event)"><div class="col-header">Avg C/G <span class="sort-icon">↕</span></div></th>
+          <th class="s-contrib" onclick="sortTable('contrib',event)"><div class="col-header">Total C <span class="sort-icon">↓</span></div></th>
+        </tr></thead>
+        <tbody id="statsBody"></tbody>
+      </table>
+      </div>
+      <div class="stats-legend">
+        <div class="legend-title">Legend</div>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="legend-abbr">G</span><span class="legend-desc">Games played</span></div>
+          <div class="legend-item"><span class="legend-abbr">RS</span><span class="legend-desc">Runs Scored</span></div>
+          <div class="legend-item"><span class="legend-abbr">RC</span><span class="legend-desc">Net Runs Conceded (gross runs minus wicket credits — each wicket = −5)</span></div>
+          <div class="legend-item"><span class="legend-abbr">Wkts</span><span class="legend-desc">Wickets taken while bowling</span></div>
+          <div class="legend-item"><span class="legend-abbr">Avg C/G</span><span class="legend-desc">Average Contribution per game</span></div>
+          <div class="legend-item"><span class="legend-abbr">Total C</span><span class="legend-desc">Total Contribution = RS − RC (higher is better)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Sub-tab 2: Batting & Bowling Detail ───────────────────────────── -->
+    <div id="statsView-detail" style="display:none">
+      <div class="section-title">Batting &amp; Bowling Detail</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="detail-stats-table">
+        <thead><tr>
+          <th class="s-rank"></th>
+          <th class="s-name" onclick="sortDetailTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('detailGames',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('avgSR',event)"><div class="col-header">Avg SR <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('sevens',event)"><div class="col-header">7s <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('dotsFaced',event)"><div class="col-header">DF <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('dotsBowled',event)"><div class="col-header">DB <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDetailTable('extras',event)"><div class="col-header">Ex <span class="sort-icon">↕</span></div></th>
+        </tr></thead>
+        <tbody id="detailStatsBody"></tbody>
+      </table>
+      </div>
+      <div class="data-note" style="margin-top:14px">
+        <span class="data-note-icon">⚠️</span>
+        <span>SR and ball-by-ball stats confirmed from all 19 scorecards. G = games with complete detail data for that player.</span>
+      </div>
+      <div class="stats-legend">
+        <div class="legend-title">Legend</div>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="legend-abbr">Avg SR</span><span class="legend-desc">Strike Rate — runs scored per 100 balls faced</span></div>
+          <div class="legend-item"><span class="legend-abbr">7s</span><span class="legend-desc">Zone D full hits — ball reaches the back net on the full (6 bonus + 1 physical run)</span></div>
+          <div class="legend-item"><span class="legend-abbr">DF</span><span class="legend-desc">Dot Balls Faced — legal deliveries where no run was scored while batting (each one creates a Second Ball dismissal risk)</span></div>
+          <div class="legend-item"><span class="legend-abbr">DB</span><span class="legend-desc">Dot Balls Bowled — legal deliveries where no run was conceded while bowling</span></div>
+          <div class="legend-item"><span class="legend-abbr">Ex</span><span class="legend-desc">Extras Given — wides, no-balls and legsides conceded while bowling (each worth +2 to the batting team)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Sub-tab 3: Dismissals ─────────────────────────────────────────── -->
+    <div id="statsView-dismissals" style="display:none">
+      <div class="section-title">Dismissal Breakdown</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="detail-stats-table">
+        <thead><tr>
+          <th class="s-rank"></th>
+          <th class="s-name" onclick="sortDismissalTable('name',event)"><div class="col-header">Player <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('detailGames',event)"><div class="col-header">G <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('totalDismissals',event)"><div class="col-header">Total <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dRunOut',event)"><div class="col-header">RO <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('roRate',event)"><div class="col-header">RO% <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dCaught',event)"><div class="col-header">Ct <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dBowled',event)"><div class="col-header">Bd <span class="sort-icon">↕</span></div></th>
+          <th class="s-num" onclick="sortDismissalTable('dStumped',event)"><div class="col-header">St <span class="sort-icon">↕</span></div></th>
+        </tr></thead>
+        <tbody id="dismissalStatsBody"></tbody>
+      </table>
+      </div>
+      <div class="data-note" style="margin-top:14px">
+        <span class="data-note-icon">ℹ️</span>
+        <span>Dismissal types sourced from ball-by-ball data across all 19 games. Each dismissal = −5 runs to the skin total.</span>
+      </div>
+      <div class="stats-legend">
+        <div class="legend-title">Legend</div>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="legend-abbr">Total</span><span class="legend-desc">Total dismissals across all games</span></div>
+          <div class="legend-item"><span class="legend-abbr">RO</span><span class="legend-desc">Run-Outs — highest cost dismissal; voids Zone D bonus runs if the 7 hasn't been completed</span></div>
+          <div class="legend-item"><span class="legend-abbr">RO%</span><span class="legend-desc">Percentage of dismissals that are run-outs — the key risk indicator</span></div>
+          <div class="legend-item"><span class="legend-abbr">Ct</span><span class="legend-desc">Caught — most common dismissal type</span></div>
+          <div class="legend-item"><span class="legend-abbr">Bd</span><span class="legend-desc">Bowled — dismissed by the ball hitting the stumps</span></div>
+          <div class="legend-item"><span class="legend-abbr">St</span><span class="legend-desc">Stumped — out of crease and the keeper removes the bails</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pairsbowling" class="panel">
+    <div class="pb-controls">
+      <div class="pb-pills" id="pbPillBar">
+        <button class="pb-pill active" onclick="showPairsView('pairs',this)">Batting Pairs</button>
+        <button class="pb-pill" onclick="showPairsView('bowling',this)">Bowling Skins</button>
+        <button class="pb-pill" onclick="showPairsView('heatmap',this)">Bowler Heatmap</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <div class="min-games-wrap" style="margin-bottom:0">
+          <span class="min-games-label">Min</span>
+          <div class="min-games-pills" id="pbMinGamesPills">
+            <button class="mg-pill active" onclick="setPbMinGames(1,this)">All</button>
+            <button class="mg-pill" onclick="setPbMinGames(2,this)">2+</button>
+            <button class="mg-pill" onclick="setPbMinGames(3,this)">3+</button>
+            <button class="mg-pill" onclick="setPbMinGames(4,this)">4+</button>
+            <button class="mg-pill" onclick="setPbMinGames(5,this)">5+</button>
+          </div>
+        </div>
+        <div class="pb-filter-wrap">
+          <label class="pb-filter-label">Filter Player</label>
+          <select id="pairsPlayerFilter" class="pb-filter-select" onchange="applyPairsFilter()">
+            <option value="">All Players</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="pbPairs" class="pb-view active">
+      <div id="pairsGrid"></div>
+      <div class="data-note" style="margin-top:14px"><span class="data-note-icon">✅</span><span>Pairs data complete — all 18 games confirmed from live scorecards.</span></div>
+    </div>
+    <div id="pbBowling" class="pb-view">
+      <div id="bowlingGrid"></div>
+      <div class="data-note" style="margin-top:14px"><span class="data-note-icon">✅</span><span>Bowling data complete — all 18 games confirmed from live scorecards.</span></div>
+    </div>
+    <div id="pbHeatmap" class="pb-view">
+      <div class="pb-season-note" id="heatmapNote"></div>
+      <div id="heatmapCards"></div>
+      <div class="section-title" style="margin:20px 0 10px">Summary Ranking</div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="stats-table" id="heatmapSummary" style="margin-bottom:14px"></table>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── Rankings panel ───────────────────────────────────────────────── -->
+  <div id="rankings" class="panel">
+    <div id="rankingsContent"></div>
+  </div>
+
+  <!-- ── Form panel ───────────────────────────────────────────────────── -->
+  <div id="form" class="panel">
+    <div id="formContent"></div>
+  </div>
+  <div id="teamsheet" class="panel">
+    <div class="ts-subnav">
+      <button class="ts-subnav-btn active" onclick="showTsView('analysis',this)">Analysis</button>
+      <button class="ts-subnav-btn" onclick="showTsView('matchday',this)">Match Day Sheet</button>
+    </div>
+
+    <div id="tsViewAnalysis" class="ts-subview active">
+      <div class="ts-setup">
+        <div class="ts-squad-header">
+          <div class="section-title">Select Squad (max 8)</div>
+          <div class="ts-squad-actions">
+            <button class="ts-action-btn" onclick="selectAllPlayers()">Select All</button>
+            <button class="ts-action-btn" onclick="clearAllPlayers()">Clear</button>
+          </div>
+        </div>
+        <div id="playerChips" class="ts-chips"></div>
+        <button class="ts-generate-btn" onclick="generatePredictions(selectedPlayers)">Generate Recommendations</button>
+        <div class="data-note" style="margin-top:10px"><span class="data-note-icon">✅</span><span>Batting recommendations based on all 18 games of pairs data. Bowling recommendations based on all 18 games of bowling data.</span></div>
+      </div>
+      <div id="tsOutput" style="margin-top:20px"></div>
+    </div>
+
+    <div id="tsViewMatchday" class="ts-subview">
+      <div id="mdEmpty" class="md-empty">
+        <div class="md-empty-icon">📋</div>
+        <div class="md-empty-title">No Match Day Sheet yet</div>
+        <div class="md-empty-desc">Generate recommendations in the Analysis tab, then pick a method to populate this sheet — or start editing here directly to use the better-scoring method.</div>
+      </div>
+      <div id="mdContent" style="display:none">
+        <div class="md-header">
+          <div>
+            <div class="md-title">Match Day Sheet</div>
+            <div class="md-subtitle" id="mdSource">—</div>
+          </div>
+          <div class="md-actions">
+            <button class="ts-action-btn" onclick="mdResetToGenerated()">↺ Reset</button>
+            <button class="ts-action-btn" onclick="mdSaveTeam()">💾 Save</button>
+            <button class="ts-action-btn" onclick="mdDownload()">⬇ Open Share Page</button>
+            <span id="mdSaveConfirm" style="display:none;color:var(--green);font-size:11px;font-weight:600;align-self:center">✓ Saved</span>
+          </div>
+        </div>
+
+        <div class="md-section">
+          <div class="md-section-title">Batting Pairs</div>
+          <div id="mdBatting" class="md-batting-grid"></div>
+        </div>
+
+        <div class="md-section">
+          <div class="md-section-title">Bowling Order <span class="md-section-hint">2 overs each · no consecutive overs in same skin</span></div>
+          <div id="mdBowling" class="md-bowling-grid"></div>
+        </div>
+
+        <div class="md-section">
+          <div class="md-section-title">Captain's Notes</div>
+          <textarea id="mdNotes" class="md-notes" placeholder="Tactical notes, batting order tweaks, reminders…"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const seasons=[
+  {id:'spring2025',label:'Spring 2025',sub:'Spring 2025 · C3 Division · Fourways Falcons',cls:'sp'},
+  {id:'autumn2026',label:'Autumn 2026',sub:'Autumn 2026 · C1 Division · Hillfox Action Sports',cls:'au'},
+];
+
+let games=[];
+
+let gameStats=[];
+
+
+let pairsData=[];
+
+// Bowling data — over-by-over RC (net). All RC values derived from scorecard skin subtotals
+// and cross-checked against player summary totals. G2/G5/G6 bowler assignments corrected from scorecard images.
+const bowlingData=[
+  // G1 · 30 Oct 2025 · vs Toenails · OPP skin totals: S1=-6 S2=-7 S3=-16 S4=23 ✅
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:2,bowler:'Chibin',rc:10},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:3,bowler:'Ashwin',rc:6},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:1,over:4,bowler:'Zach',rc:14},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:1,bowler:'Zayd',rc:-1},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:2,bowler:'Nithin Thomas',rc:-3},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:3,bowler:'Arun',rc:2},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:2,over:4,bowler:'Amir',rc:-2},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:1,bowler:'Kiran Varghese',rc:-7},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:2,bowler:'Zach',rc:-5},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:3,bowler:'Arun',rc:-1},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:3,over:4,bowler:'Chibin',rc:-3},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:1,bowler:'Zayd',rc:10},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:2,bowler:'Ashwin',rc:3},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:3,bowler:'Nithin Thomas',rc:5},
+  {season:'spring2025',date:'30 Oct 2025',game:'G1',skin:4,over:4,bowler:'Amir',rc:16},
+  // G2 · 04 Nov 2025 · vs The Gravel Donkeys · OPP skin totals: S1=6 S2=18 S3=1 S4=49 ✅
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:1,bowler:'Kiran Varghese',rc:1},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:2,bowler:'Godfrey',rc:7},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:3,bowler:'Zach',rc:0},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:1,over:4,bowler:'Yusuf',rc:-2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:1,bowler:'Zayd',rc:5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:2,bowler:'Shaun',rc:7},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:3,bowler:'Arun',rc:8},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:2,over:4,bowler:'Kiran Ninan',rc:-2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:1,bowler:'Shaun',rc:6},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:2,bowler:'Arun',rc:5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:3,bowler:'Godfrey',rc:-12},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:3,over:4,bowler:'Kiran Varghese',rc:2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:1,bowler:'Zach',rc:13},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:2,bowler:'Yusuf',rc:21},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:3,bowler:'Kiran Ninan',rc:9},
+  {season:'spring2025',date:'04 Nov 2025',game:'G2',skin:4,over:4,bowler:'Zayd',rc:6},
+  // G3 · 04 Nov 2025 · vs MATCHFIXERS · OPP skin totals: S1=25 S2=-1 S3=28 S4=26 ✅
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:1,bowler:'Zayd',rc:10},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:2,bowler:'Zach',rc:2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:3,bowler:'Vijay',rc:10},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:1,over:4,bowler:'Shaun',rc:3},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:1,bowler:'Kiran Varghese',rc:-3},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:2,bowler:'Arun',rc:-5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:3,bowler:'Yusuf',rc:6},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:2,over:4,bowler:'Nithin Thomas',rc:1},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:1,bowler:'Shaun',rc:2},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:2,bowler:'Yusuf',rc:8},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:3,bowler:'Arun',rc:14},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:3,over:4,bowler:'Kiran Varghese',rc:4},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:1,bowler:'Zayd',rc:11},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:2,bowler:'Zach',rc:5},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:3,bowler:'Vijay',rc:12},
+  {season:'spring2025',date:'04 Nov 2025',game:'G3',skin:4,over:4,bowler:'Nithin Thomas',rc:-2},
+  // G4 · 25 Nov 2025 · vs The Gravel Donkeys · OPP skin totals: S1=21 S2=49 S3=12 S4=52 ✅
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:2,bowler:'Chibin',rc:8},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:3,bowler:'Vijay',rc:-2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:1,over:4,bowler:'Amir',rc:9},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:1,bowler:'Zayd',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:2,bowler:'Ashwin',rc:19},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:3,bowler:'Amir',rc:8},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:2,over:4,bowler:'Vijay',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:1,bowler:'Yusuf',rc:10},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:2,bowler:'Arun',rc:1},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:3,bowler:'Chibin',rc:7},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:3,over:4,bowler:'Ashwin',rc:-6},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:1,bowler:'Yusuf',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:2,bowler:'Kiran Varghese',rc:4},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:3,bowler:'Arun',rc:24},
+  {season:'spring2025',date:'25 Nov 2025',game:'G4',skin:4,over:4,bowler:'Zayd',rc:13},
+  // G5 · 25 Nov 2025 · vs Just The Tip And Run 22 · OPP skin totals: S1=23 S2=23 S3=20 S4=37 ✅
+  // Bowler assignments corrected from scorecard image — all 16 overs previously wrong
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:1,bowler:'Kiran Varghese',rc:10},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:2,bowler:'Godfrey',rc:-1},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:3,bowler:'Amir',rc:2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:1,over:4,bowler:'Zayd',rc:12},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:1,bowler:'Yusuf',rc:4},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:2,bowler:'Vijay',rc:6},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:3,bowler:'Arun',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:2,over:4,bowler:'Chibin',rc:2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:1,bowler:'Kiran Varghese',rc:3},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:2,bowler:'Arun',rc:13},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:3,bowler:'Vijay',rc:8},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:3,over:4,bowler:'Yusuf',rc:-4},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:1,bowler:'Godfrey',rc:11},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:2,bowler:'Chibin',rc:12},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:3,bowler:'Amir',rc:-2},
+  {season:'spring2025',date:'25 Nov 2025',game:'G5',skin:4,over:4,bowler:'Zayd',rc:16},
+  // G6 · 04 Dec 2025 · vs Toenails · OPP skin totals: S1=13 S2=11 S3=31 S4=-19 ✅
+  // Bowler assignments corrected from scorecard image
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:1,bowler:'Kiran Ninan',rc:7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:2,bowler:'Godfrey',rc:-16},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:3,bowler:'Vijay',rc:14},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:1,over:4,bowler:'Dony',rc:8},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:1,bowler:'Zayd',rc:-1},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:2,bowler:'Chibin',rc:7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:3,bowler:'Ashwin',rc:12},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:2,over:4,bowler:'Jesse',rc:-7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:1,bowler:'Dony',rc:21},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:2,bowler:'Ashwin',rc:7},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:3,bowler:'Vijay',rc:-1},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:3,over:4,bowler:'Chibin',rc:4},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:1,bowler:'Jesse',rc:-6},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:2,bowler:'Godfrey',rc:-2},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:3,bowler:'Kiran Ninan',rc:-14},
+  {season:'spring2025',date:'04 Dec 2025',game:'G6',skin:4,over:4,bowler:'Zayd',rc:3},
+  // G7 · 24 Feb 2026 · vs Incredibles — confirmed from scorecard 2293054
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:1,bowler:'Kiran Varghese',rc:11},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:2,bowler:'Shaun',rc:14},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:3,bowler:'Vinay',rc:6},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:1,over:4,bowler:'Amir',rc:-2},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:1,bowler:'Goukol',rc:11},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:2,bowler:'Chibin',rc:6},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:3,bowler:'Akhil',rc:2},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:2,over:4,bowler:'Nithin Thomas',rc:-5},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:2,bowler:'Vinay',rc:9},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:3,bowler:'Goukol',rc:20},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:3,over:4,bowler:'Shaun',rc:-9},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:1,bowler:'Amir',rc:2},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:2,bowler:'Chibin',rc:10},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:3,bowler:'Akhil',rc:-4},
+  {season:'autumn2026',date:'24 Feb 2026',game:'G7',skin:4,over:4,bowler:'Nithin Thomas',rc:9},
+  // G8 · 04 Mar 2026 · vs Akkerkop Arende — corrected from scorecard 2293056
+  // Autumn format: 4 bowlers per skin, 1 over each. RC = net (gross - wickets×5).
+  // Verified: all player over-RCs sum to their confirmed gameStats RC ✅
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:2,bowler:'Chibin',rc:3},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:3,bowler:'Vijay',rc:2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:1,over:4,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:1,bowler:'Akhil',rc:3},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:2,bowler:'Arun',rc:1},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:3,bowler:'Ashwin',rc:2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:2,over:4,bowler:'Nithin Thomas',rc:-1},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:1,bowler:'Chibin',rc:9},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:2,bowler:'Shaun',rc:-2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:3,bowler:'Arun',rc:9},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:3,over:4,bowler:'Akhil',rc:16},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:1,bowler:'Ashwin',rc:-2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:2,bowler:'Kiran Varghese',rc:15},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:3,bowler:'Vijay',rc:2},
+  {season:'autumn2026',date:'04 Mar 2026',game:'G8',skin:4,over:4,bowler:'Nithin Thomas',rc:1},
+  // G9 · 11 Mar 2026 · vs SEW Strikers — confirmed from scorecard 2303782
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:2,bowler:'Dony',rc:4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:3,bowler:'Amir',rc:-2},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:1,over:4,bowler:'Chibin',rc:10},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:1,bowler:'Akhil',rc:-4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:2,bowler:'Ashwin',rc:6},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:3,bowler:'Shaun',rc:-4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:2,over:4,bowler:'Nandu',rc:2},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:1,bowler:'Kiran Varghese',rc:18},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:2,bowler:'Ashwin',rc:7},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:3,bowler:'Amir',rc:-6},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:3,over:4,bowler:'Nandu',rc:-11},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:1,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:2,bowler:'Dony',rc:-4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:3,bowler:'Chibin',rc:4},
+  {season:'autumn2026',date:'11 Mar 2026',game:'G9',skin:4,over:4,bowler:'Akhil',rc:-5},
+  // G10 · 17 Mar 2026 · vs Duck Hunters — confirmed from scorecard 2293062
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:1,bowler:'Kiran Varghese',rc:12},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:2,bowler:'Chibin',rc:-4},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:3,bowler:'Amir',rc:3},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:1,over:4,bowler:'Akhil',rc:6},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:1,bowler:'Shaun',rc:9},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:2,bowler:'Vijay',rc:-5},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:3,bowler:'Arun',rc:12},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:2,over:4,bowler:'Nithin Thomas',rc:5},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:1,bowler:'Kiran Varghese',rc:-7},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:2,bowler:'Amir',rc:8},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:3,bowler:'Vijay',rc:-8},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:3,over:4,bowler:'Nithin Thomas',rc:3},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:1,bowler:'Shaun',rc:3},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:2,bowler:'Akhil',rc:14},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:3,bowler:'Chibin',rc:-10},
+  {season:'autumn2026',date:'17 Mar 2026',game:'G10',skin:4,over:4,bowler:'Arun',rc:7},
+  // G11 · 02 Apr 2026 · vs Super Kings — confirmed from scorecard 2293058
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:1,bowler:'Kiran Varghese',rc:5},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:2,bowler:'Chibin',rc:3},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:3,bowler:'Godfrey',rc:10},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:1,over:4,bowler:'Shaun',rc:4},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:1,bowler:'Yusuf',rc:13},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:2,bowler:'Ashwin',rc:6},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:3,bowler:'Akhil',rc:3},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:2,over:4,bowler:'Zayd',rc:14},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:1,bowler:'Kiran Varghese',rc:7},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:2,bowler:'Godfrey',rc:4},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:3,bowler:'Ashwin',rc:0},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:3,over:4,bowler:'Yusuf',rc:12},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:1,bowler:'Chibin',rc:13},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:2,bowler:'Zayd',rc:12},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:3,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'02 Apr 2026',game:'G11',skin:4,over:4,bowler:'Akhil',rc:8},
+  // G12 · 15 Apr 2026 · vs Akkerkop Arende — confirmed from scorecard 2293071
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:1,bowler:'Kiran Varghese',rc:13},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:2,bowler:'Chibin',rc:9},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:3,bowler:'Vijay',rc:0},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:1,over:4,bowler:'Amir',rc:-1},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:1,bowler:'Merlin',rc:12},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:2,bowler:'Ashwin',rc:6},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:3,bowler:'Dony',rc:15},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:2,over:4,bowler:'Nithin Thomas',rc:5},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:1,bowler:'Kiran Varghese',rc:12},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:2,bowler:'Dony',rc:8},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:3,bowler:'Ashwin',rc:19},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:3,over:4,bowler:'Merlin',rc:12},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:1,bowler:'Amir',rc:0},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:2,bowler:'Chibin',rc:14},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:3,bowler:'Vijay',rc:10},
+  {season:'autumn2026',date:'15 Apr 2026',game:'G12',skin:4,over:4,bowler:'Nithin Thomas',rc:2},
+  // G13 · 23 Apr 2026 · vs Haduuuuken — confirmed from scorecard 2314795
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:1,bowler:'Kiran Varghese',rc:8},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:2,bowler:'Vishnu',rc:7},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:3,bowler:'Shaun',rc:12},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:1,over:4,bowler:'Aaron',rc:6},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:1,bowler:'Chibin',rc:11},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:2,bowler:'Arun',rc:2},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:3,bowler:'Don',rc:8},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:2,over:4,bowler:'Akhil',rc:-5},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:1,bowler:'Kiran Varghese',rc:9},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:2,bowler:'Don',rc:4},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:3,bowler:'Shaun',rc:5},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:3,over:4,bowler:'Aaron',rc:-2},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:1,bowler:'Chibin',rc:10},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:2,bowler:'Arun',rc:2},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:3,bowler:'Vishnu',rc:3},
+  {season:'autumn2026',date:'23 Apr 2026',game:'G13',skin:4,over:4,bowler:'Akhil',rc:10},
+  // G14 · 29 Apr 2026 · vs Akkerkop Arende — confirmed from scorecard 2293080
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:1,bowler:'Chibin',rc:4},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:2,bowler:'Shaun',rc:7},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:3,bowler:'Arun',rc:4},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:1,over:4,bowler:'Akhil',rc:15},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:1,bowler:'Vishnu',rc:-3},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:2,bowler:'Vijay',rc:6},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:3,bowler:'Aaron',rc:9},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:2,over:4,bowler:'Nithin Thomas',rc:12},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:1,bowler:'Chibin',rc:7},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:2,bowler:'Shaun',rc:10},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:3,bowler:'Arun',rc:7},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:3,over:4,bowler:'Aaron',rc:2},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:1,bowler:'Vishnu',rc:9},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:2,bowler:'Vijay',rc:16},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:3,bowler:'Akhil',rc:4},
+  {season:'autumn2026',date:'29 Apr 2026',game:'G14',skin:4,over:4,bowler:'Nithin Thomas',rc:-5},
+  // G15 · 06 May 2026 · vs Duck Hunters — confirmed from scorecard 2293077
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:1,bowler:'Kiran Varghese',rc:1},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:2,bowler:'Don',rc:11},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:3,bowler:'Ashwin',rc:7},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:1,over:4,bowler:'Akhil',rc:3},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:1,bowler:'Nithin G',rc:7},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:2,bowler:'Amir',rc:-4},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:3,bowler:'Arun',rc:11},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:2,over:4,bowler:'Nithin Thomas',rc:15},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:2,bowler:'Don',rc:9},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:3,bowler:'Amir',rc:0},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:3,over:4,bowler:'Nithin G',rc:9},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:1,bowler:'Nithin Thomas',rc:-10},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:2,bowler:'Arun',rc:1},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:3,bowler:'Ashwin',rc:5},
+  {season:'autumn2026',date:'06 May 2026',game:'G15',skin:4,over:4,bowler:'Akhil',rc:4},
+  // G16 · 12 May 2026 · vs Morning Wood Warriors — confirmed from scorecard 2318041
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:1,bowler:'Kiran Varghese',rc:8},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:2,bowler:'Shaun',rc:6},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:3,bowler:'Ashwin',rc:-3},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:1,over:4,bowler:'Nithin Thomas',rc:-5},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:1,bowler:'Shaun',rc:3},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:2,bowler:'Alex',rc:13},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:3,bowler:'Dony',rc:12},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:2,over:4,bowler:'Akhil',rc:9},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:1,bowler:'Zayd',rc:8},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:2,bowler:'Kiran Varghese',rc:3},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:3,bowler:'Alex',rc:9},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:3,over:4,bowler:'Dony',rc:5},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:1,bowler:'Zayd',rc:12},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:2,bowler:'Ashwin',rc:16},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:3,bowler:'Nithin Thomas',rc:13},
+  {season:'autumn2026',date:'12 May 2026',game:'G16',skin:4,over:4,bowler:'Akhil',rc:0},
+  // G17 · 21 May 2026 · vs DLH — confirmed from scorecard 2320060
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:1,bowler:'Akhil',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:2,bowler:'Vijay',rc:3},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:3,bowler:'Kiran Varghese',rc:11},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:1,over:4,bowler:'Shaun',rc:8},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:1,bowler:'Nithin Thomas',rc:-1},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:2,bowler:'Arun',rc:-4},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:3,bowler:'Ashwin',rc:19},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:2,over:4,bowler:'Vishnu',rc:8},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:2,bowler:'Arun',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:3,bowler:'Akhil',rc:-10},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:3,over:4,bowler:'Ashwin',rc:11},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:1,bowler:'Shaun',rc:8},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:2,bowler:'Vijay',rc:6},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:3,bowler:'Vishnu',rc:-4},
+  {season:'autumn2026',date:'21 May 2026',game:'G17',skin:4,over:4,bowler:'Nithin Thomas',rc:11},
+  // G18 · 27 May 2026 · vs Duck Hunters — confirmed from scorecard 2322095
+  // Verified: all skin totals and player RC sums confirmed ✅
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:1,bowler:'Kiran Varghese',rc:11},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:2,bowler:'Akhil',rc:9},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:3,bowler:'Vishnu',rc:3},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:1,over:4,bowler:'Shaun',rc:11},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:1,bowler:'Zayd',rc:-10},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:2,bowler:'Arun',rc:18},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:3,bowler:'Chibin',rc:15},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:2,over:4,bowler:'Nithin Thomas',rc:12},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:1,bowler:'Kiran Varghese',rc:2},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:2,bowler:'Vishnu',rc:-13},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:3,bowler:'Arun',rc:6},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:3,over:4,bowler:'Akhil',rc:-2},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:1,bowler:'Shaun',rc:0},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:2,bowler:'Chibin',rc:-2},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:3,bowler:'Nithin Thomas',rc:1},
+  {season:'autumn2026',date:'27 May 2026',game:'G18',skin:4,over:4,bowler:'Zayd',rc:6},
+  // G19 · 02 Jun 2026 · vs Akkerkop Arende (Bronze Final) · OPP skin totals: S1=32 S2=18 S3=21 S4=-10 ✅
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:1,bowler:'Kiran Varghese',rc:6},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:2,bowler:'Chibin',rc:8},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:3,bowler:'Vijay',rc:17},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:1,over:4,bowler:'Nithin Thomas',rc:1},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:1,bowler:'Zayd',rc:10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:2,bowler:'Arun',rc:8},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:3,bowler:'Ashwin',rc:-10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:2,over:4,bowler:'Akhil',rc:10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:1,bowler:'Kiran Varghese',rc:1},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:2,bowler:'Chibin',rc:-4},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:3,bowler:'Vijay',rc:17},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:3,over:4,bowler:'Akhil',rc:7},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:1,bowler:'Zayd',rc:-1},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:2,bowler:'Arun',rc:2},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:3,bowler:'Ashwin',rc:-10},
+  {season:'autumn2026',date:'02 Jun 2026',game:'G19',skin:4,over:4,bowler:'Nithin Thomas',rc:-1},
+];
+
+let activeSeason='all',sortKey='contrib',sortDir=1,sortDetailKey='avgSR',sortDetailDir=1,searchTerm='';
+let statsMinGames=1,pbMinGames=1;
+
+function showStatsView(view, btn) {
+  ['core','detail','dismissals'].forEach(v => {
+    const el = document.getElementById('statsView-' + v);
+    if (el) el.style.display = v === view ? '' : 'none';
+  });
+  document.querySelectorAll('#statsSubPills .pb-pill').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  if (view === 'dismissals') renderDismissalStats();
+}
+
+let sortDismissalKey = 'totalDismissals', sortDismissalDir = 1;
+
+function renderDismissalStats() {
+  const sf = activeSeason;
+  const src = (sf === 'all' ? gameStats : gameStats.filter(g => g.season === sf))
+    .filter(g => g.dCaught !== undefined);
+  const agg = {};
+  src.forEach(g => {
+    if (!agg[g.name]) agg[g.name] = {name:g.name, detailGames:0, dCaught:0, dBowled:0, dRunOut:0, dStumped:0};
+    agg[g.name].detailGames++;
+    agg[g.name].dCaught  += (g.dCaught  || 0);
+    agg[g.name].dBowled  += (g.dBowled  || 0);
+    agg[g.name].dRunOut  += (g.dRunOut  || 0);
+    agg[g.name].dStumped += (g.dStumped || 0);
+  });
+  const players = Object.values(agg).map(p => ({
+    ...p,
+    totalDismissals: p.dCaught + p.dBowled + p.dRunOut + p.dStumped,
+    roRate: (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) > 0
+      ? Math.round(p.dRunOut / (p.dCaught + p.dBowled + p.dRunOut + p.dStumped) * 100) : 0,
+  }));
+  const filtered = players.filter(p => p.detailGames >= statsMinGames);
+  const sorted = [...filtered].sort((a, b) =>
+    sortDismissalDir === 1 ? b[sortDismissalKey] - a[sortDismissalKey] : a[sortDismissalKey] - b[sortDismissalKey]
+  );
+  const tbody = document.getElementById('dismissalStatsBody');
+  if (!tbody) return;
+  if (!sorted.length) { tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No players meet the minimum games threshold.</td></tr>'; return; }
+  tbody.innerHTML = sorted.map((p, i) => {
+    const rank = i + 1, rc = rank <= 3 ? `rank-${rank}` : '';
+    const roCol = p.roRate >= 35 ? 'neg' : p.roRate >= 20 ? 'zero' : '';
+    return `<tr>
+      <td class="s-rank"><span class="rank ${rc}">${rank}</span></td>
+      <td class="s-name player-name">${p.name}</td>
+      <td class="s-num">${p.detailGames}</td>
+      <td class="s-num">${p.totalDismissals}</td>
+      <td class="s-num" style="color:${p.dRunOut > 10 ? 'var(--red)' : p.dRunOut > 5 ? 'var(--accent)' : 'inherit'}">${p.dRunOut}</td>
+      <td class="s-num"><span class="${roCol}">${p.roRate}%</span></td>
+      <td class="s-num">${p.dCaught}</td>
+      <td class="s-num">${p.dBowled}</td>
+      <td class="s-num">${p.dStumped}</td>
+    </tr>`;
+  }).join('');
+}
+
+function sortDismissalTable(key, event) {
+  if (sortDismissalKey === key) { sortDismissalDir = sortDismissalDir === 1 ? -1 : 1; }
+  else { sortDismissalKey = key; sortDismissalDir = key === 'name' ? -1 : 1; }
+  document.querySelectorAll('#statsView-dismissals th').forEach(th => th.classList.remove('sorted'));
+  event.currentTarget.closest('th').classList.add('sorted');
+  renderDismissalStats();
+}
+
+function setStatsMinGames(n,btn){
+  statsMinGames=n;
+  document.querySelectorAll('#statsMinGamesPills .mg-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderStats();
+  renderDetailStats();
+  // Re-render dismissals if that sub-tab is active
+  if (document.getElementById('statsView-dismissals') && document.getElementById('statsView-dismissals').style.display !== 'none') {
+    renderDismissalStats();
+  }
+}
+
+function setPbMinGames(n,btn){
+  pbMinGames=n;
+  document.querySelectorAll('#pbMinGamesPills .mg-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPairs();
+}
+
+function getAggregated(sf){
+  const src=sf==='all'?gameStats:gameStats.filter(g=>g.season===sf);
+  const agg={};
+  src.forEach(g=>{
+    if(!agg[g.name])agg[g.name]={name:g.name,games:0,rs:0,rc:0,wkts:0,contrib:0};
+    agg[g.name].games++;
+    agg[g.name].rs+=g.rs;
+    agg[g.name].rc+=g.rc;
+    agg[g.name].wkts+=g.wkts;
+    agg[g.name].contrib+=g.contrib;
+  });
+  return Object.values(agg).map(p=>({...p,avg:+(p.contrib/p.games).toFixed(1)}));
+}
+
+function getDetailAggregated(sf){
+  const src=(sf==='all'?gameStats:gameStats.filter(g=>g.season===sf)).filter(g=>g.sr!==null&&g.sr!==undefined);
+  const agg={};
+  src.forEach(g=>{
+    if(!agg[g.name])agg[g.name]={name:g.name,detailGames:0,srSum:0,sevens:0,dotsFaced:0,dotsBowled:0,extras:0,dCaught:0,dBowled:0,dRunOut:0,dStumped:0};
+    agg[g.name].detailGames++;
+    agg[g.name].srSum+=g.sr;
+    agg[g.name].sevens+=(g.sevens||0);
+    agg[g.name].dotsFaced+=(g.dotsFaced||0);
+    agg[g.name].dotsBowled+=(g.dotsBowled||0);
+    agg[g.name].extras+=(g.extras||0);
+    agg[g.name].dCaught+=(g.dCaught||0);
+    agg[g.name].dBowled+=(g.dBowled||0);
+    agg[g.name].dRunOut+=(g.dRunOut||0);
+    agg[g.name].dStumped+=(g.dStumped||0);
+  });
+  return Object.values(agg).map(p=>({...p,avgSR:+(p.srSum/p.detailGames).toFixed(1)}));
+}
+
+function seasonLabel(id){return seasons.find(s=>s.id===id)?.label||id;}
+function isS2(id){return id==='autumn2026';}
+
+function buildSeasonButtons(){
+  const c=document.getElementById('seasonButtons');
+  c.innerHTML='';
+  const all=document.createElement('button');
+  all.className='season-btn'+(activeSeason==='all'?' active':'');
+  all.textContent='All Seasons';
+  all.onclick=()=>{activeSeason='all';refresh();};
+  c.appendChild(all);
+  seasons.forEach(s=>{
+    const b=document.createElement('button');
+    b.className=`season-btn ${s.cls}`+(activeSeason===s.id?' active':'');
+    b.textContent=s.label;
+    b.onclick=()=>{activeSeason=s.id;refresh();};
+    c.appendChild(b);
+  });
+}
+
+function updatePills(){
+  const f=activeSeason==='all'?games:games.filter(g=>g.season===activeSeason);
+  const wins=f.filter(g=>g.result==='win').length,losses=f.filter(g=>g.result==='loss').length;
+  const pts=f.reduce((s,g)=>s+g.points,0),maxPts=f.reduce((s,g)=>s+g.maxPoints,0);
+  const skins=f.reduce((s,g)=>s+g.dmSkins,0),maxSkins=f.length*4;
+  document.getElementById('pillRecord').textContent=`${wins}W – ${losses}L`;
+  document.getElementById('pillPoints').innerHTML=`<span class="num">${pts}</span><span class="sep">/</span><span class="den">${maxPts}</span>`;
+  document.getElementById('pillPointsPct').textContent=maxPts?Math.round(pts/maxPts*100)+'% of available':'';
+  document.getElementById('pillSkins').innerHTML=`<span class="num">${skins}</span><span class="sep">/</span><span class="den">${maxSkins}</span>`;
+  document.getElementById('pillSkinsPct').textContent=maxSkins?Math.round(skins/maxSkins*100)+'% of available':'';
+  document.getElementById('pillGames').textContent=f.length;
+  document.getElementById('heroSub').textContent=activeSeason==='all'?"All Seasons · Durban Mallu's":seasons.find(s=>s.id===activeSeason)?.sub||'';
+}
+
+function onSearch(){
+  searchTerm=document.getElementById('oppSearch').value.toLowerCase();
+  const clearBtn=document.getElementById('searchClear');
+  clearBtn.classList.toggle('visible',searchTerm.length>0);
+  renderResults();
+}
+
+function clearSearch(){
+  document.getElementById('oppSearch').value='';
+  searchTerm='';
+  document.getElementById('searchClear').classList.remove('visible');
+  renderResults();
+}
+
+function renderResults(){
+  let f=activeSeason==='all'?games:games.filter(g=>g.season===activeSeason);
+  // game numbers are based on chronological position within the full season-filtered list
+  const allInSeason=[...f];
+  if(searchTerm) f=f.filter(g=>g.opponent.toLowerCase().includes(searchTerm));
+  const tbody=document.getElementById('resultsBody');
+  const countEl=document.getElementById('resultsCount');
+  if(!f.length){
+    tbody.innerHTML='<tr><td colspan="9" class="empty-state">No games match your search.</td></tr>';
+    countEl.textContent=searchTerm?'0 results':'';
+    return;
+  }
+  if(searchTerm) countEl.textContent=`${f.length} of ${allInSeason.length} games`;
+  else countEl.textContent=`${f.length} game${f.length!==1?'s':''}`;
+  tbody.innerHTML=f.map(g=>{
+    const num=allInSeason.indexOf(g)+1;
+    return`<tr class="${g.result}">
+      <td class="col-num"><span class="game-num">${num}</span></td>
+      <td class="col-date muted-text">${g.date}</td>
+      <td class="col-season"><span class="season-tag ${isS2(g.season)?'s2':''}">${seasonLabel(g.season)}</span></td>
+      <td class="col-opp" style="font-weight:500">${g.opponent}</td>
+      <td class="col-score"><span class="score-dm">${g.dmScore}</span><span class="score-sep">/</span><span class="score-opp">${g.oppScore}</span></td>
+      <td class="col-skins muted-text" style="text-align:center">${g.dmSkins}–${g.oppSkins}</td>
+      <td class="col-result" style="text-align:center"><span class="badge ${g.result}">${g.result==='win'?'Win':'Loss'}</span></td>
+      <td class="col-pts"><span class="pts-val">${g.points}</span></td>
+      <td class="col-link"><a class="scorecard-link" href="https://actionsport.spawtz.com/Leagues/IndoorCricket/Scoresheet?FixtureId=${g.fixtureId}" target="_blank">↗</a></td>
+    </tr>`;
+  }).join('');
+}
+
+function renderStats(){
+  const agg=getAggregated(activeSeason).filter(p=>p.games>=statsMinGames);
+  const sorted=agg.sort((a,b)=>{
+    if(sortKey==='name')return sortDir===1?b.name.localeCompare(a.name):a.name.localeCompare(b.name);
+    return sortDir===1?(b[sortKey]-a[sortKey]):(a[sortKey]-b[sortKey]);
+  });
+  const maxC=Math.max(...agg.map(p=>Math.abs(p.contrib)),1);
+  const tbody=document.getElementById('statsBody');
+  if(!sorted.length){tbody.innerHTML='<tr><td colspan="8" class="empty-state">No players meet the minimum games threshold.</td></tr>';return;}
+  tbody.innerHTML=sorted.map((p,i)=>{
+    const rank=i+1,rc=rank<=3?`rank-${rank}`:'';
+    const pct=Math.abs(p.contrib)/maxC*100,isNeg=p.contrib<0;
+    const cc=p.contrib>0?'pos':p.contrib<0?'neg':'zero';
+    const ac=p.avg>0?'pos':p.avg<0?'neg':'zero';
+    return`<tr>
+      <td class="s-rank"><span class="rank ${rc}">${rank}</span></td>
+      <td class="s-name player-name">${p.name}</td>
+      <td class="s-num">${p.games}</td>
+      <td class="s-num">${p.rs}</td>
+      <td class="s-num">${p.rc}</td>
+      <td class="s-num">${p.wkts}</td>
+      <td class="s-avg"><span class="avg-val ${ac}">${p.avg>0?'+':''}${p.avg}</span></td>
+      <td class="s-contrib"><div class="contrib-bar"><div class="bar-bg"><div class="bar-fill ${isNeg?'neg':''}" style="width:${pct}%"></div></div><span class="contrib-val ${cc}">${p.contrib>0?'+':''}${p.contrib}</span></div></td>
+    </tr>`;
+  }).join('');
+  document.getElementById('statsTitle').textContent=activeSeason==='all'?'All-Time Player Statistics':(seasons.find(s=>s.id===activeSeason)?.label||'')+' · Player Statistics';
+  renderDetailStats();
+}
+
+function renderDetailStats(){
+  const agg=getDetailAggregated(activeSeason).filter(p=>p.detailGames>=statsMinGames);
+  const sorted=[...agg].sort((a,b)=>{
+    if(sortDetailKey==='name')return sortDetailDir===1?b.name.localeCompare(a.name):a.name.localeCompare(b.name);
+    return sortDetailDir===1?(b[sortDetailKey]-a[sortDetailKey]):(a[sortDetailKey]-b[sortDetailKey]);
+  });
+  const tbody=document.getElementById('detailStatsBody');
+  if(!tbody)return;
+  if(!sorted.length){tbody.innerHTML='<tr><td colspan="8" class="empty-state">No players meet the minimum games threshold.</td></tr>';return;}
+  tbody.innerHTML=sorted.map((p,i)=>{
+    const rank=i+1,rc=rank<=3?`rank-${rank}`:'';
+    const srCls=p.avgSR>=150?'pos':p.avgSR>=80?'zero':'neg';
+    return`<tr>
+      <td class="s-rank"><span class="rank ${rc}">${rank}</span></td>
+      <td class="s-name player-name">${p.name}</td>
+      <td class="s-num">${p.detailGames}</td>
+      <td class="s-num"><span class="avg-val ${srCls}">${p.avgSR>0?'+':''}${p.avgSR}</span></td>
+      <td class="s-num">${p.sevens}</td>
+      <td class="s-num">${p.dotsFaced}</td>
+      <td class="s-num">${p.dotsBowled}</td>
+      <td class="s-num">${p.extras}</td>
+    </tr>`;
+  }).join('');
+}
+
+function sortDetailTable(key,event){
+  if(sortDetailKey===key){sortDetailDir=sortDetailDir===1?-1:1;}else{sortDetailKey=key;sortDetailDir=key==='name'?-1:1;}
+  document.querySelectorAll('.detail-stats-table th').forEach(th=>th.classList.remove('sorted'));
+  event.currentTarget.closest('th').classList.add('sorted');
+  renderDetailStats();
+}
+
+// ── Pairs & Bowling State ──────────────────────────────────
+let activePairsView='pairs';
+let pairsPlayerFilter='';
+let selectedPlayers=['Akhil','Amir','Arun','Chibin','Kiran Varghese','Shaun'];
+const DEFAULT_SQUAD=['Akhil','Amir','Arun','Chibin','Kiran Varghese','Shaun'];
+const FALLBACK_RC=4; // actual league average from 82 overs of data
+const HEATMAP_MIN_GAMES=2;
+
+function renderPairs(){
+  buildPairsFilterOptions();
+  const v=activePairsView;
+  if(v==='pairs')renderBattingPairs();
+  else if(v==='bowling')renderBowlingSkins();
+  else if(v==='heatmap')renderHeatmap();
+  applyPairsFilter();
+}
+
+function renderTeamSheet(){
+  buildPlayerChips();
+}
+
+function showPairsView(view,btn){
+  activePairsView=view;
+  document.querySelectorAll('.pb-pill').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  else document.querySelectorAll('.pb-pill').forEach(b=>{
+    if(b.getAttribute('onclick').includes(`'${view}'`))b.classList.add('active');
+  });
+  document.querySelectorAll('.pb-view').forEach(v=>v.classList.remove('active'));
+  const el=document.getElementById('pb'+view.charAt(0).toUpperCase()+view.slice(1));
+  if(el) el.classList.add('active');
+  renderPairs();
+}
+
+function buildPairsFilterOptions(){
+  const sf=activeSeason==='all';
+  const names=new Set();
+  pairsData.filter(p=>sf||p.season===activeSeason).forEach(p=>{names.add(p.p1);names.add(p.p2);});
+  bowlingData.filter(b=>sf||b.season===activeSeason).forEach(b=>names.add(b.bowler));
+  const sel=document.getElementById('pairsPlayerFilter');
+  const cur=sel.value;
+  sel.innerHTML='<option value="">All Players</option>';
+  [...names].sort().forEach(n=>{
+    const o=document.createElement('option');
+    o.value=n;o.textContent=n;
+    if(n===cur)o.selected=true;
+    sel.appendChild(o);
+  });
+  pairsPlayerFilter=sel.value;
+}
+
+function applyPairsFilter(){
+  pairsPlayerFilter=document.getElementById('pairsPlayerFilter').value;
+  document.querySelectorAll('.pair-card').forEach(c=>{
+    const p1=c.dataset.p1,p2=c.dataset.p2;
+    c.classList.toggle('hidden',!!pairsPlayerFilter&&p1!==pairsPlayerFilter&&p2!==pairsPlayerFilter);
+  });
+  document.querySelectorAll('.bowling-game-block').forEach(b=>{
+    if(!pairsPlayerFilter){b.classList.remove('hidden');return;}
+    b.classList.toggle('hidden',!b.dataset.bowlers?.includes(pairsPlayerFilter));
+  });
+  document.querySelectorAll('.heatmap-card').forEach(c=>{
+    c.classList.toggle('hidden',!!pairsPlayerFilter&&c.dataset.player!==pairsPlayerFilter);
+  });
+  document.querySelectorAll('#heatmapSummary tr[data-player]').forEach(r=>{
+    r.classList.toggle('hidden',!!pairsPlayerFilter&&r.dataset.player!==pairsPlayerFilter);
+  });
+}
+
+// ── Sub-View 1: Batting Pairs ──────────────────────────────
+function renderBattingPairs(){
+  const src=activeSeason==='all'?pairsData:pairsData.filter(p=>p.season===activeSeason);
+  const grid=document.getElementById('pairsGrid');
+  if(!grid)return;
+  if(!src.length){grid.innerHTML='<div class="empty-state">No pairs data for this season.</div>';return;}
+  const combos={};
+  src.forEach(p=>{
+    const key=[p.p1,p.p2].sort().join('|');
+    if(!combos[key])combos[key]={p1:p.p1,p2:p.p2,appearances:[],total:0};
+    combos[key].appearances.push(p);
+    combos[key].total+=p.score;
+  });
+  const sorted=Object.values(combos).sort((a,b)=>(b.total/b.appearances.length)-(a.total/a.appearances.length)).filter(c=>c.appearances.length>=pbMinGames);
+  if(!sorted.length){grid.innerHTML=`<div class="empty-state">No pairs with ${pbMinGames}+ appearances. Try a lower minimum.</div>`;return;}
+  grid.innerHTML=sorted.map(c=>{
+    const avg=+(c.total/c.appearances.length).toFixed(1);
+    const cls=avg>=20?'high':avg>=10?'mid':'low';
+    // Skins record: count W/L/T from confirmed skinResult data
+    const known=c.appearances.filter(a=>a.skinResult&&a.skinResult!=='unknown');
+    const sw=known.filter(a=>a.skinResult==='win'||a.skinResult==='jackpot-win').length;
+    const sl=known.filter(a=>a.skinResult==='loss').length;
+    const st=known.filter(a=>a.skinResult==='tie').length;
+    const pending=c.appearances.length-known.length;
+    const swPct=known.length>0?Math.round(sw/known.length*100):null;
+    const srLabel=known.length>0
+      ?`<span class="pair-sr-w">${sw}W</span><span class="pair-sr-sep"> – </span><span class="pair-sr-l">${sl}L</span>${st>0?`<span class="pair-sr-sep"> – </span><span class="pair-sr-t">${st}T</span>`:''}`
+      :'<span class="pair-sr-unk">—</span>';
+    const srPctLabel=swPct!==null?`<span class="pair-sr-pct">${swPct}%</span>`:'';
+    const pendingLabel=pending>0?`<span class="pair-sr-pending">(+${pending} pending)</span>`:'';
+    const gameChips=c.appearances.map(a=>{
+      const gRef=games.find(g=>g.date===a.date&&g.season===a.season);
+      const opp=gRef?gRef.opponent.split(' ').slice(0,2).join(' '):'?';
+      const res=gRef?gRef.result:'?';
+      const sc=a.score;
+      const scCls=sc>=35?'h':sc>=20?'m':'l';
+      const srIcon=a.skinResult==='win'||a.skinResult==='jackpot-win'?'🟢':a.skinResult==='loss'?'🔴':a.skinResult==='tie'?'🟡':'·';
+      const oppScoreStr=a.oppScore!==null&&a.oppScore!==undefined?` vs ${a.oppScore}`:'';
+      return`<div class="pair-game-chip">
+        <span class="pgc-score ${scCls}">${sc}${oppScoreStr}</span>
+        <span class="pgc-info">S${a.skin} · ${a.date.split(' ').slice(0,2).join(' ')} · ${opp}<br>${srIcon} skin ${a.skinResult==='unknown'?'?':a.skinResult} · ${res==='win'?'✅':'❌'} match</span>
+      </div>`;
+    }).join('');
+    return`<div class="pair-card" data-p1="${c.p1}" data-p2="${c.p2}">
+      <div class="pair-card-header">
+        <div class="pair-names-big">${c.p1} &amp; ${c.p2}</div>
+        <div class="pair-meta">
+          <span class="pair-avg ${cls}">${avg>0?'+':''}${avg}</span>
+          <span class="pair-apps">${c.appearances.length} skin${c.appearances.length!==1?'s':''}</span>
+        </div>
+      </div>
+      <div class="pair-skins-record">${srLabel} ${srPctLabel} ${pendingLabel}</div>
+      <div class="pair-games">${gameChips}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── Sub-View 2: Bowling Skins ──────────────────────────────
+function renderBowlingSkins(){
+  const src=activeSeason==='all'?bowlingData:bowlingData.filter(b=>b.season===activeSeason);
+  const grid=document.getElementById('bowlingGrid');
+  if(!grid)return;
+  if(!src.length){grid.innerHTML='<div class="empty-state">No bowling data for this season.</div>';return;}
+  const byGame={};
+  src.forEach(b=>{
+    const key=b.game+'|'+b.season;
+    if(!byGame[key])byGame[key]={game:b.game,season:b.season,date:b.date,overs:[]};
+    byGame[key].overs.push(b);
+  });
+  grid.innerHTML=Object.entries(byGame).map(([key,gd])=>{
+    const gRef=games.find(g=>g.date===gd.date&&g.season===gd.season);
+    const opp=gRef?gRef.opponent:'?';
+    const res=gRef?gRef.result:'?';
+    const bowlers=[...new Set(gd.overs.map(o=>o.bowler))].join(',');
+    let gameRC=0;
+    const skins=[1,2,3,4].map(s=>{
+      const sovs=gd.overs.filter(o=>o.skin===s).sort((a,b)=>a.over-b.over);
+      const st=sovs.reduce((sum,o)=>sum+o.rc,0);
+      gameRC+=st;
+      const stCls=st<=5?'good':st<=14?'ok':'bad';
+      const overRows=sovs.map(o=>{
+        const rcCls=o.rc<=0?'g':o.rc<=8?'y':'r';
+        const bowlerShort=o.bowler.split(' ')[0];
+        return`<div class="bsc-over">
+          <span class="bsc-bowler">${bowlerShort}</span>
+          <span class="bsc-rc ${rcCls}">${o.rc>0?'+':''}${o.rc}</span>
+        </div>`;
+      }).join('');
+      return`<div class="bowling-skin-col">
+        <div class="bsc-header">Skin ${s}</div>
+        ${overRows}
+        <div class="bsc-total"><span class="rc-val ${stCls}">${st>0?'+':''}${st}</span></div>
+      </div>`;
+    }).join('');
+    const gameRcCls=gameRC<=10?'good':gameRC<=25?'ok':'bad';
+    return`<div class="bowling-game-block" data-bowlers="${bowlers}">
+      <div class="bowling-game-head">
+        <span class="bowling-game-title">${gd.game} · ${gd.date} · vs ${opp}</span>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <span class="badge ${res}">${res==='win'?'Win':'Loss'}</span>
+          <span style="font-size:11px;color:var(--muted)">Total RC: <span class="rc-val ${gameRcCls}" style="font-size:14px">${gameRC>0?'+':''}${gameRC}</span></span>
+        </div>
+      </div>
+      <div class="bowling-skins-grid">${skins}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── Sub-View 3: Bowler Heatmap ─────────────────────────────
+function renderHeatmap(){
+  const src=activeSeason==='all'?bowlingData:bowlingData.filter(b=>b.season===activeSeason);
+  const cards=document.getElementById('heatmapCards');
+  const summary=document.getElementById('heatmapSummary');
+  const note=document.getElementById('heatmapNote');
+  if(!cards||!summary)return;
+  if(!src.length){cards.innerHTML='<div class="empty-state">No bowling data for this season.</div>';summary.innerHTML='';return;}
+  if(activeSeason==='all')note.textContent='⚠️ All-seasons view mixes Spring (2 bowlers/skin) and Autumn (4 bowlers/skin) formats. Use a season filter for like-for-like positional comparisons.';
+  else note.textContent='';
+  // Build playerSkinOver[bowler][skin][over] = {sum, n}
+  const pso={};
+  const pgames={}; // games per player
+  src.forEach(b=>{
+    if(!pso[b.bowler])pso[b.bowler]={};
+    if(!pso[b.bowler][b.skin])pso[b.bowler][b.skin]={};
+    if(!pso[b.bowler][b.skin][b.over])pso[b.bowler][b.skin][b.over]={sum:0,n:0};
+    pso[b.bowler][b.skin][b.over].sum+=b.rc;
+    pso[b.bowler][b.skin][b.over].n++;
+    if(!pgames[b.bowler])pgames[b.bowler]=new Set();
+    pgames[b.bowler].add(b.game+'|'+b.season);
+  });
+  function cellClass(rc){return rc<=2?'hc-c0':rc<=5?'hc-c1':rc<=9?'hc-c2':rc<=14?'hc-c3':'hc-c4';}
+  // Heatmap cards (all players)
+  const players=Object.keys(pso).sort();
+  cards.className='heatmap-cards';
+  cards.innerHTML=players.map(p=>{
+    const allVals=[];
+    const rows=[1,2,3,4].map(over=>{
+      const cells=[1,2,3,4].map(skin=>{
+        const d=pso[p]?.[skin]?.[over];
+        if(!d)return`<td class="hc-cell-empty">—</td>`;
+        const avg=+(d.sum/d.n).toFixed(1);
+        allVals.push(avg);
+        const cc=cellClass(avg);
+        return`<td class="${cc}" title="n=${d.n}">${avg>0?'+':''}${avg}</td>`;
+      }).join('');
+      return`<tr><td style="color:var(--muted);font-size:10px;padding-right:4px">O${over}</td>${cells}</tr>`;
+    }).join('');
+    const overallAvg=allVals.length?+(allVals.reduce((a,b)=>a+b,0)/allVals.length).toFixed(1):null;
+    const gCount=pgames[p]?.size||0;
+    return`<div class="heatmap-card" data-player="${p}">
+      <div class="hc-name">${p}</div>
+      <div class="hc-avg">${gCount} game${gCount!==1?'s':''} · Overall avg RC: ${overallAvg!==null?(overallAvg>0?'+':'')+overallAvg:'—'}</div>
+      <table class="hc-grid">
+        <thead><tr><th></th><th>S1</th><th>S2</th><th>S3</th><th>S4</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }).join('');
+  // Summary table
+  const qualified=players.filter(p=>(pgames[p]?.size||0)>=Math.max(HEATMAP_MIN_GAMES,pbMinGames));
+  if(!qualified.length){summary.innerHTML='<tr><td colspan="6" class="empty-state">No players with 2+ games of bowling data.</td></tr>';return;}
+  const summaryData=qualified.map(p=>{
+    const allRC=[];
+    let bestSkinAvg=Infinity,bestSkin=null,bestOverAvg=Infinity,bestOver=null;
+    [1,2,3,4].forEach(skin=>{
+      const vals=[];
+      [1,2,3,4].forEach(over=>{const d=pso[p]?.[skin]?.[over];if(d)vals.push(d.sum/d.n);});
+      if(vals.length){const avg=vals.reduce((a,b)=>a+b,0)/vals.length;if(avg<bestSkinAvg){bestSkinAvg=avg;bestSkin=skin;}}
+    });
+    [1,2,3,4].forEach(over=>{
+      const vals=[];
+      [1,2,3,4].forEach(skin=>{const d=pso[p]?.[skin]?.[over];if(d){vals.push(d.sum/d.n);allRC.push(d.sum/d.n);}});
+      if(vals.length){const avg=vals.reduce((a,b)=>a+b,0)/vals.length;if(avg<bestOverAvg){bestOverAvg=avg;bestOver=over;}}
+    });
+    const overall=allRC.length?+(allRC.reduce((a,b)=>a+b,0)/allRC.length).toFixed(1):null;
+    const er=getExtrasRate(p,activeSeason);
+    return{p,gCount:pgames[p]?.size,bestSkin,bestSkinAvg,bestOver,bestOverAvg,overall,er};
+  }).sort((a,b)=>a.overall-b.overall);
+  summary.innerHTML=`<thead><tr>
+    <th>Player</th><th>Games</th><th>Best Skin</th><th>Best Over</th><th>Avg RC</th><th>Extras/Over</th>
+  </tr></thead><tbody>`+summaryData.map(d=>{
+    const erBadge=d.er!==null?extRateBadge(d.er):'<span class="ts-est">no data</span>';
+    const rcCls=d.overall<=3?'pos':d.overall<=7?'zero':'neg';
+    return`<tr data-player="${d.p}">
+      <td class="player-name">${d.p}</td>
+      <td>${d.gCount}</td>
+      <td>Skin ${d.bestSkin||'?'}</td>
+      <td>Over ${d.bestOver||'?'}</td>
+      <td><span class="avg-val ${rcCls}">${d.overall!==null?(d.overall>0?'+':'')+d.overall:'—'}</span></td>
+      <td>${erBadge}</td>
+    </tr>`;
+  }).join('')+'</tbody>';
+}
+
+// ── Sub-View 4: Team Sheet ─────────────────────────────────
+function buildPlayerChips(){
+  const src=activeSeason==='all'?[...pairsData,...bowlingData.map(b=>({...b,p1:b.bowler,p2:null}))]
+    :[...pairsData,...bowlingData.map(b=>({...b,p1:b.bowler,p2:null}))].filter(x=>x.season===activeSeason);
+  const allPlayers=new Set();
+  src.forEach(x=>{if(x.p1)allPlayers.add(x.p1);if(x.p2)allPlayers.add(x.p2);});
+  // Also include active game players
+  gameStats.filter(g=>activeSeason==='all'||g.season===activeSeason).forEach(g=>allPlayers.add(g.name));
+  const sorted=[...allPlayers].sort();
+  const chips=document.getElementById('playerChips');
+  chips.innerHTML=sorted.map(n=>`<div class="ts-chip${selectedPlayers.includes(n)?' selected':''}" onclick="togglePlayer('${n}')" data-player="${n}">${n}</div>`).join('');
+}
+
+function togglePlayer(name){
+  const idx=selectedPlayers.indexOf(name);
+  if(idx>=0)selectedPlayers.splice(idx,1);
+  else if(selectedPlayers.length<8)selectedPlayers.push(name);
+  document.querySelectorAll('.ts-chip').forEach(c=>{
+    c.classList.toggle('selected',selectedPlayers.includes(c.dataset.player));
+  });
+}
+
+function selectAllPlayers(){
+  const src=document.querySelectorAll('.ts-chip');
+  selectedPlayers=[];
+  src.forEach(c=>{if(selectedPlayers.length<8){selectedPlayers.push(c.dataset.player);c.classList.add('selected');}else c.classList.remove('selected');});
+}
+function clearAllPlayers(){selectedPlayers=[];document.querySelectorAll('.ts-chip').forEach(c=>c.classList.remove('selected'));}
+
+function getExtrasRate(name,season){
+  const src=(season==='all'?gameStats:gameStats.filter(g=>g.season===season)).filter(g=>g.name===name&&g.extras!==null);
+  if(!src.length)return null;
+  const total=src.reduce((s,g)=>s+(g.extras||0),0);
+  return+(total/(src.length*2)).toFixed(2); // 2 overs per game
+}
+
+function extRateBadge(rate){
+  if(rate===null)return'';
+  const cls=rate<=0.25?'ok':rate<=0.5?'warn':'high';
+  return`<span class="ext-badge ${cls}">${rate.toFixed(2)}/ov</span>`;
+}
+
+function getAvgRC(brc,player,skin,over){
+  const d=brc[player]?.[skin]?.[over];
+  if(d&&d.n>0)return{val:+(d.sum/d.n).toFixed(1),hasData:true};
+  // Fall back to player overall
+  let sum=0,n=0;
+  [1,2,3,4].forEach(s=>[1,2,3,4].forEach(o=>{const dd=brc[player]?.[s]?.[o];if(dd){sum+=dd.sum;n+=dd.n;}}));
+  if(n>0)return{val:+(sum/n).toFixed(1),hasData:false};
+  return{val:FALLBACK_RC,hasData:false};
+}
+
+function getBestSlots(brc,player){
+  const slots=[];
+  [1,2,3,4].forEach(skin=>[1,2,3,4].forEach(over=>{
+    const d=brc[player]?.[skin]?.[over];
+    if(d&&d.n>0)slots.push({skin,over,avg:d.sum/d.n,n:d.n});
+  }));
+  return slots.sort((a,b)=>b.n-a.n||a.avg-b.avg);
+}
+
+function isBackToBack(pOvers,skin,over){
+  return pOvers.some(o=>o.skin===skin&&Math.abs(o.over-over)===1);
+}
+
+function runAlloc(brc,squad,scoreFn){
+  // Each player must bowl exactly 2 overs. 16 slots total (4 skins × 4 overs).
+  const slots={}; // [skin][over] → player
+  const pOvers={}; // player → [{skin,over}]
+  squad.forEach(p=>{pOvers[p]=[];});
+  [1,2,3,4].forEach(s=>{slots[s]={};[1,2,3,4].forEach(o=>{slots[s][o]=null;});});
+
+  const needsOvers=(p)=>pOvers[p].length<2;
+  const canBowl=(p,s,o)=>needsOvers(p)&&!slots[s][o]&&!isBackToBack(pOvers[p],s,o);
+  const assign=(p,s,o)=>{slots[s][o]=p;pOvers[p].push({skin:s,over:o});};
+
+  // Helper: each player's preferred slots ranked BY THIS METHOD's score function.
+  // Lower scoreFn = more preferred.
+  function rankedSlotsForPlayer(p){
+    const out=[];
+    [1,2,3,4].forEach(skin=>[1,2,3,4].forEach(over=>{
+      out.push({skin,over,score:scoreFn(brc,p,skin,over)});
+    }));
+    return out.sort((a,b)=>a.score-b.score);
+  }
+
+  // Pass 1: each player gets their best slot per this method's scoring.
+  // Iterate players in order of their best-available-score (best first = first dibs).
+  const playerRank=[...squad].sort((a,b)=>{
+    const aBest=rankedSlotsForPlayer(a)[0]?.score??Infinity;
+    const bBest=rankedSlotsForPlayer(b)[0]?.score??Infinity;
+    return aBest-bBest;
+  });
+  playerRank.forEach(p=>{
+    const ranked=rankedSlotsForPlayer(p);
+    for(const {skin,over} of ranked){
+      if(canBowl(p,skin,over)){assign(p,skin,over);break;}
+    }
+  });
+
+  // Pass 2: fill any remaining empty slots with the best eligible player for that slot
+  let iters=0;
+  while(iters<100){
+    iters++;
+    let filled=false;
+    for(let s=1;s<=4;s++)for(let o=1;o<=4;o++){
+      if(slots[s][o])continue;
+      const eligible=squad.filter(p=>canBowl(p,s,o));
+      if(!eligible.length)continue;
+      eligible.sort((a,b)=>scoreFn(brc,a,s,o)-scoreFn(brc,b,s,o));
+      assign(eligible[0],s,o);
+      filled=true;
+    }
+    if(!filled)break;
+  }
+
+  // Pass 3: force-assign anyone still under 2 overs (constraint relaxed last)
+  squad.filter(p=>needsOvers(p)).forEach(p=>{
+    for(let s=1;s<=4&&needsOvers(p);s++)for(let o=1;o<=4&&needsOvers(p);o++){
+      if(!slots[s][o]&&!isBackToBack(pOvers[p],s,o)){assign(p,s,o);}
+    }
+  });
+
+  return{slots,pOvers};
+}
+
+function generatePredictions(squad){
+  if(squad.length<4){document.getElementById('tsOutput').innerHTML='<div class="empty-state">Select at least 4 players to generate recommendations.</div>';return;}
+  const sf=activeSeason==='all';
+  // Build pairStats
+  const pSrc=(sf?pairsData:pairsData.filter(p=>p.season===activeSeason)).filter(p=>squad.includes(p.p1)&&squad.includes(p.p2));
+  const pairStats={};
+  pSrc.forEach(p=>{
+    const key=[p.p1,p.p2].sort().join('|');
+    if(!pairStats[key])pairStats[key]={p1:p.p1,p2:p.p2,total:0,n:0,skinCounts:{1:0,2:0,3:0,4:0}};
+    pairStats[key].total+=p.score;pairStats[key].n++;pairStats[key].skinCounts[p.skin]++;
+  });
+  // Batting recommendation
+  const usedBatters=new Set();
+  const batRec=[];
+  [1,2,3,4].forEach(skin=>{
+    const avail=Object.values(pairStats).filter(ps=>!usedBatters.has(ps.p1)&&!usedBatters.has(ps.p2));
+    if(!avail.length){
+      // fallback: pick two unused squad members
+      const unused=squad.filter(p=>!usedBatters.has(p));
+      if(unused.length>=2){batRec.push({p1:unused[0],p2:unused[1],avg:null,apps:0,conf:'low',skin});usedBatters.add(unused[0]);usedBatters.add(unused[1]);}
+      return;
+    }
+    avail.sort((a,b)=>{
+      const sa=(a.total/a.n)+(a.skinCounts[skin]>0?3:0);
+      const sb=(b.total/b.n)+(b.skinCounts[skin]>0?3:0);
+      return sb-sa;
+    });
+    const best=avail[0];
+    const conf=best.n>=4?'high':best.n>=2?'med':'low';
+    batRec.push({p1:best.p1,p2:best.p2,avg:+(best.total/best.n).toFixed(1),apps:best.n,conf,skin,skinHistory:best.skinCounts[skin]>0});
+    usedBatters.add(best.p1);usedBatters.add(best.p2);
+  });
+  // Build bowling RC structure
+  const bSrc=(sf?bowlingData:bowlingData.filter(b=>b.season===activeSeason)).filter(b=>squad.includes(b.bowler));
+  const brc={};
+  bSrc.forEach(b=>{
+    if(!brc[b.bowler])brc[b.bowler]={};
+    if(!brc[b.bowler][b.skin])brc[b.bowler][b.skin]={};
+    if(!brc[b.bowler][b.skin][b.over])brc[b.bowler][b.skin][b.over]={sum:0,n:0};
+    brc[b.bowler][b.skin][b.over].sum+=b.rc;brc[b.bowler][b.skin][b.over].n++;
+  });
+  // Method 1: pure performance
+  const scoreFn1=(brc,p,s,o)=>getAvgRC(brc,p,s,o).val;
+  const m1=runAlloc(brc,squad,scoreFn1);
+  // Method 2: weighted position preference — gives meaningful bonus for skins/slots player has bowled before
+  const skinFreq={},slotFreq={};
+  squad.forEach(p=>{skinFreq[p]={1:0,2:0,3:0,4:0};slotFreq[p]={};});
+  bSrc.forEach(b=>{if(skinFreq[b.bowler]){skinFreq[b.bowler][b.skin]++;const k=`${b.skin}_${b.over}`;slotFreq[b.bowler][k]=(slotFreq[b.bowler][k]||0)+1;}});
+  // Weights: each prior appearance in a skin = -1.5 (preference bonus); each prior appearance in exact slot = -2.5 (stronger bonus)
+  // These offset RC values to actually shift decisions vs Method 1
+  const scoreFn2=(brc,p,s,o)=>getAvgRC(brc,p,s,o).val-(skinFreq[p]?.[s]||0)*1.5-(slotFreq[p]?.[`${s}_${o}`]||0)*2.5;
+  const m2=runAlloc(brc,squad,scoreFn2);
+
+  function methodHTML(label,desc,alloc){
+    const{slots,pOvers}=alloc;
+    const bowlTable=[1,2,3,4].map(s=>{
+      const overCells=[1,2,3,4].map(o=>{
+        const p=slots[s]?.[o];
+        if(!p)return`<td class="muted-text" style="font-size:11px">—</td>`;
+        const{val,hasData}=getAvgRC(brc,p,s,o);
+        const rcCls=val<=3?'pos':val<=7?'zero':'neg';
+        const er=getExtrasRate(p,activeSeason);
+        const pass=pOvers[p].findIndex(ov=>ov.skin===s&&ov.over===o)+1;
+        const passLabel=hasData?`P${pass}`:`P${pass}`;
+        return`<td>
+          <div style="font-weight:600;font-size:12px">${p.split(' ')[0]}</div>
+          <div style="font-size:10px;color:var(--muted)">${hasData?`<span class="avg-val ${rcCls}">${val>0?'+':''}${val}</span>`:'<span class="ts-est">est</span>'} <span class="ts-pass">${passLabel}</span>${extRateBadge(er)}</div>
+        </td>`;
+      }).join('');
+      return`<tr><td class="skin-badge" style="width:28px">S${s}</td>${overCells}</tr>`;
+    }).join('');
+    const summaryRows=squad.map(p=>{
+      const povs=pOvers[p]||[];
+      const slotStr=povs.map(o=>`S${o.skin}O${o.over}`).join(' & ')||'—';
+      return`<div class="ts-summary-row"><span style="font-weight:600">${p}</span><span class="ts-summary-slots">${slotStr}</span></div>`;
+    }).join('');
+    const batRows=batRec.map(b=>`<tr>
+      <td><span class="skin-badge">S${b.skin}</span></td>
+      <td style="font-weight:600">${b.p1} &amp; ${b.p2}</td>
+      <td>${b.avg!==null?`<span class="avg-val ${b.avg>=20?'pos':b.avg>=10?'zero':'neg'}">${b.avg>0?'+':''}${b.avg}</span>`:'<span class="ts-est">no data</span>'}</td>
+      <td>${b.apps}</td>
+      <td><span class="ts-conf ${b.conf}">${b.conf}</span>${b.skinHistory?'<span style="font-size:10px;color:var(--muted);margin-left:3px">↺</span>':''}</td>
+    </tr>`).join('');
+    return`<div class="ts-method">
+      <div class="ts-method-title">${label}</div>
+      <div class="ts-method-desc">${desc}</div>
+      <div class="ts-section-label">Bowling Allocation</div>
+      <table class="ts-alloc-table"><thead><tr><th></th><th>O1</th><th>O2</th><th>O3</th><th>O4</th></tr></thead><tbody>${bowlTable}</tbody></table>
+      <div class="ts-section-label">Player Assignments</div>
+      ${summaryRows}
+      <div class="ts-section-label">Batting Pairs</div>
+      <table class="ts-alloc-table"><thead><tr><th>Skin</th><th>Pair</th><th>Avg</th><th>Apps</th><th>Confidence</th></tr></thead><tbody>${batRows}</tbody></table>
+    </div>`;
+  }
+  // Calculate total projected RC for each method (lower = better)
+  function methodScore(alloc){
+    let total=0;
+    [1,2,3,4].forEach(s=>[1,2,3,4].forEach(o=>{
+      const p=alloc.slots[s]?.[o];
+      if(p)total+=getAvgRC(brc,p,s,o).val;
+    }));
+    return total;
+  }
+  const m1Score=methodScore(m1);
+  const m2Score=methodScore(m2);
+  const betterMethod=m1Score<=m2Score?'1':'2';
+
+  // Stash both methods globally so Match Day can pull them
+  window.tsLastGenerated={m1,m2,squad:[...squad],batRec:[...batRec],brc,betterMethod,m1Score:+m1Score.toFixed(1),m2Score:+m2Score.toFixed(1)};
+
+  document.getElementById('tsOutput').innerHTML=`<div class="ts-output-grid">
+    ${methodHTML('Method 1 — Best Available Performance','Assigns each player to the bowling slot where their historical net RC is lowest, regardless of skin or over position. Use this when you want the statistically optimal allocation based purely on past performance.',m1)}
+    ${methodHTML('Method 2 — Weighted Position Preference','Prioritises placing each player in the skin and over position they have bowled most often — consistency of role over pure performance. Use this when you want a familiar rotation the team already knows.',m2)}
+  </div>
+  <div class="ts-use-method-row">
+    <div>
+      <div class="ts-use-method-label">Send to Match Day Sheet</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:3px">M1 proj. RC: <strong style="color:var(--text)">${m1Score.toFixed(1)}</strong> · M2 proj. RC: <strong style="color:var(--text)">${m2Score.toFixed(1)}</strong> · Lower is better</div>
+    </div>
+    <div class="ts-use-method-buttons">
+      <button class="ts-use-btn${betterMethod==='1'?'':' secondary'}" onclick="useMethodForMatchDay(1)">Use Method 1 →</button>
+      <button class="ts-use-btn${betterMethod==='2'?'':' secondary'}" onclick="useMethodForMatchDay(2)">Use Method 2 →</button>
+    </div>
+  </div>`;
+}
+
+// ── Match Day Sheet ──────────────────────────────────────────────
+// State: editable copy of squad/batting/bowling, plus original generated for "Reset"
+window.mdState={squad:[],batting:{1:{p1:null,p2:null},2:{p1:null,p2:null},3:{p1:null,p2:null},4:{p1:null,p2:null}},bowling:{},notes:'',sourceLabel:'',generated:null};
+
+function showTsView(view,btn){
+  document.querySelectorAll('.ts-subnav-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tsViewAnalysis').classList.toggle('active',view==='analysis');
+  document.getElementById('tsViewMatchday').classList.toggle('active',view==='matchday');
+  if(view==='matchday')renderMatchDay();
+}
+
+function useMethodForMatchDay(methodNum){
+  if(!window.tsLastGenerated)return;
+  const g=window.tsLastGenerated;
+  const alloc=methodNum===1?g.m1:g.m2;
+  populateMatchDayFromMethod(alloc,g.batRec,g.squad,`Method ${methodNum} — Projected RC ${methodNum===1?g.m1Score:g.m2Score}`);
+  // Switch to Match Day view
+  const buttons=document.querySelectorAll('.ts-subnav-btn');
+  buttons.forEach(b=>b.classList.remove('active'));
+  buttons[1].classList.add('active');
+  document.getElementById('tsViewAnalysis').classList.remove('active');
+  document.getElementById('tsViewMatchday').classList.add('active');
+  renderMatchDay();
+}
+
+function populateMatchDayFromMethod(alloc,batRec,squad,sourceLabel){
+  const md={squad:[...squad],batting:{},bowling:{},notes:window.mdState.notes||'',sourceLabel};
+  // Batting
+  [1,2,3,4].forEach(s=>{
+    const b=batRec.find(x=>x.skin===s);
+    md.batting[s]=b?{p1:b.p1,p2:b.p2}:{p1:squad[0]||null,p2:squad[1]||null};
+  });
+  // Bowling
+  [1,2,3,4].forEach(s=>{
+    md.bowling[s]={};
+    [1,2,3,4].forEach(o=>{md.bowling[s][o]=alloc.slots[s]?.[o]||null;});
+  });
+  // Snapshot for "Reset"
+  md.generated={batting:JSON.parse(JSON.stringify(md.batting)),bowling:JSON.parse(JSON.stringify(md.bowling)),sourceLabel};
+  window.mdState=md;
+}
+
+function renderMatchDay(){
+  const md=window.mdState;
+  // If nothing yet but we have generated results, auto-populate with better method
+  if(!md.squad.length&&window.tsLastGenerated){
+    const g=window.tsLastGenerated;
+    const better=g.betterMethod==='1'?g.m1:g.m2;
+    populateMatchDayFromMethod(better,g.batRec,g.squad,`Method ${g.betterMethod} (auto — better projected RC ${g.betterMethod==='1'?g.m1Score:g.m2Score})`);
+  }
+  if(!md.squad.length){
+    document.getElementById('mdEmpty').style.display='block';
+    document.getElementById('mdContent').style.display='none';
+    return;
+  }
+  document.getElementById('mdEmpty').style.display='none';
+  document.getElementById('mdContent').style.display='block';
+  document.getElementById('mdSource').textContent=md.sourceLabel||'Custom';
+  document.getElementById('mdNotes').value=md.notes||'';
+  renderMdBatting();
+  renderMdBowling();
+}
+
+function getPairAvg(p1,p2){
+  if(!p1||!p2||p1===p2)return null;
+  const key=[p1,p2].sort().join('|');
+  const src=activeSeason==='all'?pairsData:pairsData.filter(p=>p.season===activeSeason);
+  const matches=src.filter(p=>[p.p1,p.p2].sort().join('|')===key);
+  if(!matches.length)return null;
+  return{avg:+(matches.reduce((s,g)=>s+g.score,0)/matches.length).toFixed(1),n:matches.length};
+}
+
+function renderMdBatting(){
+  const md=window.mdState;
+  const squad=md.squad;
+  document.getElementById('mdBatting').innerHTML=[1,2,3,4].map(skin=>{
+    const a=md.batting[skin]||{p1:null,p2:null};
+    const pa=getPairAvg(a.p1,a.p2);
+    const cls=pa?(pa.avg>=30?'good':pa.avg>=15?'ok':'bad'):'';
+    const scoreText=pa?`${pa.avg>0?'+':''}${pa.avg} avg · ${pa.n} game${pa.n!==1?'s':''} together`:(a.p1===a.p2&&a.p1?'⚠ Same player selected twice':'No shared batting data');
+    const opts=p=>squad.map(sq=>`<option value="${sq}"${sq===p?' selected':''}>${sq}</option>`).join('');
+    return`<div class="md-batting-skin">
+      <div class="md-batting-header">
+        <span class="md-batting-skin-label">Skin ${skin} — Overs ${(skin-1)*4+1}–${skin*4}</span>
+        <span class="md-batting-skin-num">S${skin}</span>
+      </div>
+      <div class="md-batting-selects">
+        <select class="md-select" onchange="mdUpdateBatting(${skin},'p1',this.value)"><option value="">— Player 1 —</option>${opts(a.p1)}</select>
+        <select class="md-select" onchange="mdUpdateBatting(${skin},'p2',this.value)"><option value="">— Player 2 —</option>${opts(a.p2)}</select>
+      </div>
+      <div class="md-pair-score ${cls}">${scoreText}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderMdBowling(){
+  const md=window.mdState;
+  const squad=md.squad;
+  // brc lookup: use the most recent generated brc if available
+  const brc=window.tsLastGenerated?.brc;
+  const rcCls=v=>v===null||v===undefined?'none':v<=3?'good':v<=7?'ok':'bad';
+  document.getElementById('mdBowling').innerHTML=[1,2,3,4].map(skin=>{
+    const overs=[1,2,3,4].map(over=>{
+      const bowler=md.bowling[skin]?.[over]||null;
+      const rcData=brc&&bowler?getAvgRC(brc,bowler,skin,over):null;
+      const rcVal=rcData?rcData.val:null;
+      const rcText=rcVal===null?'est':`${rcVal>0?'+':''}${rcVal}`;
+      const er=bowler?getExtrasRate(bowler,activeSeason):null;
+      const opts=squad.map(sq=>`<option value="${sq}"${sq===bowler?' selected':''}>${sq}</option>`).join('');
+      return`<div class="md-over-row">
+        <span class="md-over-label">O${over}</span>
+        <select class="md-select" onchange="mdUpdateBowling(${skin},${over},this.value)"><option value="">—</option>${opts}</select>
+        <span class="md-rc-badge ${rcCls(rcVal)}" title="Projected RC">${rcText}</span>
+        ${er!==null?`<span class="md-extras-badge" style="font-size:9px;color:${er>0.5?'var(--red)':er>0.25?'var(--accent)':'var(--muted)'};font-weight:600" title="${er} extras/over">${er.toFixed(2)}x</span>`:'<span class="md-extras-badge"></span>'}
+      </div>`;
+    }).join('');
+    return`<div class="md-bowling-skin">
+      <div class="md-bowling-header"><span class="md-batting-skin-label">Skin ${skin}</span><span class="md-batting-skin-num">S${skin}</span></div>
+      ${overs}
+    </div>`;
+  }).join('');
+}
+
+function mdUpdateBatting(skin,slot,player){
+  window.mdState.batting[skin][slot]=player||null;
+  renderMdBatting();
+}
+
+function mdUpdateBowling(skin,over,player){
+  if(!window.mdState.bowling[skin])window.mdState.bowling[skin]={};
+  window.mdState.bowling[skin][over]=player||null;
+  renderMdBowling();
+}
+
+function mdResetToGenerated(){
+  const md=window.mdState;
+  if(!md.generated){alert('No generated version to reset to. Generate a team sheet first.');return;}
+  md.batting=JSON.parse(JSON.stringify(md.generated.batting));
+  md.bowling=JSON.parse(JSON.stringify(md.generated.bowling));
+  md.sourceLabel=md.generated.sourceLabel;
+  renderMatchDay();
+}
+
+function mdSaveTeam(){
+  window.mdState.notes=document.getElementById('mdNotes').value;
+  try{
+    localStorage.setItem('dm_matchday_sheet',JSON.stringify(window.mdState));
+    const el=document.getElementById('mdSaveConfirm');
+    el.style.display='inline';
+    setTimeout(()=>el.style.display='none',2500);
+  }catch(e){alert('Save failed: '+e.message);}
+}
+
+function mdDownload(){
+  window.mdState.notes=document.getElementById('mdNotes').value;
+  const md=window.mdState;
+  const brc=window.tsLastGenerated?.brc;
+  const dateStr=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  const timeStr=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+
+  // Build batting section
+  const battingRows=[1,2,3,4].map(s=>{
+    const b=md.batting[s]||{};
+    const pa=getPairAvg(b.p1,b.p2);
+    const cls=pa?(pa.avg>=30?'score-good':pa.avg>=15?'score-ok':'score-bad'):'score-none';
+    const scoreText=pa?`${pa.avg>0?'+':''}${pa.avg} avg · ${pa.n} game${pa.n!==1?'s':''}`:'No shared data';
+    return`<div class="bat-card">
+      <div class="bat-card-header"><span class="skin-tag">S${s}</span><span class="bat-overs">Overs ${(s-1)*4+1}–${s*4}</span></div>
+      <div class="bat-pair">${b.p1||'—'} <span class="amp">&amp;</span> ${b.p2||'—'}</div>
+      <div class="bat-score ${cls}">${scoreText}</div>
+    </div>`;
+  }).join('');
+
+  // Build bowling section
+  const rcCls=v=>v===null||v===undefined?'rc-none':v<=3?'rc-good':v<=7?'rc-ok':'rc-bad';
+  const bowlingSkins=[1,2,3,4].map(s=>{
+    const rows=[1,2,3,4].map(o=>{
+      const bowler=md.bowling[s]?.[o]||null;
+      const rcData=brc&&bowler?getAvgRC(brc,bowler,s,o):null;
+      const rcVal=rcData?rcData.val:null;
+      const rcText=rcVal===null?'est':`${rcVal>0?'+':''}${rcVal}`;
+      const er=bowler?getExtrasRate(bowler,activeSeason):null;
+      return`<tr>
+        <td class="over-cell">O${o}</td>
+        <td class="bowler-cell">${bowler||'—'}</td>
+        <td class="rc-cell"><span class="rc-badge ${rcCls(rcVal)}">${rcText}</span></td>
+        <td class="extras-cell">${er!==null?`${er.toFixed(2)}/ov`:''}</td>
+      </tr>`;
+    }).join('');
+    return`<div class="bowl-card">
+      <div class="bowl-card-header"><span class="skin-tag">S${s}</span><span class="bowl-overs">Overs ${(s-1)*4+1}–${s*4}</span></div>
+      <table class="bowl-table"><tbody>${rows}</tbody></table>
+    </div>`;
+  }).join('');
+
+  // Bowler workload summary
+  const workload={};
+  [1,2,3,4].forEach(s=>[1,2,3,4].forEach(o=>{
+    const b=md.bowling[s]?.[o];if(b){workload[b]=(workload[b]||0)+1;}
+  }));
+  const workloadRows=md.squad.map(p=>{
+    const overs=workload[p]||0;
+    return`<div class="workload-row"><span class="workload-name">${p}</span><span class="workload-overs">${overs} over${overs!==1?'s':''}</span></div>`;
+  }).join('');
+
+  // Projected total RC
+  let projRC=0,projRCcount=0;
+  [1,2,3,4].forEach(s=>[1,2,3,4].forEach(o=>{
+    const b=md.bowling[s]?.[o];
+    if(b&&brc){const v=getAvgRC(brc,b,s,o).val;projRC+=v;projRCcount++;}
+  }));
+  const projRCText=projRCcount===16?`${projRC>0?'+':''}${projRC.toFixed(1)}`:'—';
+
+  const html=`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Durban Mallu's — Match Day Sheet · ${dateStr}</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','DM Sans',sans-serif;background:#0f1815;color:#e8f0e6;line-height:1.5;padding:24px 16px;min-height:100vh}
+.sheet{max-width:760px;margin:0 auto;background:#162420;border:1px solid #1e2e22;border-radius:12px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
+.header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px;padding-bottom:18px;border-bottom:2px solid #d8b363;margin-bottom:22px}
+.header-left h1{font-size:24px;font-weight:700;color:#e8f0e6;letter-spacing:-0.5px;margin-bottom:4px}
+.header-left .subtitle{font-size:11px;color:#d8b363;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.header-right{text-align:right;font-size:11px;color:#7a8b7e}
+.header-right .date{font-size:14px;color:#e8f0e6;font-weight:600;margin-bottom:2px}
+.summary-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:24px;padding:14px;background:rgba(216,179,99,0.06);border-radius:8px;border:1px solid rgba(216,179,99,0.2)}
+.summary-cell{text-align:center}
+.summary-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#7a8b7e;font-weight:600;margin-bottom:4px}
+.summary-value{font-size:18px;font-weight:700;color:#e8f0e6}
+.summary-value.muted{color:#7a8b7e;font-size:14px}
+.section{margin-bottom:26px}
+.section-title{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#d8b363;font-weight:700;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #1e2e22;display:flex;justify-content:space-between;align-items:center}
+.section-title .hint{font-size:9px;color:#7a8b7e;font-weight:400;letter-spacing:1px;text-transform:none}
+.squad-list{display:flex;flex-wrap:wrap;gap:6px}
+.squad-chip{background:#1e2e22;color:#e8f0e6;padding:6px 12px;border-radius:14px;font-size:12px;font-weight:500;border:1px solid #2a3d30}
+.bat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.bat-card{background:#1a2925;border:1px solid #1e2e22;border-radius:8px;padding:14px}
+.bat-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.skin-tag{background:#d8b363;color:#0f1815;font-size:10px;font-weight:700;padding:3px 9px;border-radius:4px;letter-spacing:1px}
+.bat-overs,.bowl-overs{font-size:10px;color:#7a8b7e;letter-spacing:1px;text-transform:uppercase}
+.bat-pair{font-size:16px;font-weight:600;color:#e8f0e6;margin-bottom:6px}
+.amp{color:#7a8b7e;margin:0 4px;font-weight:400}
+.bat-score{font-size:12px;font-weight:600}
+.score-good{color:#2ea043}
+.score-ok{color:#d8b363}
+.score-bad{color:#e5534b}
+.score-none{color:#7a8b7e;font-style:italic;font-weight:400}
+.bowl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.bowl-card{background:#1a2925;border:1px solid #1e2e22;border-radius:8px;padding:14px}
+.bowl-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #1e2e22}
+.bowl-table{width:100%;border-collapse:collapse}
+.bowl-table td{padding:7px 4px;font-size:13px;border-bottom:1px solid rgba(30,46,34,0.5)}
+.bowl-table tr:last-child td{border-bottom:none}
+.over-cell{color:#d8b363;font-weight:700;font-size:11px;letter-spacing:1px;width:30px}
+.bowler-cell{font-weight:500;color:#e8f0e6}
+.rc-cell{width:50px;text-align:center}
+.rc-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;min-width:36px;text-align:center}
+.rc-good{background:rgba(46,160,67,0.18);color:#2ea043}
+.rc-ok{background:rgba(216,179,99,0.18);color:#d8b363}
+.rc-bad{background:rgba(229,83,75,0.18);color:#e5534b}
+.rc-none{background:rgba(122,139,126,0.18);color:#7a8b7e;font-style:italic;font-size:10px}
+.extras-cell{font-size:10px;color:#7a8b7e;text-align:right;width:60px}
+.workload-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:6px}
+.workload-row{display:flex;justify-content:space-between;align-items:center;background:#1a2925;border:1px solid #1e2e22;border-radius:6px;padding:8px 12px}
+.workload-name{font-size:12px;font-weight:500;color:#e8f0e6}
+.workload-overs{font-size:11px;color:#d8b363;font-weight:600}
+.notes-box{background:#1a2925;border:1px solid #1e2e22;border-radius:8px;padding:14px;white-space:pre-wrap;font-size:13px;line-height:1.6;color:#c8d1c6;min-height:60px}
+.notes-empty{color:#7a8b7e;font-style:italic}
+.footer{margin-top:26px;padding-top:14px;border-top:1px solid #1e2e22;text-align:center;font-size:10px;color:#7a8b7e;letter-spacing:1px}
+.print-actions{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:100}
+.print-btn{background:#d8b363;color:#0f1815;border:none;padding:8px 14px;font-size:12px;font-weight:600;border-radius:6px;cursor:pointer;font-family:inherit;box-shadow:0 2px 6px rgba(0,0,0,0.3)}
+.print-btn:hover{transform:translateY(-1px)}
+.print-btn.secondary{background:#1e2e22;color:#e8f0e6;border:1px solid #2a3d30}
+@media print{
+  body{background:#fff;color:#000;padding:0}
+  .sheet{box-shadow:none;border:none;background:#fff;color:#000;max-width:100%;padding:18px}
+  .header-left h1{color:#000}
+  .summary-value,.bat-pair,.bowler-cell,.workload-name,.notes-box,.bat-card,.bowl-card,.workload-row,.squad-chip{color:#000;background:#fff;border-color:#ccc}
+  .header-left .subtitle,.section-title{color:#8a6d2a}
+  .header,.section-title{border-color:#8a6d2a}
+  .summary-bar{background:#faf6ed;border-color:#d8b363}
+  .skin-tag{background:#8a6d2a;color:#fff}
+  .print-actions{display:none}
+  .bowl-table td{border-color:#e5e5e5}
+}
+@media (max-width:560px){
+  body{padding:14px 8px}
+  .sheet{padding:18px 14px}
+  .header-left h1{font-size:20px}
+  .bat-grid,.bowl-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="print-actions">
+  <button class="print-btn" onclick="window.print()">🖨 Print / Save PDF</button>
+</div>
+<div class="sheet">
+  <div class="header">
+    <div class="header-left">
+      <h1>Durban Mallu's</h1>
+      <div class="subtitle">Match Day Sheet</div>
+    </div>
+    <div class="header-right">
+      <div class="date">${dateStr}</div>
+      <div>Generated ${timeStr}</div>
+    </div>
+  </div>
+
+  <div class="summary-bar">
+    <div class="summary-cell">
+      <div class="summary-label">Squad</div>
+      <div class="summary-value">${md.squad.length}</div>
+    </div>
+    <div class="summary-cell">
+      <div class="summary-label">Total Overs</div>
+      <div class="summary-value">16</div>
+    </div>
+    <div class="summary-cell">
+      <div class="summary-label">Proj. RC</div>
+      <div class="summary-value ${projRC<=80?'':'muted'}">${projRCText}</div>
+    </div>
+    <div class="summary-cell">
+      <div class="summary-label">Source</div>
+      <div class="summary-value muted" style="font-size:11px">${md.sourceLabel||'Custom'}</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Squad</div>
+    <div class="squad-list">${md.squad.map(p=>`<span class="squad-chip">${p}</span>`).join('')}</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Batting Pairs <span class="hint">By skin · 4 overs each</span></div>
+    <div class="bat-grid">${battingRows}</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Bowling Order <span class="hint">RC = projected from history</span></div>
+    <div class="bowl-grid">${bowlingSkins}</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Bowler Workload</div>
+    <div class="workload-grid">${workloadRows||'<div style="color:#7a8b7e;font-size:12px">No bowlers assigned</div>'}</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Captain's Notes</div>
+    <div class="notes-box ${md.notes?'':'notes-empty'}">${md.notes?md.notes.replace(/</g,'&lt;').replace(/>/g,'&gt;'):'No notes added.'}</div>
+  </div>
+
+  <div class="footer">
+    Generated from Durban Mallu's Tracker · ${dateStr}
+  </div>
+</div>
+</body>
+</html>`;
+
+  const w=window.open('','_blank');
+  if(!w){alert('Popup blocked. Please allow popups for this site.');return;}
+  w.document.write(html);
+  w.document.close();
+}
+
+// Try to restore saved match day sheet on load
+(function restoreMatchDay(){
+  try{
+    const saved=localStorage.getItem('dm_matchday_sheet');
+    if(saved){
+      const parsed=JSON.parse(saved);
+      if(parsed&&parsed.squad)window.mdState=parsed;
+    }
+  }catch(e){}
+})();
+
+function renderInsights(){
+  const f=(activeSeason==='all'?games:games.filter(g=>g.season===activeSeason)).sort((a,b)=>a.dateVal-b.dateVal);
+  if(!f.length){document.getElementById('highlightsGrid').innerHTML='<div class="empty-state">No games found.</div>';document.getElementById('h2hGrid').innerHTML='';return;}
+
+  // Latest Game card — most recent game in the filtered set
+  const latest=f[f.length-1];
+  const latestSkins=pairsData.filter(p=>p.game===latest.fixtureId||p.date===latest.date&&p.season===latest.season);
+  const skinRows=latestSkins.length>0
+    ?latestSkins.map(p=>{
+        const icon=p.skinResult==='win'||p.skinResult==='jackpot-win'?'🟢':p.skinResult==='loss'?'🔴':p.skinResult==='tie'?'🟡':'·';
+        const oppStr=p.oppScore!==null&&p.oppScore!==undefined?` <span style="color:var(--muted)">vs ${p.oppScore}</span>`:'';
+        const jLabel=p.skinResult==='jackpot-win'?' <span style="font-size:9px;color:var(--accent);letter-spacing:1px">JACKPOT</span>':'';
+        return`<div class="lg-skin-row"><span class="lg-skin-label">S${p.skin}</span><span class="lg-skin-pair">${p.p1} &amp; ${p.p2}</span><span class="lg-skin-score">${p.score}${oppStr}</span><span class="lg-skin-icon">${icon}${jLabel}</span></div>`;
+      }).join('')
+    :`<div style="color:var(--muted);font-size:12px">Skin breakdown not available.</div>`;
+  const lgBadgeCls=latest.result==='win'?'win':'loss';
+  const lgMargin=latest.dmScore-latest.oppScore;
+  document.getElementById('latestGameCard').innerHTML=`
+    <div class="lg-header">
+      <div>
+        <div class="lg-opponent">vs ${latest.opponent}</div>
+        <div class="lg-date">${latest.date} · ${latest.season==='spring2025'?'Spring 2025':'Autumn 2026'}</div>
+      </div>
+      <div class="lg-result-block">
+        <span class="badge ${lgBadgeCls}">${latest.result==='win'?'Win':'Loss'}</span>
+        <div class="lg-score">${latest.dmScore} <span class="lg-score-sep">–</span> ${latest.oppScore}</div>
+        <div class="lg-margin" style="color:${lgMargin>0?'var(--green)':'var(--red)'}">${lgMargin>0?'+':''}${lgMargin} · ${latest.dmSkins}–${latest.oppSkins} skins</div>
+      </div>
+    </div>
+    <div class="lg-skins">${skinRows}</div>`;
+
+  const margins=f.map(g=>({...g,margin:g.dmScore-g.oppScore}));
+  const best=margins.reduce((a,b)=>b.margin>a.margin?b:a);
+  const worst=margins.reduce((a,b)=>b.margin<a.margin?b:a);
+  const highest=f.reduce((a,b)=>b.dmScore>a.dmScore?b:a);
+  const lowest=f.reduce((a,b)=>b.dmScore<a.dmScore?b:a);
+  document.getElementById('highlightsGrid').innerHTML=`
+    <div class="insight-card"><div class="ic-label">🏆 Biggest Win</div><div class="ic-val green">+${best.margin}</div><div class="ic-sub">${best.date} vs ${best.opponent}</div><div class="ic-sub">${best.dmScore} – ${best.oppScore} (${best.dmSkins}-${best.oppSkins} skins)</div></div>
+    <div class="insight-card"><div class="ic-label">💔 Biggest Loss</div><div class="ic-val red">${worst.margin}</div><div class="ic-sub">${worst.date} vs ${worst.opponent}</div><div class="ic-sub">${worst.dmScore} – ${worst.oppScore} (${worst.dmSkins}-${worst.oppSkins} skins)</div></div>
+    <div class="insight-card"><div class="ic-label">📈 Highest Score</div><div class="ic-val">${highest.dmScore}</div><div class="ic-sub">${highest.date} vs ${highest.opponent}</div><div class="ic-sub">${highest.result==='win'?'✅ Won':'❌ Lost'} ${highest.dmSkins}-${highest.oppSkins} skins</div></div>
+    <div class="insight-card"><div class="ic-label">📉 Lowest Score</div><div class="ic-val red">${lowest.dmScore}</div><div class="ic-sub">${lowest.date} vs ${lowest.opponent}</div><div class="ic-sub">${lowest.result==='win'?'✅ Won':'❌ Lost'} ${lowest.dmSkins}-${lowest.oppSkins} skins</div></div>`;
+  const oppMap={};
+  f.forEach(g=>{if(!oppMap[g.opponent])oppMap[g.opponent]=[];oppMap[g.opponent].push(g);});
+  const repeatOpps=Object.entries(oppMap).filter(([,gs])=>gs.length>1);
+  if(!repeatOpps.length){document.getElementById('h2hGrid').innerHTML='<div class="empty-state">No repeat opponents in the selected filter.</div>';}
+  else{document.getElementById('h2hGrid').innerHTML=repeatOpps.map(([opp,gs])=>{
+    const w=gs.filter(g=>g.result==='win').length,l=gs.filter(g=>g.result==='loss').length;
+    const gameRows=gs.map(g=>`<div class="h2h-game"><span class="hg-date">${g.date}</span><span class="h2h-season">${seasonLabel(g.season)}</span><span class="hg-score ${g.result}">${g.dmScore}–${g.oppScore} (${g.dmSkins}-${g.oppSkins})</span></div>`).join('');
+    return`<div class="h2h-card"><div class="h2h-opponent">vs ${opp}</div><div class="h2h-record"><span class="w">${w}W</span><span class="d"> – </span><span class="l">${l}L</span></div><div class="h2h-games">${gameRows}</div></div>`;
+  }).join('');}
+  document.getElementById('ladderSection').style.display=(activeSeason==='spring2025')?'none':'block';
+}
+
+function sortTable(key,event){
+  if(sortKey===key){sortDir=sortDir===1?-1:1;}else{sortKey=key;sortDir=key==='name'?-1:1;}
+  document.querySelectorAll('.stats-table th').forEach(th=>th.classList.remove('sorted'));
+  event.currentTarget.closest('th').classList.add('sorted');
+  renderStats();
+}
+
+function showTab(name){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.getAttribute('onclick').includes(`'${name}'`)));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===name));
+  if(name==='insights')renderInsights();
+  if(name==='pairsbowling')renderPairs();
+  if(name==='teamsheet')renderTeamSheet();
+  if(name==='rankings')renderRankings();
+  if(name==='form')renderForm();
+}
+
+function refresh(){
+  buildSeasonButtons();
+  updatePills();
+  renderInsights();
+  renderResults();
+  renderStats();
+  const active=document.querySelector('.panel.active');
+  if(active&&active.id==='pairsbowling')renderPairs();
+  if(active&&active.id==='teamsheet')renderTeamSheet();
+  if(active&&active.id==='rankings')renderRankings();
+  if(active&&active.id==='form')renderForm();
+}
+
+
+// ── Rankings ──────────────────────────────────────────────────────────────────
+function renderRankings(){
+  const f=activeSeason==='all'?gameStats:gameStats.filter(g=>g.season===activeSeason);
+  if(!f.length){document.getElementById('rankingsContent').innerHTML='<div style="color:var(--muted);padding:20px">No data for this season.</div>';return;}
+
+  // Build win-game set from hardcoded games array
+  const filteredGames=activeSeason==='all'?games:games.filter(g=>g.season===activeSeason);
+  const winFixtures=new Set(filteredGames.filter(g=>g.result==='win').map(g=>String(g.fixtureId)));
+
+  // Aggregate per player
+  const byPlayer={};
+  f.forEach(g=>{
+    if(!byPlayer[g.name]) byPlayer[g.name]={
+      name:g.name,gp:0,rs:0,rc:0,wkts:0,contrib:0,sevens:0,
+      dotsBowled:0,ob:0,bestRS:0,twentyPlus:0,
+      winContrib:0,winGP:0,allRS:[],srNumerator:0,srDenominator:0,
+      dCaught:0,dBowled:0,dRunOut:0,dStumped:0,dotsFaced:0
+    };
+    const p=byPlayer[g.name];
+    p.gp++; p.rs+=g.rs; p.rc+=g.rc; p.wkts+=g.wkts; p.contrib+=g.contrib;
+    p.sevens+=g.sevens; p.dotsBowled+=g.dotsBowled; p.ob+=g.ob;
+    p.dotsFaced+=(g.dotsFaced||0);
+    p.dCaught+=(g.dCaught||0); p.dBowled+=(g.dBowled||0);
+    p.dRunOut+=(g.dRunOut||0); p.dStumped+=(g.dStumped||0);
+    if(g.rs>p.bestRS) p.bestRS=g.rs;
+    if(g.rs>=20) p.twentyPlus++;
+    p.allRS.push(g.rs);
+    if(g.sr>0){p.srNumerator+=g.rs;p.srDenominator+=g.rs/g.sr*100/100;}
+    if(winFixtures.has(String(g.fixtureId))){p.winContrib+=g.contrib;p.winGP++;}
+  });
+
+  const players=Object.values(byPlayer).map(p=>({
+    ...p,
+    avgRS:   p.gp?+(p.rs/p.gp).toFixed(1):0,
+    avgContrib: p.gp?+(p.contrib/p.gp).toFixed(1):0,
+    avgWinContrib: p.winGP?+(p.winContrib/p.winGP).toFixed(1):0,
+    econ:    p.ob?+(p.rc/p.ob).toFixed(2):0,
+    wktsPerOver: p.ob?+(p.wkts/p.ob).toFixed(2):0,
+    avgSR:   p.srDenominator?+(p.srNumerator/p.srDenominator).toFixed(1):0,
+    allrounder: p.rs + p.wkts*10,
+    totalDismissals: p.dCaught+p.dBowled+p.dRunOut+p.dStumped,
+    roRate: (p.dCaught+p.dBowled+p.dRunOut+p.dStumped)>0?+(p.dRunOut/(p.dCaught+p.dBowled+p.dRunOut+p.dStumped)*100).toFixed(0):0,
+    dfPerGame: p.gp?+(p.dotsFaced/p.gp).toFixed(1):0,
+  })).filter(p=>p.gp>0);
+
+  function posClass(i){return i===0?'gold':i===1?'silver':i===2?'bronze':'';}
+  function medal(i){return i===0?'🥇':i===1?'🥈':i===2?'🥉':'';}
+
+  function leaderCard(title,icon,sorted,valFn,valClass,subFn,minGP){
+    const eligible=minGP?sorted.filter(p=>p.gp>=minGP):sorted;
+    const top=eligible.slice(0,5);
+    if(!top.length) return '';
+    const rows=top.map((p,i)=>`
+      <div class="rank-row">
+        <div class="rank-pos ${posClass(i)}">${medal(i)||i+1}</div>
+        <div style="flex:1"><div class="rank-name">${p.name}</div><div class="rank-sub">${subFn(p)}</div></div>
+        <div class="rank-val ${valClass||''}">${valFn(p)}</div>
+      </div>`).join('');
+    return `<div class="rank-card">
+      <div class="rank-card-title"><span class="rank-card-icon">${icon}</span>${title}</div>
+      ${rows}
+    </div>`;
+  }
+
+  function section(title,icon,cards){
+    const filled=cards.filter(Boolean);
+    return `<div class="rankings-section">
+      <div class="rankings-section-title"><span class="section-icon">${icon}</span>${title}</div>
+      <div class="rankings-grid">${filled.join('')}</div>
+    </div>`;
+  }
+
+  // ── Batting ────────────────────────────────────────────────────────────────
+  const batting = section('Batting','🏏',[
+    leaderCard('Top Scorers — Total RS','📊',
+      [...players].sort((a,b)=>b.rs-a.rs),
+      p=>p.rs,'',p=>`${p.gp} games · avg ${p.avgRS}/g`),
+    leaderCard('Batting Average — RS per Game','📈',
+      [...players].sort((a,b)=>b.avgRS-a.avgRS),
+      p=>p.avgRS,'',p=>`${p.gp} games · ${p.rs} total RS`,2),
+    leaderCard('Best Strike Rate','⚡',
+      [...players].filter(p=>p.avgSR>0).sort((a,b)=>b.avgSR-a.avgSR),
+      p=>p.avgSR+'%','accent',p=>`${p.gp} games`,2),
+    leaderCard('Most 7s — Zone D Full Hits','💥',
+      [...players].sort((a,b)=>b.sevens-a.sevens),
+      p=>p.sevens,'accent',p=>`${p.gp} games played`),
+    leaderCard('Highest Single Game Score','🎯',
+      [...players].sort((a,b)=>b.bestRS-a.bestRS),
+      p=>p.bestRS,'',p=>`${p.gp} games · avg ${p.avgRS}/g`),
+    leaderCard('Consistency — 20+ Run Games','🎖️',
+      [...players].sort((a,b)=>b.twentyPlus-a.twentyPlus),
+      p=>p.twentyPlus,'',p=>`${p.gp} games · ${+(p.twentyPlus/p.gp*100).toFixed(0)}% hit rate`),
+    leaderCard('Run-Out Risk — Most Run-Outs','⚠️',
+      [...players].filter(p=>p.totalDismissals>=5).sort((a,b)=>b.dRunOut-a.dRunOut),
+      p=>p.dRunOut,'neg',p=>`${p.roRate}% of ${p.totalDismissals} dismissals · ${p.gp} games`),
+    leaderCard('Second Ball Pressure — Dots/Game','🔴',
+      [...players].filter(p=>p.gp>=3).sort((a,b)=>b.dfPerGame-a.dfPerGame),
+      p=>p.dfPerGame,'neg',p=>`${p.dotsFaced} total dots · ${p.gp} games`),
+  ]);
+
+  // ── Bowling ────────────────────────────────────────────────────────────────
+  const bowling = section('Bowling','🎳',[
+    leaderCard('Most Wickets','🎯',
+      [...players].sort((a,b)=>b.wkts-a.wkts),
+      p=>p.wkts,'accent',p=>`${p.ob} overs · ${p.gp} games`),
+    leaderCard('Best Economy — RC per Over','🔒',
+      [...players].filter(p=>p.ob>=2).sort((a,b)=>a.econ-b.econ),
+      p=>p.econ,'blue',p=>`${p.ob} overs · ${p.wkts} wkts`,2),
+    leaderCard('Wickets per Over','🌀',
+      [...players].filter(p=>p.ob>=2).sort((a,b)=>b.wktsPerOver-a.wktsPerOver),
+      p=>p.wktsPerOver,'accent',p=>`${p.wkts} wkts from ${p.ob} overs`,2),
+    leaderCard('Dot Ball Kings','🧱',
+      [...players].sort((a,b)=>b.dotsBowled-a.dotsBowled),
+      p=>p.dotsBowled,'blue',p=>`${p.ob} overs bowled`),
+    leaderCard('Most Overs Bowled','🏃',
+      [...players].sort((a,b)=>b.ob-a.ob),
+      p=>p.ob,'',p=>`${p.wkts} wkts · econ ${p.econ}`),
+  ]);
+
+  // ── All-round & Impact ─────────────────────────────────────────────────────
+  const general = section('All-Round & Impact','⭐',[
+    leaderCard('Best Avg Contribution — RS − RC','🏆',
+      [...players].filter(p=>p.gp>=2).sort((a,b)=>b.avgContrib-a.avgContrib),
+      p=>(p.avgContrib>=0?'+':'')+p.avgContrib,'',
+      p=>`${p.gp} games · total ${p.contrib>=0?'+':''}${p.contrib}`,2),
+    leaderCard('Total Contribution — All Games','📋',
+      [...players].sort((a,b)=>b.contrib-a.contrib),
+      p=>(p.contrib>=0?'+':'')+p.contrib,'',p=>`${p.gp} games · avg ${p.avgContrib>=0?'+':''}${p.avgContrib}/g`),
+    leaderCard('Clutch — Avg Contribution in Wins','🏅',
+      [...players].filter(p=>p.winGP>=1).sort((a,b)=>b.avgWinContrib-a.avgWinContrib),
+      p=>(p.avgWinContrib>=0?'+':'')+p.avgWinContrib,'',
+      p=>`${p.winGP} wins contributed to`),
+    leaderCard('All-Rounder Score — RS + (Wkts×10)','🌟',
+      [...players].sort((a,b)=>b.allrounder-a.allrounder),
+      p=>p.allrounder,'accent',
+      p=>`${p.rs} RS + ${p.wkts} wkts`),
+  ]);
+
+  document.getElementById('rankingsContent').innerHTML = batting + bowling + general;
+}
+// ── Form ──────────────────────────────────────────────────────────────────────
+function renderForm(){
+  const f=activeSeason==='all'?gameStats:gameStats.filter(g=>g.season===activeSeason);
+  if(!f.length){document.getElementById('formContent').innerHTML='<div style="color:var(--muted);padding:20px">No data for this season.</div>';return;}
+
+  // Get all players who appear in filtered games
+  const playerNames=[...new Set(f.map(g=>g.name))].sort();
+  // Season avg contrib per player
+  const seasonAvg={};
+  playerNames.forEach(name=>{
+    const rows=f.filter(g=>g.name===name);
+    seasonAvg[name]=rows.length?rows.reduce((s,r)=>s+r.contrib,0)/rows.length:0;
+  });
+
+  // Get last 5 games chronologically per player
+  const allGames=[...new Set(f.map(g=>g.game))].sort((a,b)=>+a.slice(1)-+b.slice(1));
+  const last5Games=allGames.slice(-5);
+
+  function trendBadge(last3Avg,sAvg){
+    if(last3Avg>sAvg+3)return'📈';
+    if(last3Avg<sAvg-3)return'📉';
+    return'➡️';
+  }
+
+  const cards=playerNames.map(name=>{
+    const playerRows=f.filter(g=>g.name===name);
+    const gameMap={};
+    playerRows.forEach(g=>{gameMap[g.game]=g;});
+
+    const dotDivs=last5Games.map(gid=>{
+      const g=gameMap[gid];
+      if(!g)return`<div class="form-dot empty">–</div>`;
+      const cls=g.contrib>0?'pos':g.contrib<0?'neg':'zero';
+      const label=g.contrib>0?'+'+g.contrib:g.contrib;
+      return`<div class="form-dot ${cls}" title="${g.opponent}: ${label}">${label}</div>`;
+    });
+
+    const last3=last5Games.slice(-3).map(gid=>gameMap[gid]).filter(Boolean);
+    const last3Avg=last3.length?+(last3.reduce((s,g)=>s+g.contrib,0)/last3.length).toFixed(1):0;
+    const sAvg=+(seasonAvg[name]||0).toFixed(1);
+    const trend=trendBadge(last3Avg,sAvg);
+    return`<div class="form-card">
+      <div class="form-card-header">
+        <div class="form-player-name">${name}</div>
+        <div class="form-trend-badge">${trend}</div>
+      </div>
+      <div class="form-dots">${dotDivs.join('')}</div>
+      <div class="form-stats">
+        <div><div class="form-stat-label">Avg C/G</div><div class="form-stat-val ${sAvg>=0?'up':'down'}">${sAvg>=0?'+':''}${sAvg}</div></div>
+        <div><div class="form-stat-label">Last 3</div><div class="form-stat-val ${last3Avg>=0?'up':'down'}">${last3Avg>=0?'+':''}${last3Avg}</div></div>
+        <div><div class="form-stat-label">RS</div><div class="form-stat-val">${playerRows.reduce((s,g)=>s+g.rs,0)}</div></div>
+        <div><div class="form-stat-label">7s</div><div class="form-stat-val">${playerRows.reduce((s,g)=>s+(g.sevens||0),0)}</div></div>
+      </div>
+    </div>`;
+  });
+
+  const grid=document.createElement('div');
+  grid.className='form-grid';
+  grid.innerHTML=cards.join('');
+  document.getElementById('formContent').innerHTML='';
+  document.getElementById('formContent').appendChild(grid);
+}
+// Load gameStats from games.json, then initialise
+// Load all data from games.json, then initialise
+fetch('data/games.json')
+  .then(r => r.json())
+  .then(data => {
+    games = data.games.map(g => ({
+      ...g,
+      dateVal: new Date(g.dateVal)
+    }));
+    gameStats = data.gameStats.map(g => ({
+      ...g,
+      dateVal: new Date(g.dateVal)
+    }));
+    pairsData = data.pairStats.map(ps => ({
+      season:     ps.season,
+      date:       ps.date,
+      game:       ps.game,
+      skin:       ps.skin,
+      p1:         ps.batters[0],
+      p2:         ps.batters[1],
+      score:      ps.dmRuns,
+      oppScore:   ps.oppRuns,
+      skinResult: ps.dmRuns > ps.oppRuns ? 'win' : ps.dmRuns < ps.oppRuns ? 'loss' : 'tie'
+    }));
+    refresh();
+  })
+  .catch(err => {
+    console.error('Failed to load games.json:', err);
+    refresh();
+  });
+</script>
+</body>
+</html>
