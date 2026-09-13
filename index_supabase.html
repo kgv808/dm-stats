@@ -6,7 +6,7 @@
 <title>Durban Mallu's — Season Tracker (Supabase)</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
-  :root{--green:#00C853;--green-dim:#00913c;--bg:#0a0f0d;--surface:#111a14;--surface2:#162019;--border:#1e2e22;--text:#e8f0ea;--muted:#6b8c72;--accent:#FFD600;--red:#ff4444;--blue:#7ecfff;}
+  :root{--green:#00C853;--green-dim:#00913c;--bg:#0a0f0d;--surface:#111a14;--surface2:#162019;--border:#1e2e22;--text:#e8f0ea;--muted:#6b8c72;--accent:#FFD600;--red:#ff4444;--blue:#7ecfff;--orange:#FF9800;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;}
   .hero{background:linear-gradient(135deg,#0a1a0e 0%,#0f2a14 50%,#0a1a0e 100%);border-bottom:1px solid var(--border);padding:28px 24px 20px;position:relative;overflow:hidden;}
@@ -26,6 +26,9 @@
   .season-btn.au{border-color:var(--blue);color:var(--blue);}
   .season-btn.au:hover{background:rgba(126,207,255,0.12);}
   .season-btn.au.active{background:var(--blue);color:#0a0f0d;}
+  .season-btn.sp2{border-color:var(--orange);color:var(--orange);}
+  .season-btn.sp2:hover{background:rgba(255,152,0,0.12);}
+  .season-btn.sp2.active{background:var(--orange);color:#0a0f0d;}
   .season-pills{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
   .pill{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 14px;display:flex;flex-direction:column;gap:2px;min-width:90px;}
   .pill-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
@@ -758,6 +761,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const SEASON_META = {
   'spring2025': {label:'Spring 2025', sub:'Spring 2025 · C3 Division · Fourways Falcons',     cls:'sp'},
   'autumn2026': {label:'Autumn 2026', sub:'Autumn 2026 · C1 Division · Hillfox Action Sports', cls:'au'},
+  'spring2026': {label:'Spring 2026', sub:'Spring 2026 · B1 Division · Fourways Falcons',       cls:'sp2'},
 };
 
 let seasons=[];
